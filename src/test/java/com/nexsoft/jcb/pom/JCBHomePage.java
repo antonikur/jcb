@@ -3,6 +3,7 @@ package com.nexsoft.jcb.pom;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class JCBHomePage {
 	protected WebDriver driver;
@@ -73,8 +74,41 @@ public class JCBHomePage {
 	@FindBy(xpath = "//div[@class='info']")
 	private WebElement txtInfoUser;
 	
+	
 	public JCBHomePage(WebDriver driver) {
 		this.driver = driver;
+	}
+	
+	public JCBDashboardPage clickAndGotoMenuDashboard() {
+		menuDashboard.click();
+		return PageFactory.initElements(driver, JCBDashboardPage.class);
+	}
+	
+	public JCBMasterUserPage clickAndGotoMenuMasterUser() {
+		menuMaster.click();
+		menuMasterUser.click();
+		return PageFactory.initElements(driver, JCBMasterUserPage.class);
+	}
+	
+	public JCBMasterKotaPage clickAndGotoMenuMasterKota() {
+		menuMaster.click();
+		menuMasterKota.click();
+		return PageFactory.initElements(driver, JCBMasterKotaPage.class);
+	}
+	
+	public JCBMasterAreaPage clickAndGotoMenuMasterArea() {
+		menuMaster.click();
+		menuMasterArea.click();
+		return PageFactory.initElements(driver, JCBMasterAreaPage.class);
+	}
+	
+	public JCBDataMerchantPage clickAndGotoMenuDataMerchant() {
+		menuDataMerchant.click();
+		return PageFactory.initElements(driver, JCBDataMerchantPage.class);
+	}
+	
+	public String getTxtInfoUser() {
+		return txtInfoUser.getText();
 	}
 	
 }

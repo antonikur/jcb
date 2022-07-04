@@ -1,5 +1,7 @@
 package com.nexsoft.jcb.test;
 
+import static org.testng.Assert.assertEquals;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -12,7 +14,9 @@ import com.nexsoft.jcb.pom.JCBLoginPage;
 
 public class TestModulLogin {
 	protected WebDriver driver;
+//	protected WebDriverWait wait;
 	protected Tools tool;
+	
 	
 	
 	@BeforeClass
@@ -20,7 +24,10 @@ public class TestModulLogin {
 		System.setProperty("url", "https://dev.ptdika.com/jcb/new/login");
 		System.setProperty("webdriver.chrome.driver", "C:\\Antoni\\chromedriver.exe");
 		driver = new ChromeDriver();
+//		wait = new WebDriverWait(driver, 20);
 		driver.get(System.getProperty("url"));
+		//wait.until(ExpectedConditions.presenceOfElementLocated(addItem));
+		
 		driver.manage().window().maximize();
 	}
 	
@@ -76,16 +83,26 @@ public class TestModulLogin {
 	
 	@Test(priority = 9)
 	public void input_username_dan_password_valid_sebagai_admin(){
-		PageFactory.initElements(driver, JCBLoginPage.class)
-		.inputFieldUsername(null)
-		.inputFieldPassword(null)
+		String actual = PageFactory.initElements(driver, JCBLoginPage.class)
+		.inputFieldUsername("admindika3")
+		.inputFieldPassword("d1k4@passw0rd")
 		.clickBtnLogin()
 		.gotoHomePage()
-		;
+		.getTxtInfoUser();
+		
+		assertEquals(actual, "Administrator");
 	}
 	
 	@Test(priority = 10)
 	public void input_username_dan_password_valid_sebagai_surveyor(){
+		String actual = PageFactory.initElements(driver, JCBLoginPage.class)
+		.inputFieldUsername("antonik")
+		.inputFieldPassword("antonik")
+		.clickBtnLogin()
+		.gotoHomePage()
+		.getTxtInfoUser();
+				
+		assertEquals(actual, "AntoniK");
 
 	}
 	
