@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class JCBLoginPage {
-	WebDriver driver;
+	protected WebDriver driver;
 	
 	@FindBy(xpath = "//input[@placeholder='User']")
 	private WebElement fieldUsername;
@@ -52,6 +52,10 @@ public class JCBLoginPage {
 		return pesanErrorInvalidUserPassword.getText();
 	}
 	
+	
+	public JCBHomePage gotoHomePage() {
+		return PageFactory.initElements(driver, JCBHomePage.class);
+	}
 	
 	
 }
