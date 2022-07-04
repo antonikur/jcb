@@ -1,11 +1,37 @@
 package com.nexsoft.jcb.test;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import com.nexsoft.jcb.other.Tools;
+import com.nexsoft.jcb.pom.JCBLoginPage;
+
 public class TestModulLogin {
+	protected WebDriver driver;
+	protected Tools tool;
+	
+	
+	@BeforeClass
+	public void initial() {
+		System.setProperty("url", "https://dev.ptdika.com/jcb/new/login");
+		System.setProperty("webdriver.chrome.driver", "C:\\Antoni\\chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.get(System.getProperty("url"));
+		driver.manage().window().maximize();
+	}
+	
+	@BeforeMethod
+	public void reset() {
+		driver.get(System.getProperty("url"));
+	}
+	
 	@Test(priority = 0)
 	public void input_username_tanpa_password_dan_tekan_login(){
-
+		
 	}
 	
 	@Test(priority = 1)
@@ -50,7 +76,12 @@ public class TestModulLogin {
 	
 	@Test(priority = 9)
 	public void input_username_dan_password_valid_sebagai_admin(){
-
+		PageFactory.initElements(driver, JCBLoginPage.class)
+		.inputFieldUsername(null)
+		.inputFieldPassword(null)
+		.clickBtnLogin()
+		.gotoHomePage()
+		;
 	}
 	
 	@Test(priority = 10)

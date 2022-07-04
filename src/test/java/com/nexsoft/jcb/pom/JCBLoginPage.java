@@ -44,6 +44,11 @@ public class JCBLoginPage {
 		return PageFactory.initElements(driver, JCBLoginPage.class);
 	}
 	
+	public JCBLoginPage clickBtnLogin() {
+		btnLogin.click();
+		return PageFactory.initElements(driver, JCBLoginPage.class);
+	}
+	
 	public String getPromptAlertTextFieldEmpty() {
 		return driver.switchTo().alert().getText();
 	}
