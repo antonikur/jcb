@@ -27,6 +27,9 @@ public class JCBDashboardPage {
 	@FindBy(xpath = "//i[@class='fa fa-minus']")
 	private WebElement btnCollapseExpand;
 	
+	@FindBy(xpath = "//span[normalize-space()='Logout']")
+	private WebElement menuLogout;
+	
 	public JCBDashboardPage(WebDriver driver){
 		this.driver = driver;
 	}
@@ -37,7 +40,14 @@ public class JCBDashboardPage {
 	
 	public JCBMonitoringPage clickDetailAndGotoMonitoring() {
 		tool.scrollByFindElement(driver, btnDetail);
+		btnDetail.click();
 		return PageFactory.initElements(driver, JCBMonitoringPage.class);
+	}
+	
+	
+	public JCBLoginPage clickLogoutAndGotoLogin() {
+		menuLogout.click();
+		return PageFactory.initElements(driver, JCBLoginPage.class);
 	}
 	
 }

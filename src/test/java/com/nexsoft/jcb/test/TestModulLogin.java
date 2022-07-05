@@ -10,11 +10,11 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.nexsoft.jcb.other.Tools;
+import com.nexsoft.jcb.pom.JCBHomePage;
 import com.nexsoft.jcb.pom.JCBLoginPage;
 
 public class TestModulLogin {
 	protected WebDriver driver;
-//	protected WebDriverWait wait;
 	protected Tools tool;
 	
 	
@@ -24,9 +24,7 @@ public class TestModulLogin {
 		System.setProperty("url", "https://dev.ptdika.com/jcb/new/login");
 		System.setProperty("webdriver.chrome.driver", "C:\\Antoni\\chromedriver.exe");
 		driver = new ChromeDriver();
-//		wait = new WebDriverWait(driver, 20);
 		driver.get(System.getProperty("url"));
-		//wait.until(ExpectedConditions.presenceOfElementLocated(addItem));
 		
 		driver.manage().window().maximize();
 	}
@@ -90,6 +88,10 @@ public class TestModulLogin {
 		.gotoHomePage()
 		.getTxtInfoUser();
 		
+		//logout
+		PageFactory.initElements(driver, JCBHomePage.class)
+		.clickLogoutAndGotoLoginPage();
+		
 		assertEquals(actual, "Administrator");
 	}
 	
@@ -101,6 +103,10 @@ public class TestModulLogin {
 		.clickBtnLogin()
 		.gotoHomePage()
 		.getTxtInfoUser();
+		
+		//logout
+		PageFactory.initElements(driver, JCBHomePage.class)
+		.clickLogoutAndGotoLoginPage();
 				
 		assertEquals(actual, "AntoniK");
 
@@ -108,7 +114,19 @@ public class TestModulLogin {
 	
 	@Test(priority = 11)
 	public void tekan_tombol_logout_setelah_berhasil_login(){
-
+		String actual = PageFactory.initElements(driver, JCBLoginPage.class)
+				.inputFieldUsername("admindika3")
+				.inputFieldPassword("d1k4@passw0rd")
+				.clickBtnLogin()
+				.gotoHomePage()
+				.clickLogoutAndGotoLoginPage()
+				.getTitleLogin().trim();
+		
+		//logout
+		PageFactory.initElements(driver, JCBHomePage.class)
+		.clickLogoutAndGotoLoginPage();
+		
+		assertEquals(actual, "DIKA | JCB");
 	}
 
 

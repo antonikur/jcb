@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="11" total="12" passed="1" failed="0" skipped="0">
+<testng-results ignored="91" total="92" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-07-04T11:29:49 WIB" name="Default suite" finished-at="2022-07-04T11:30:12 WIB" duration-ms="23364">
+  <suite started-at="2022-07-05T14:24:03 WIB" name="Default suite" finished-at="2022-07-05T14:24:10 WIB" duration-ms="7638">
     <groups>
     </groups>
-    <test started-at="2022-07-04T11:29:49 WIB" name="Default test" finished-at="2022-07-04T11:30:12 WIB" duration-ms="23364">
-      <class name="com.nexsoft.jcb.test.TestModulLogin">
-        <test-method is-config="true" signature="initial()[pri:0, instance:com.nexsoft.jcb.test.TestModulLogin@1ffaf86]" started-at="2022-07-04T11:29:49 WIB" name="initial" finished-at="2022-07-04T11:30:01 WIB" duration-ms="12186" status="PASS">
+    <test started-at="2022-07-05T14:24:03 WIB" name="Default test" finished-at="2022-07-05T14:24:10 WIB" duration-ms="7638">
+      <class name="com.nexsoft.jcb.test.TestModulMaster">
+        <test-method is-config="true" signature="initial()[pri:0, instance:com.nexsoft.jcb.test.TestModulMaster@74d1dc36]" started-at="2022-07-05T14:24:03 WIB" name="initial" finished-at="2022-07-05T14:24:06 WIB" duration-ms="3183" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initial -->
-        <test-method is-config="true" signature="reset()[pri:0, instance:com.nexsoft.jcb.test.TestModulLogin@1ffaf86]" started-at="2022-07-04T11:30:01 WIB" name="reset" finished-at="2022-07-04T11:30:01 WIB" duration-ms="146" status="PASS">
+        <test-method is-config="true" signature="reset()[pri:0, instance:com.nexsoft.jcb.test.TestModulMaster@74d1dc36]" started-at="2022-07-05T14:24:06 WIB" name="reset" finished-at="2022-07-05T14:24:08 WIB" duration-ms="1513" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reset -->
-        <test-method signature="input_username_dan_password_valid_sebagai_surveyor()[pri:10, instance:com.nexsoft.jcb.test.TestModulLogin@1ffaf86]" started-at="2022-07-04T11:30:01 WIB" name="input_username_dan_password_valid_sebagai_surveyor" finished-at="2022-07-04T11:30:12 WIB" duration-ms="10978" status="PASS">
+        <test-method signature="tekan_tombol_delete_pada_baris_user()[pri:40, instance:com.nexsoft.jcb.test.TestModulMaster@74d1dc36]" started-at="2022-07-05T14:24:08 WIB" name="tekan_tombol_delete_pada_baris_user" finished-at="2022-07-05T14:24:10 WIB" duration-ms="2897" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- input_username_dan_password_valid_sebagai_surveyor -->
-      </class> <!-- com.nexsoft.jcb.test.TestModulLogin -->
+        </test-method> <!-- tekan_tombol_delete_pada_baris_user -->
+      </class> <!-- com.nexsoft.jcb.test.TestModulMaster -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

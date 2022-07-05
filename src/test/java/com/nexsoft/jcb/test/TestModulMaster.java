@@ -1,16 +1,73 @@
 package com.nexsoft.jcb.test;
 
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
+import static org.testng.Assert.fail;
+
+import java.util.List;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import com.nexsoft.jcb.other.Tools;
+import com.nexsoft.jcb.pom.JCBHomePage;
+import com.nexsoft.jcb.pom.JCBLoginPage;
+import com.nexsoft.jcb.pom.JCBMasterUserPage;
+
 public class TestModulMaster {
+	
+	protected WebDriver driver;
+//	protected WebDriverWait wait;
+	protected Tools tool = new Tools();
+	
+	protected JCBHomePage homePage;
+	
+	
+	@BeforeClass
+	public void initial() {
+		System.setProperty("url", "https://dev.ptdika.com/jcb/new/login");
+		System.setProperty("webdriver.chrome.driver", "C:\\Antoni\\chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.get(System.getProperty("url"));
+		
+		driver.manage().window().maximize();
+	}
+	
+	@BeforeMethod
+	public void reset() {
+		driver.get(System.getProperty("url"));
+		
+		homePage = PageFactory.initElements(PageFactory.initElements(driver, JCBLoginPage.class)
+				.inputFieldUsername("antoni")
+				.inputFieldPassword("antoni")
+				.clickBtnLogin()
+				.gotoHomePage()
+				.getDriver(), JCBHomePage.class);
+		
+	}
+	
+	
 	@Test(priority = 0)
 	public void tekan_menu_master_user(){
-
+		String actual = homePage.clickAndGotoMenuMasterUser()
+				.getTitleUserPage().trim();
+		
+		//logout
+		PageFactory.initElements(driver, JCBMasterUserPage.class)
+		.clickLogoutAndGotoLogin();
+		
+		assertEquals(actual, "Data User");
 	}
 	
 	@Test(priority = 1)
 	public void input_kolom_search_by_no_di_user(){
-
+		
 	}
 	
 	@Test(priority = 2)
@@ -20,7 +77,48 @@ public class TestModulMaster {
 	
 	@Test(priority = 3)
 	public void input_kolom_search_by_name(){
-
+		String keyword = "toni";//input keyword that must have result/data
+		
+		List<List<WebElement>> actualTableUser = homePage.clickAndGotoMenuMasterUser()
+		.inputFieldSearch(keyword)
+		.getTableDataUser();
+		boolean isCorrect = false;
+		
+		for(int i=0; i<actualTableUser.get(0).size(); i++) {//check data per row if it contains keyword
+		
+		//assert
+			//if no matching keyword found
+			if(actualTableUser.get(0).get(0).getText().trim().equalsIgnoreCase("No matching records found")) {
+				//logout
+				PageFactory.initElements(driver, JCBMasterUserPage.class)
+				.clickLogoutAndGotoLogin();
+				
+				fail("No data found, make sure you use keyword that available");
+			}
+			//if one of the column have contain data from keyword
+			else {
+					//if it contain in no
+				if(actualTableUser.get(0).get(i).getText().toLowerCase().contains(keyword.toLowerCase().trim()) || 
+						// if it contain in nik
+						actualTableUser.get(1).get(i).getText().toLowerCase().contains(keyword.toLowerCase().trim()) || 
+						// if it contain in name
+						actualTableUser.get(2).get(i).getText().toLowerCase().contains(keyword.toLowerCase().trim()) || 
+						//if it contain in privilage
+						actualTableUser.get(3).get(i).getText().toLowerCase().contains(keyword.toLowerCase().trim()) ) { 
+					isCorrect = true;
+				} else {
+					//if one of the row doesn't contain keyword then fail
+					isCorrect = false;
+					break;
+				}
+			}
+		}
+		
+		//logout
+		PageFactory.initElements(driver, JCBMasterUserPage.class)
+		.clickLogoutAndGotoLogin();
+		
+		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
 	}
 	
 	@Test(priority = 4)
@@ -50,12 +148,30 @@ public class TestModulMaster {
 	
 	@Test(priority = 9)
 	public void pilih_show_entries_50_di_user(){
-
+		List<WebElement> kolomNo = homePage.clickAndGotoMenuMasterUser()
+		.selectDropdownListEntriesByValue("50")
+		.getColumnNo();
+		int entriesSize = kolomNo.size();
+		
+		//logout
+		PageFactory.initElements(driver, JCBMasterUserPage.class)
+		.clickLogoutAndGotoLogin();
+		
+		assertEquals(entriesSize, 50, "kemungkinan karena data tidak mencukupi 50, tolong dicek dan ditambah");
 	}
 	
 	@Test(priority = 10)
 	public void pilih_show_entries_100_di_user(){
-
+		List<WebElement> kolomNo = homePage.clickAndGotoMenuMasterUser()
+		.selectDropdownListEntriesByValue("100")
+		.getColumnNo();
+		int entriesSize = kolomNo.size();
+		
+		//logout
+		PageFactory.initElements(driver, JCBMasterUserPage.class)
+		.clickLogoutAndGotoLogin();
+		
+		assertEquals(entriesSize, 100, "kemungkinan karena data tidak mencukupi 100, tolong dicek dan ditambah");
 	}
 	
 	@Test(priority = 11)
@@ -85,12 +201,32 @@ public class TestModulMaster {
 	
 	@Test(priority = 16)
 	public void tekan_tombol_add_new_user(){
-
+		String titlePopupNewUser = homePage.clickAndGotoMenuMasterUser()
+		.clickAddNewUser()
+		.getTitlePopupNewUser().trim();
+		
+		//logout
+		PageFactory.initElements(driver, JCBMasterUserPage.class)
+		.clickBtnCancel()
+		.clickLogoutAndGotoLogin();
+		
+		assertEquals(titlePopupNewUser, "Form Input User");
 	}
 	
 	@Test(priority = 17)
 	public void input_data_valid_di_new_user_dan_save(){
-
+		String actual = homePage.clickAndGotoMenuMasterUser()
+		.clickAddNewUser()
+		.inputAllAddUserField("K1234654", "kur nia", "kur_niawan", "123@!$4ad5", "4")
+		.clickBtnSave()
+		.getMessageAddNewSuccess();
+		
+		//logout
+		PageFactory.initElements(driver, JCBMasterUserPage.class)
+		.clickLogoutAndGotoLogin();
+		
+		assertTrue(actual.contains("Data berhasil disimpan."));
+//		assertEquals(actual, "Data berhasil disimpan.");
 	}
 	
 	@Test(priority = 18)
@@ -185,7 +321,16 @@ public class TestModulMaster {
 	
 	@Test(priority = 36)
 	public void tekan_tombol_edit_pada_baris_user(){
-
+		String actual = homePage.clickAndGotoMenuMasterUser()
+		.clickEditUserByNo("5")
+		.getTitlePopupEditUser();
+		
+		//logout
+		PageFactory.initElements(driver, JCBMasterUserPage.class)
+		.clickBtnCancelPopupEdit()
+		.clickLogoutAndGotoLogin();
+		
+		assertEquals(actual, "Form Edit User");
 	}
 	
 	@Test(priority = 37)
@@ -205,7 +350,16 @@ public class TestModulMaster {
 	
 	@Test(priority = 40)
 	public void tekan_tombol_delete_pada_baris_user(){
-
+		String actual = homePage.clickAndGotoMenuMasterUser()
+		.selectDropdownListEntriesByValue("100")
+		.clickDeleteUserByNo("100")
+		.getMessageDeleteSuccess();
+		
+		//logout
+		PageFactory.initElements(driver, JCBMasterUserPage.class)
+		.clickLogoutAndGotoLogin();
+		
+		assertTrue(actual.contains("Data berhasil dihapus."));
 	}
 	
 	@Test(priority = 41)

@@ -1,13 +1,21 @@
 package com.nexsoft.jcb.pom;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+import com.nexsoft.jcb.other.Tools;
+
 public class JCBMasterUserPage {
 	protected WebDriver driver;
+	protected Tools tool = new Tools();
+	
 	
 	@FindBy(xpath = "//a[@class='btn btn-info']")
 	private WebElement btnAddNewUser;
@@ -15,22 +23,42 @@ public class JCBMasterUserPage {
 	@FindBy(name = "data-table-default_length")//10, 25, 50, 100
 	private WebElement dropdownListEntries;
 	
+	@FindBy(xpath = "//a[normalize-space()='Previous']")
+	private WebElement btnPageNavPrev;
+	
+	@FindBy(xpath = "//a[normalize-space()='Next']")
+	private WebElement btnPageNavNext;
+	
+	@FindBy(xpath = "//h1[@class='page-header']")
+	private WebElement titleMasterUser;
+	
 	@FindBy(xpath = "//input[@type='search']")
 	private WebElement fieldSearch;
 	
-	@FindBy(name = "nik")
+	@FindBy(xpath = "//*[@id=\"content\"]/div[1]/div[2]/div")
+	private WebElement messageNewDataSuccess;
+	
+	//delete message
+	@FindBy(xpath = "//*[@id=\"content\"]/div[1]/div[2]/div")
+	private WebElement messageDeleteDataSuccess;
+	
+	//new user
+	@FindBy(xpath = "//h4[@id='myModalLabel']")
+	private WebElement titlePopupAddNewUser;
+	
+	@FindBy(xpath = "//input[@name='nik']")
 	private WebElement fieldNIKAddNewPopup;
 	
-	@FindBy(name = "name")
+	@FindBy(xpath = "//input[@name='name']")
 	private WebElement fieldNameAddNewPopup;
 	
-	@FindBy(name = "username")
+	@FindBy(xpath = "//input[@name='username']")
 	private WebElement fieldUsernameAddNewPopup;
 	
-	@FindBy(name = "password")
+	@FindBy(xpath = "//input[@name='password']")
 	private WebElement fieldPasswordAddNewPopup;
 	
-	@FindBy(name = "privilege")
+	@FindBy(xpath = "//select[@name='privilege']")//2, 3, 4, 5, 6
 	private WebElement dropdownListPrivilageAddNewPopup;
 	
 	@FindBy(xpath = "(//button[@type='submit'])[2]")
@@ -40,14 +68,35 @@ public class JCBMasterUserPage {
 	private WebElement btnCancel;
 	
 	
-	@FindBy(xpath = "//a[normalize-space()='2']")
-	private WebElement btnPageNavNumber;
+//	@FindBy(xpath = "//a[normalize-space()='2']")
+//	private WebElement btnPageNavNumber;
 	
-	@FindBy(xpath = "//a[normalize-space()='Previous']")
-	private WebElement btnPageNavPrev;
+	//edit
+	@FindBy(xpath = "(//h4[@id='myModalLabel'])[2]")
+	private WebElement titlePopupEditUser;
 	
-	@FindBy(xpath = "//a[normalize-space()='Next']")
-	private WebElement btnPageNavNext;
+	@FindBy(xpath = "(//button[@type='button'])[3]")
+	private WebElement btnCancelPopupEditUser;
+	
+	//table
+	@FindBy(xpath = "//td[normalize-space()][1]")
+	private List<WebElement> tableKolomNo;
+	
+	@FindBy(xpath = "//td[normalize-space()][2]")
+	private List<WebElement> tableKolomNIK;
+	
+	@FindBy(xpath = "//td[normalize-space()][3]")
+	private List<WebElement> tableKolomName;
+	
+	@FindBy(xpath = "//td[normalize-space()][4]")
+	private List<WebElement> tableKolomPrivilage;
+	
+	@FindBy(xpath = "//td[@class='dataTables_empty']")
+	private WebElement messageDataTablesEmpty;//No matching records found
+	
+	
+	@FindBy(xpath = "//span[normalize-space()='Logout']")
+	private WebElement menuLogout;
 	
 	public JCBMasterUserPage(WebDriver driver){
 		this.driver = driver;
@@ -55,6 +104,8 @@ public class JCBMasterUserPage {
 	
 	
 	public JCBMasterUserPage clickAddNewUser() {
+		btnAddNewUser.click();
+		tool.stopForMoment();
 		return PageFactory.initElements(driver, JCBMasterUserPage.class);
 	}
 	
@@ -64,6 +115,11 @@ public class JCBMasterUserPage {
 		return PageFactory.initElements(driver, JCBMasterUserPage.class);
 	}
 	
+	public String getTitleUserPage() {
+		return titleMasterUser.getText();
+	}
+	
+	//add new pop up
 	public JCBMasterUserPage inputAllAddUserField(String nik, String name, String username, String password, String privilege) {
 		Select select = new Select(dropdownListPrivilageAddNewPopup);
 		fieldNIKAddNewPopup.sendKeys(nik);
@@ -84,8 +140,94 @@ public class JCBMasterUserPage {
 		btnCancel.click();
 		return PageFactory.initElements(driver, JCBMasterUserPage.class);
 	}
+	//page navigate
+	public JCBMasterUserPage clickPageNumber(String page) {	
+		driver.findElement(By.xpath("//a[normalize-space()='"+page+"']")).click();
+		return PageFactory.initElements(driver, JCBMasterUserPage.class);
+	}
+	
+	public JCBMasterUserPage clickNextPage() {
+		btnPageNavNext.click();
+		return PageFactory.initElements(driver, JCBMasterUserPage.class);
+	}
+	
+	public JCBMasterUserPage clickPreviousPage() {
+		btnPageNavPrev.click();
+		return PageFactory.initElements(driver, JCBMasterUserPage.class);
+	}
+	
+	public JCBMasterUserPage inputFieldSearch(String search) {
+		fieldSearch.sendKeys(search);
+		return PageFactory.initElements(driver, JCBMasterUserPage.class);
+	}
+	
+	//edit user
+	public JCBMasterUserPage clickEditUserByNo(String index) {
+		//button to view edit and delete
+		driver.findElement(By.xpath("//td[normalize-space()='"+index+"']")).click();		
+		
+		//button edit
+		driver.findElement(By.xpath("//table[@id='data-table-default']/tbody/tr["+ (Integer.parseInt(index)+1) +"]/td/ul/li/span[2]/a[1]/i")).click();
+		
+		tool.stopForMoment();
+		
+		return PageFactory.initElements(driver, JCBMasterUserPage.class);
+	}
 	
 	
+	public JCBMasterUserPage clickDeleteUserByNo(String index) {
+		//button to view edit and delete
+		driver.findElement(By.xpath("//td[normalize-space()='"+index+"']")).click();
+		
+		//button delete
+		driver.findElement(By.xpath("//table[@id='data-table-default']/tbody/tr["+(Integer.parseInt(index)+1)+"]/td/ul/li/span[2]/a[2]/i")).click();
+		
+		driver.switchTo().alert().accept();
+		
+		return PageFactory.initElements(driver, JCBMasterUserPage.class);
+	}
 	
+	public JCBLoginPage clickLogoutAndGotoLogin() {
+		menuLogout.click();
+		return PageFactory.initElements(driver, JCBLoginPage.class);
+	}
+	
+	public List<List<WebElement>> getTableDataUser(){
+		List<List<WebElement>> tableUser = new ArrayList<>();
+		tableUser.add(tableKolomNo);
+		tableUser.add(tableKolomNIK);
+		tableUser.add(tableKolomName);
+		tableUser.add(tableKolomPrivilage);
+		return tableUser;
+	}
+	
+	public List<WebElement> getColumnNo(){
+		return tableKolomNo;
+	}
+	
+	public String getMessageDataTableEmpty() {
+		return messageDataTablesEmpty.getText();
+	}
+	
+	public String getTitlePopupNewUser() {
+		return titlePopupAddNewUser.getText();
+	}
+	
+	public String getTitlePopupEditUser() {
+		return titlePopupEditUser.getText();
+	}
+	
+	public String getMessageAddNewSuccess() {
+		return messageNewDataSuccess.getText();
+	}
+	
+	public JCBMasterUserPage clickBtnCancelPopupEdit() {
+		btnCancelPopupEditUser.click();
+		return PageFactory.initElements(driver, JCBMasterUserPage.class);
+	}
+	
+	public String getMessageDeleteSuccess() {
+		return messageDeleteDataSuccess.getText();
+	}
 	
 }

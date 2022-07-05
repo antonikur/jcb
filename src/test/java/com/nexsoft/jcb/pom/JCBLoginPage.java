@@ -20,12 +20,17 @@ public class JCBLoginPage {
 	@FindBy(xpath = "//small[normalize-space()='User / Password tidak sesuai.']")
 	private WebElement pesanErrorInvalidUserPassword;
 	
+	@FindBy(id = "myModalLabel")
+	private WebElement titlePopUpEditUser;
+	
 //	@FindBy(xpath = "")
 //	private WebElement promptAlertUserEmpty;
 //	
 //	@FindBy(xpath = "")
 //	private WebElement promptAlertPasswordEmpty;
 	
+	@FindBy(xpath = "//b[normalize-space()='DIKA | JCB']")
+	private WebElement titleLoginPage;
 	
 	public JCBLoginPage(WebDriver driver) {
 		this.driver = driver;
@@ -49,6 +54,10 @@ public class JCBLoginPage {
 		return PageFactory.initElements(driver, JCBLoginPage.class);
 	}
 	
+	public String getTitleLogin() {
+		return titleLoginPage.getText();
+	}
+	
 	public String getPromptAlertTextFieldEmpty() {
 		return driver.switchTo().alert().getText();
 	}
@@ -61,6 +70,7 @@ public class JCBLoginPage {
 	public JCBHomePage gotoHomePage() {
 		return PageFactory.initElements(driver, JCBHomePage.class);
 	}
+	
 	
 	
 }

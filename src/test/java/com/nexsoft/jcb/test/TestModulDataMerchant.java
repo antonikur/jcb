@@ -1,8 +1,48 @@
 package com.nexsoft.jcb.test;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import com.nexsoft.jcb.other.Tools;
+import com.nexsoft.jcb.pom.JCBHomePage;
+import com.nexsoft.jcb.pom.JCBLoginPage;
+
 public class TestModulDataMerchant {
+	
+	protected WebDriver driver;
+//	protected WebDriverWait wait;
+	protected Tools tool;
+	protected JCBHomePage homePage;
+	
+	@BeforeClass
+	public void initial() {
+		System.setProperty("url", "https://dev.ptdika.com/jcb/new/login");
+		System.setProperty("webdriver.chrome.driver", "C:\\Antoni\\chromedriver.exe");
+		driver = new ChromeDriver();
+//		wait = new WebDriverWait(driver, 20);
+		driver.get(System.getProperty("url"));
+		//wait.until(ExpectedConditions.presenceOfElementLocated(addItem));
+		
+		driver.manage().window().maximize();
+	}
+	
+	@BeforeMethod
+	public void reset() {
+		driver.get(System.getProperty("url"));
+		
+		homePage = new JCBHomePage(PageFactory.initElements(driver, JCBLoginPage.class)
+				.inputFieldUsername("antoni")
+				.inputFieldPassword("antoni")
+				.clickBtnLogin()
+				.gotoHomePage()
+				.getDriver());
+		
+	}
+	
 	@Test(priority = 0)
 	public void input_search_merchant_name_by_address_dan_tekan_search(){
 

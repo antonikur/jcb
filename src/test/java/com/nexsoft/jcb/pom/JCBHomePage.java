@@ -5,8 +5,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.nexsoft.jcb.other.Tools;
+
 public class JCBHomePage {
 	protected WebDriver driver;
+	Tools tool = new Tools();
 	
 	@FindBy(xpath = "//span[normalize-space()='Dashboard']")
 	private WebElement menuDashboard;
@@ -68,6 +71,7 @@ public class JCBHomePage {
 	@FindBy(xpath = "//span[normalize-space()='Logout']")
 	private WebElement menuLogout;
 	
+	
 	@FindBy(xpath = "//b[normalize-space()='Selamat datang, Administrator']")
 	private WebElement txtWelcome;
 	
@@ -80,6 +84,7 @@ public class JCBHomePage {
 	}
 	
 	public JCBDashboardPage clickAndGotoMenuDashboard() {
+		tool.stopForMoment();
 		menuDashboard.click();
 		return PageFactory.initElements(driver, JCBDashboardPage.class);
 	}
@@ -109,6 +114,15 @@ public class JCBHomePage {
 	
 	public String getTxtInfoUser() {
 		return txtInfoUser.getText();
+	}
+	
+	public WebDriver getDriver() {
+		return driver;
+	}
+	
+	public JCBLoginPage clickLogoutAndGotoLoginPage() {
+		menuLogout.click();
+		return PageFactory.initElements(driver, JCBLoginPage.class);
 	}
 	
 }

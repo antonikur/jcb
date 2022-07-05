@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.nexsoft.jcb.test.TestModulLogin">
+      <class name="com.nexsoft.jcb.test.TestModulMaster">
         <methods>
-          <include name="input_username_dan_password_valid_sebagai_surveyor"/>
+          <include name="input_data_valid_di_new_user_dan_save"/>
           <include name="reset"/>
           <include name="initial"/>
         </methods>
-      </class> <!-- com.nexsoft.jcb.test.TestModulLogin -->
+      </class> <!-- com.nexsoft.jcb.test.TestModulMaster -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
