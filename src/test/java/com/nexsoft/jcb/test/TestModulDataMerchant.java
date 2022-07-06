@@ -1,8 +1,17 @@
 package com.nexsoft.jcb.test;
 
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
+import static org.testng.Assert.fail;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -23,9 +32,7 @@ public class TestModulDataMerchant {
 		System.setProperty("url", "https://dev.ptdika.com/jcb/new/login");
 		System.setProperty("webdriver.chrome.driver", "C:\\Antoni\\chromedriver.exe");
 		driver = new ChromeDriver();
-//		wait = new WebDriverWait(driver, 20);
 		driver.get(System.getProperty("url"));
-		//wait.until(ExpectedConditions.presenceOfElementLocated(addItem));
 		
 		driver.manage().window().maximize();
 	}
@@ -34,18 +41,126 @@ public class TestModulDataMerchant {
 	public void reset() {
 		driver.get(System.getProperty("url"));
 		
-		homePage = new JCBHomePage(PageFactory.initElements(driver, JCBLoginPage.class)
+		homePage = PageFactory.initElements(PageFactory.initElements(driver, JCBLoginPage.class)
 				.inputFieldUsername("antoni")
 				.inputFieldPassword("antoni")
 				.clickBtnLogin()
 				.gotoHomePage()
-				.getDriver());
+				.getDriver(), JCBHomePage.class);
+	}
+	
+	@AfterMethod
+	public void logout() {
+		driver.findElement(By.xpath("//span[normalize-space()='Logout']")).click();;
+	}
+	
+	@Test(priority = 46)
+	public void tekan_menu_data_merchant(){
+		String actual = homePage.clickAndGotoMenuDataMerchant()
+		.getTitleDataMerchantPage().trim();
+		
+		assertEquals(actual, "Data Merchant");
+	}
+	
+	@Test(priority = 47)
+	public void input_search_merchant_name_by_nama_merchant_dan_tekan_search() {
+		
+		
+		////////////////////////
+		String keyword = "jakarta";//input keyword that must have result/data
+		
+		List<List<WebElement>> actualTableKota = homePage.clickAndGotoMenuDataMerchant()
+		.inputAndClickSearch(keyword)
+		.getTableDataMerchant();
+		/////////////////////
+		boolean isCorrect = false;
+		
+		
+		for(int i=0; i<actualTableKota.get(0).size(); i++) {//check data per row if it contains keyword
+		
+		//assert
+			//if no matching keyword found
+			if(actualTableKota.get(0).get(0).getText().trim().equalsIgnoreCase("No matching records found")) {
+				fail("No data found, make sure you use keyword that available");
+			}
+			//if one of the column have contain data from keyword
+			else {
+				String[] splitKeyword = keyword.trim().split(" ");
+				
+				for (String element : splitKeyword) {
+					//if it contain in no
+					if(actualTableKota.get(0).get(i).getText().toLowerCase().contains(element.toLowerCase().trim()) || 
+							// if it contain in kota
+							actualTableKota.get(1).get(i).getText().toLowerCase().contains(element.toLowerCase().trim()) ) {
+						isCorrect = true;
+						
+					} else {
+						//if one of the row doesn't contain split keyword then fail
+						isCorrect = false;
+						break;
+					}
+				}
+			}
+		}
+		
+		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
+		
+//		String keyword = "toni";//input keyword that must have result/data
+//		
+//		List<List<WebElement>> actualTableUser = homePage.clickAndGotoMenuMasterUser()
+//		.inputFieldSearch(keyword)
+//		.getTableDataUser();
+//		boolean isCorrect = false;
+//		
+//		for(int i=0; i<actualTableUser.get(0).size(); i++) {//check data per row if it contains keyword
+//		
+//		//assert
+//			//if no matching keyword found
+//			if(actualTableUser.get(0).get(0).getText().trim().equalsIgnoreCase("No matching records found")) {
+//				
+//				fail("No data found, make sure you use keyword that available");
+//			}
+//			//if one of the column have contain data from keyword
+//			else {
+//					//if it contain in no
+//				if(actualTableUser.get(0).get(i).getText().toLowerCase().contains(keyword.toLowerCase().trim()) || 
+//						// if it contain in nik
+//						actualTableUser.get(1).get(i).getText().toLowerCase().contains(keyword.toLowerCase().trim()) || 
+//						// if it contain in name
+//						actualTableUser.get(2).get(i).getText().toLowerCase().contains(keyword.toLowerCase().trim()) || 
+//						//if it contain in privilage
+//						actualTableUser.get(3).get(i).getText().toLowerCase().contains(keyword.toLowerCase().trim()) ) { 
+//					isCorrect = true;
+//				} else {
+//					//if one of the row doesn't contain keyword then fail
+//					isCorrect = false;
+//					break;
+//				}
+//			}
+//		}
+//		
+//		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
+	}
+	
+	@Test(priority = 48)
+	public void input_search_merchant_name_by_no_dan_tekan_search() {
 		
 	}
 	
+	@Test(priority = 49)
+	public void input_search_merchant_name_by_area_dan_tekan_search() {
+		
+	}
+	
+	@Test(priority = 50)
+	public void input_search_merchant_name_by_batch_dan_tekan_search() {
+		
+	}
+	
+	
 	@Test(priority = 0)
 	public void input_search_merchant_name_by_address_dan_tekan_search(){
-
+		
 	}
 	
 	@Test(priority = 1)

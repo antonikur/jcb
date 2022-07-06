@@ -27,9 +27,7 @@ public class TestModulDashboard {
 		System.setProperty("url", "https://dev.ptdika.com/jcb/new/login");
 		System.setProperty("webdriver.chrome.driver", "C:\\Antoni\\chromedriver.exe");
 		driver = new ChromeDriver();
-//		wait = new WebDriverWait(driver, 20);
 		driver.get(System.getProperty("url"));
-		//wait.until(ExpectedConditions.presenceOfElementLocated(addItem));
 		
 		driver.manage().window().maximize();
 	}

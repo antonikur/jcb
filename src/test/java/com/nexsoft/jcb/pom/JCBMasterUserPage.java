@@ -20,6 +20,7 @@ public class JCBMasterUserPage {
 	@FindBy(xpath = "//a[@class='btn btn-info']")
 	private WebElement btnAddNewUser;
 	
+	//navigation
 	@FindBy(name = "data-table-default_length")//10, 25, 50, 100
 	private WebElement dropdownListEntries;
 	
@@ -35,8 +36,20 @@ public class JCBMasterUserPage {
 	@FindBy(xpath = "//input[@type='search']")
 	private WebElement fieldSearch;
 	
+	@FindBy(xpath = "//i[@class='fa fa-expand']")
+	private WebElement btnExpandCompress;
+	
+	@FindBy(xpath = "//i[@class='fa fa-minus']")
+	private WebElement btnCollapseExpand;
+	
 	@FindBy(xpath = "//*[@id=\"content\"]/div[1]/div[2]/div")
 	private WebElement messageNewDataSuccess;
+
+	@FindBy(xpath = "//*[@id=\"content\"]/div[1]/div[3]/div/div[2]")
+	private WebElement panelListTableUser;
+	
+	@FindBy(xpath = "//*[@id=\"content\"]/div[1]/div[3]/div")
+	private WebElement panelViewDataUser;
 	
 	//delete message
 	@FindBy(xpath = "//*[@id=\"content\"]/div[1]/div[2]/div")
@@ -230,4 +243,23 @@ public class JCBMasterUserPage {
 		return messageDeleteDataSuccess.getText();
 	}
 	
+	public JCBMasterUserPage clickBtnCollapseExpand() {
+		btnCollapseExpand.click();
+		tool.stopForMoment(1500);
+		return PageFactory.initElements(driver, JCBMasterUserPage.class);
+	}
+	
+	public JCBMasterUserPage clickBtnExpandCompress() {
+		btnExpandCompress.click();
+		tool.stopForMoment(1500);
+		return PageFactory.initElements(driver, JCBMasterUserPage.class);
+	}
+	
+	public WebElement getElementPanelViewDataUser() {
+		return panelViewDataUser;
+	}
+	
+	public WebElement getElementPanelListTableUser() {
+		return panelListTableUser;
+	}
 }

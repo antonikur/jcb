@@ -1,5 +1,8 @@
 package com.nexsoft.jcb.pom;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -7,14 +10,20 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+import com.nexsoft.jcb.other.Tools;
+
 public class JCBMasterAreaPage {
 	protected WebDriver driver;
+	protected Tools tool = new Tools();
 	
 	@FindBy(xpath = "//a[@class='btn btn-info']")
 	private WebElement btnAddNewArea;
 	
 	@FindBy(xpath = "//input[@type='search']")
 	private WebElement fieldSearch;
+	
+	@FindBy(xpath = "//h1[@class='page-header']")
+	private WebElement titlePageArea;
 	
 	//navigate
 	@FindBy(xpath = "//a[normalize-space()='Previous']")
@@ -42,6 +51,7 @@ public class JCBMasterAreaPage {
 	@FindBy(xpath = "//input[@name='area']")
 	private WebElement fieldPopupNewArea;
 	
+	
 	//edit area
 	@FindBy(xpath = "(//input[@name='area'])[2]")
 	private WebElement fieldPopupEditArea;
@@ -55,9 +65,27 @@ public class JCBMasterAreaPage {
 	@FindBy(xpath = "(//button[@type='button'])[3]")
 	private WebElement btnCancelPopupEditArea;
 	
+	//table
+	@FindBy(xpath = "//td[normalize-space()][1]")
+	private List<WebElement> tableKolomNo;
+	
+	@FindBy(xpath = "//td[normalize-space()][2]")
+	private List<WebElement> tableKolomKodeArea;
+	
+	@FindBy(xpath = "//td[normalize-space()][3]")
+	private List<WebElement> tableKolomArea;
+	
+	//message
+	@FindBy(xpath = "//*[@id=\"content\"]/div[1]/div[2]/div")
+	private WebElement messageAddArea;
+	
+	@FindBy(xpath = "//*[@id=\"content\"]/div[1]/div[2]/div")
+	private WebElement messageEditArea;
+	
 	public JCBMasterAreaPage(WebDriver driver){
 		this.driver = driver;
 	}
+	
 	
 	//page navigate
 	public JCBMasterAreaPage clickPageNumber(String page) {	
@@ -71,14 +99,92 @@ public class JCBMasterAreaPage {
 		return PageFactory.initElements(driver, JCBMasterAreaPage.class);
 	}
 	
-	public JCBMasterAreaPage clickEditAreaByIndex(String index) {
-		driver.findElement(By.xpath("//td[normalize-space()='"+index+"']")).click();
-		
-		driver.findElement(By.xpath("//table[@id='data-table-default']/tbody/tr["+Integer.parseInt(index)+1+"]/td/ul/li/span[2]/a/i")).click();
+	public JCBMasterAreaPage inputFieldSearch(String keyword) {
+		fieldSearch.clear();
+		fieldSearch.sendKeys(keyword);
 		return PageFactory.initElements(driver, JCBMasterAreaPage.class);
 	}
 	
+	public String getTitleAreaPage() {
+		return titlePageArea.getText();
+	}
 	
+	//add
+	public JCBMasterAreaPage clickBtnAddNewArea() {
+		btnAddNewArea.click();
+		return PageFactory.initElements(driver, JCBMasterAreaPage.class);
+	}
+	
+	public JCBMasterAreaPage clickCancelPopupNewArea() {
+		btnCancelPopupNewArea.click();
+		return PageFactory.initElements(driver, JCBMasterAreaPage.class);
+	}
+	
+	public JCBMasterAreaPage inputFieldPopupNewArea(String area) {
+		fieldPopupNewArea.sendKeys(area);
+		return PageFactory.initElements(driver, JCBMasterAreaPage.class);
+	}
+	
+	public JCBMasterAreaPage clickSavePopupNewArea() {
+		btnSavePopupNewArea.click();
+		return PageFactory.initElements(driver, JCBMasterAreaPage.class);
+	}
+	
+	public String getMessageAddSuccess() {
+		return messageAddArea.getText();
+	}
+	
+	public String getTitlePopupAddArea() {
+		return titlePopupNewArea.getText();
+	}
+
+	
+	//edit
+	public JCBMasterAreaPage clickEditAreaByIndex(String index) {
+		driver.findElement(By.xpath("//td[normalize-space()='"+index+"']")).click();
+		tool.stopForMoment(1000);
+		driver.findElement(By.xpath("//table[@id='data-table-default']/tbody/tr["+(Integer.parseInt(index)+1)+"]/td/ul/li/span[2]/a/i")).click();
+		tool.stopForMoment(1000);
+		return PageFactory.initElements(driver, JCBMasterAreaPage.class);
+	}
+	
+	public JCBMasterAreaPage clickSavePopupEditArea() {
+		btnSavePopupEditArea.click();
+		return PageFactory.initElements(driver, JCBMasterAreaPage.class);
+	}
+	
+	public JCBMasterAreaPage clickCancelPopupEditArea() {
+		btnCancelPopupEditArea.click();
+		return PageFactory.initElements(driver, JCBMasterAreaPage.class);
+	}
+	
+	public JCBMasterAreaPage inputFieldPopupEditArea(String area) {
+		fieldPopupEditArea.clear();
+		fieldPopupEditArea.sendKeys(area);
+		return PageFactory.initElements(driver, JCBMasterAreaPage.class);
+	}
+	
+	public JCBMasterAreaPage clickSaveEditArea() {
+		btnSavePopupEditArea.click();
+		return PageFactory.initElements(driver, JCBMasterAreaPage.class);
+	}
+	
+	public String getTitlePopupEditArea() {
+		return titlePopupEditArea.getText();
+	}
+	
+	//table data
+	public List<WebElement> getColumnNo(){
+		return tableKolomNo;
+	}
+	
+	public List<List<WebElement>> getTableDataArea(){
+		List<List<WebElement>> tableUser = new ArrayList<>();
+		tableUser.add(tableKolomNo);
+		tableUser.add(tableKolomKodeArea);
+		tableUser.add(tableKolomArea);
+		return tableUser;
+	}
 	
 	public JCBLoginPage clickLogoutAndGotoLogin() {
 		menuLogout.click();

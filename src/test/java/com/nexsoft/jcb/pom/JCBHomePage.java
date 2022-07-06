@@ -97,12 +97,14 @@ public class JCBHomePage {
 	
 	public JCBMasterKotaPage clickAndGotoMenuMasterKota() {
 		menuMaster.click();
+		tool.stopForMoment(1000);
 		menuMasterKota.click();
 		return PageFactory.initElements(driver, JCBMasterKotaPage.class);
 	}
 	
 	public JCBMasterAreaPage clickAndGotoMenuMasterArea() {
 		menuMaster.click();
+		tool.stopForMoment(1000);
 		menuMasterArea.click();
 		return PageFactory.initElements(driver, JCBMasterAreaPage.class);
 	}
