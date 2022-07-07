@@ -13,6 +13,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 //import org.openqa.selenium.WebElement;
 
 //import io.appium.java_client.TouchAction;
@@ -40,10 +41,15 @@ public class Tools {
 		}
 	}
 	
-	public void scroolVerticalWindows(WebDriver driver, int y) {
+	public void scrollVerticalWindows(WebDriver driver, int y) {
 		//positive y for going down, negative y for going up
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0,"+y+")", "");
+	}
+	
+	public void scrollByFindElement(WebDriver driver, WebElement element) {
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+		stopForMoment(500);
 	}
 	
 	public String screenShoot(WebDriver driver) {

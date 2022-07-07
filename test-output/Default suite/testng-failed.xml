@@ -3,24 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.nexsoft.jcb.test.TestModulLogin">
+      <class name="com.nexsoft.jcb.test.TestFiturNewData">
         <methods>
-          <include name="input_username_valid_dengan_huruf_besar_kecil_dan_tekan_login"/>
-          <include name="input_username_dan_password_valid_sebagai_admin"/>
-          <include name="input_username_panjang_dan_tekan_login"/>
-          <include name="input_username_invalid_dan_password_valid_dan_tekan_login"/>
           <include name="initial"/>
-          <include name="input_username_tanpa_password_dan_tekan_login"/>
-          <include name="tekan_tombol_logout_setelah_berhasil_login"/>
-          <include name="input_username_valid_dan_password_invalid_dan_tekan_login"/>
-          <include name="input_username_dan_password_valid_sebagai_surveyor"/>
-          <include name="input_password_tanpa_username_dan_tekan_login"/>
-          <include name="input_password_panjang_dan_tekan_login"/>
           <include name="reset"/>
-          <include name="input_password_valid_dengan_huruf_besar_kecil_dan_tekan_login"/>
-          <include name="username_dan_password_kosong"/>
+          <include name="cek_fitur_search_newData"/>
         </methods>
-      </class> <!-- com.nexsoft.jcb.test.TestModulLogin -->
+      </class> <!-- com.nexsoft.jcb.test.TestFiturNewData -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
