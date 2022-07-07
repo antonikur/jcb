@@ -191,6 +191,8 @@ public class JCBMasterAreaPage {
 		return PageFactory.initElements(driver, JCBLoginPage.class);
 	}
 	
-	
+	public WebDriver getDriver() {
+		return driver;
+	}
 	
 }

@@ -5,8 +5,8 @@
     <classes>
       <class name="com.nexsoft.jcb.test.TestModulDataMerchant">
         <methods>
+          <include name="tekan_tombol_collapse_or_expand"/>
           <include name="initial"/>
-          <include name="tekan_menu_data_merchant"/>
           <include name="reset"/>
           <include name="logout"/>
         </methods>

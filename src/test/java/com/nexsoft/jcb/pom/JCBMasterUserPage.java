@@ -30,6 +30,9 @@ public class JCBMasterUserPage {
 	@FindBy(xpath = "//a[normalize-space()='Next']")
 	private WebElement btnPageNavNext;
 	
+	@FindBy(xpath = "//a[normalize-space()]")
+	private List<WebElement> listButton;
+	
 	@FindBy(xpath = "//h1[@class='page-header']")
 	private WebElement titleMasterUser;
 	
@@ -169,7 +172,12 @@ public class JCBMasterUserPage {
 		return PageFactory.initElements(driver, JCBMasterUserPage.class);
 	}
 	
+	public List<WebElement> getListButtonForNavigate(){
+		return listButton;
+	}
+	
 	public JCBMasterUserPage inputFieldSearch(String search) {
+		fieldSearch.clear();
 		fieldSearch.sendKeys(search);
 		return PageFactory.initElements(driver, JCBMasterUserPage.class);
 	}
@@ -261,5 +269,9 @@ public class JCBMasterUserPage {
 	
 	public WebElement getElementPanelListTableUser() {
 		return panelListTableUser;
+	}
+	
+	public WebDriver getDriver() {
+		return driver;
 	}
 }

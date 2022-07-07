@@ -177,6 +177,8 @@ public class JCBMasterKotaPage {
 		return tableKolomNo;
 	}
 	
-	
+	public WebDriver getDriver() {
+		return driver;
+	}
 	
 }

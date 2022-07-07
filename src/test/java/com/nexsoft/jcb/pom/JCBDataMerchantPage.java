@@ -10,14 +10,20 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+import com.nexsoft.jcb.other.Tools;
+
 public class JCBDataMerchantPage {
 	protected WebDriver driver;
+	protected Tools tool = new Tools();
 	
 	@FindBy(xpath = "//h1[@class='page-header']")
 	private WebElement titlePageDataMerchant;
 	
 	//search
-	@FindBy(xpath = "//h4[@id='myModalLabel']")
+	//this is new merchant popup title xpath also title popup upload
+	//h4[@id='myModalLabel']
+	
+	@FindBy(xpath = "//input[@placeholder='Search Merchant Name']")
 	private WebElement fieldSearch;
 	
 	@FindBy(xpath = "//button[@class='btn btn-default']")
@@ -29,6 +35,7 @@ public class JCBDataMerchantPage {
 	
 	@FindBy(xpath = "//a[normalize-space()='Upload Data']")
 	private WebElement btnUploadData;
+	
 	
 	//add new merchant
 	@FindBy(xpath = "//a[normalize-space()='Add New Merchant']")
@@ -71,8 +78,7 @@ public class JCBDataMerchantPage {
 	@FindBy(xpath = "//h4[@id='myModalLabel']")
 	private WebElement titlePopupUpload;
 	
-//	@FindBy(name = "excel")
-	@FindBy(xpath = "(//button[@type='submit'])[1]")
+	@FindBy(xpath = "//*[@id=\"modalForm\"]/div/div/div[2]/form/fieldset/div/div/input")
 	private WebElement selectFilePopupUpload;
 	
 	@FindBy(xpath = "(//button[@type='submit'])[2]")
@@ -94,6 +100,9 @@ public class JCBDataMerchantPage {
 	@FindBy(xpath = "//a[normalize-space()='Prev']")
 	private WebElement btnPrevPage;
 	
+	@FindBy(xpath = "//a[normalize-space()]")
+	private List<WebElement> listButton;
+	
 	
 	//Table data merchant
 	@FindBy(xpath = "//td[normalize-space()][1]")
@@ -108,7 +117,7 @@ public class JCBDataMerchantPage {
 	@FindBy(xpath = "//td[normalize-space()][4]")
 	private List<WebElement> tableKolomNamaMerchant;
 	
-	@FindBy(xpath = "//td[normalize-space()]51]")
+	@FindBy(xpath = "//td[normalize-space()][5]")
 	private List<WebElement> tableKolomAddress;
 	
 	@FindBy(xpath = "//td[normalize-space()][6]")
@@ -120,7 +129,32 @@ public class JCBDataMerchantPage {
 	@FindBy(xpath = "//td[normalize-space()][8]")
 	private List<WebElement> tableKolomStatusVisit;
 	
+	//message
+	@FindBy(xpath = "//div[@class='alert alert-success fade show']")
+	private WebElement messsageAddNewMerchantSuccess;
 	
+	@FindBy(xpath = "//p[contains(text(),'The filetype you are attempting to upload is not a')]")
+	private WebElement messageErrorUploadFile;
+	
+	@FindBy(xpath = "//p[normalize-space()='The page you requested was not found.']")
+	private WebElement messageError404;
+	
+	@FindBy(xpath = "//p[normalize-space()='You did not select a file to upload.']")
+	private WebElement messageErrorNoFileSelected;
+	
+	
+	//panel
+	@FindBy(xpath = "//i[@class='fa fa-expand']")
+	private WebElement btnExpandCompress;
+	
+	@FindBy(xpath = "//i[@class='fa fa-minus']")
+	private WebElement btnCollapseExpand;
+	
+	@FindBy(xpath = "//*[@id=\"content\"]/div[1]/div[2]/div")
+	private WebElement panelExpandCompress;
+	
+	@FindBy(xpath = "//*[@id=\"content\"]/div[1]/div[2]/div/div[2]")
+	private WebElement panelCollapseExpand;
 	
 	//delete example xpath
 	//div[@id='content']/div/div[2]/div/div[2]/div/table/tbody/tr[ ]/td[9]/a/i
@@ -135,6 +169,30 @@ public class JCBDataMerchantPage {
 		return titlePageDataMerchant.getText();
 	}
 	
+	public String getMessageAddNewMerchantSuccess() {
+		return messsageAddNewMerchantSuccess.getText();
+	}
+	
+	public WebElement getElementMessageAddMerchantSuccess() {
+		return messsageAddNewMerchantSuccess;
+	}
+	
+	public boolean getStatusNullMessageAddMerchantSuccess() {
+		return messsageAddNewMerchantSuccess == null;
+	}
+	
+	public String getMessageErrorUpload() {
+		return messageErrorUploadFile.getText();
+	}
+	
+	public String getMessageError404() {
+		return messageError404.getText();
+	}
+	
+	public String getMessageErrorFileNotSelected() {
+		return messageErrorNoFileSelected.getText();
+	}
+	
 	//search
 	public JCBDataMerchantPage inputAndClickSearch(String search) {
 		fieldSearch.clear();
@@ -143,9 +201,23 @@ public class JCBDataMerchantPage {
 		return PageFactory.initElements(driver, JCBDataMerchantPage.class);
 	}
 	
+	//navigate
+	public JCBDataMerchantPage clickBtnLastPage() {
+		btnLastPage.click();
+		tool.stopForMoment(1000);
+		return PageFactory.initElements(driver, JCBDataMerchantPage.class);
+	}
+	public JCBDataMerchantPage clickBtnFirstPage() {
+		btnFirstPage.click();
+		tool.stopForMoment(1000);
+		return PageFactory.initElements(driver, JCBDataMerchantPage.class);
+	}
+	
+	
 	//add new
 	public JCBDataMerchantPage clickBtnAddNewMerchant() {
 		btnAddNewMerchant.click();
+		tool.stopForMoment(1500);
 		return PageFactory.initElements(driver, JCBDataMerchantPage.class);
 	}
 	
@@ -179,6 +251,10 @@ public class JCBDataMerchantPage {
 		return titlePopupAddNewMerchant.getText();
 	}
 	
+	public boolean checkTitlePopupAddMerchant() {
+		return titlePopupAddNewMerchant.isDisplayed();
+	}
+	
 	//delete
 	public JCBDataMerchantPage clickDeleteBySelectIndex(String index) {
 		
@@ -201,14 +277,20 @@ public class JCBDataMerchantPage {
 		return tableDataMerchant;
 	}
 	
+	public List<WebElement> getColumnNo(){
+		return tableKolomNo;
+	}
+	
 	//download
 	public JCBDataMerchantPage clickBtnDownload() {
 		btnDownloadTemplate.click();
 		return PageFactory.initElements(driver, JCBDataMerchantPage.class);
 	}
+	
 	//upload
 	public JCBDataMerchantPage clickBtnUploadData() {
 		btnUploadData.click();
+		tool.stopForMoment(1500);
 		return PageFactory.initElements(driver, JCBDataMerchantPage.class);
 	}
 	
@@ -219,6 +301,7 @@ public class JCBDataMerchantPage {
 	
 	public JCBDataMerchantPage clickBtnCancelPopupUpload() {
 		btnCancelPopupUpload.click();
+		tool.stopForMoment(1500);
 		return PageFactory.initElements(driver, JCBDataMerchantPage.class);
 	}
 	
@@ -239,4 +322,45 @@ public class JCBDataMerchantPage {
 	public String getTitlePopupUpload() {
 		return titlePopupUpload.getText();
 	}
+	
+	public boolean checkTitlePopupUpload() {
+		return titlePopupUpload.isDisplayed();
+	}
+	
+	//delete
+	public JCBDataMerchantPage deleteDataMerchantByIndex(String index) {
+		//div[@id='content']/div/div[2]/div/div[2]/div/table/tbody/tr[3]/td[9]/a/i
+		driver.findElement(By.xpath("//div[@id='content']/div/div[2]/div/div[2]/div/table/tbody/tr["+index+"]/td[9]/a/i")).click();
+		driver.switchTo().alert().accept();
+		return PageFactory.initElements(driver, JCBDataMerchantPage.class);
+	}
+	
+	//panel
+	public WebElement getPanelViewDataMerchant() {
+		return panelExpandCompress;
+	}
+	
+	public WebElement getPanelViewListTableMerchant() {
+		return panelCollapseExpand;
+	}
+	
+	public JCBDataMerchantPage clickBtnExpandCompress() {
+		btnExpandCompress.click();
+		return PageFactory.initElements(driver, JCBDataMerchantPage.class);
+	}
+	
+	public JCBDataMerchantPage clickBtnCollapseExpand() {
+		btnCollapseExpand.click();
+		tool.stopForMoment(1500);
+		return PageFactory.initElements(driver, JCBDataMerchantPage.class); 
+	}
+	
+	public WebDriver getDriver() {
+		return driver;
+	}
+	
+	public List<WebElement> getListButtonForNavigate(){
+		return listButton;
+	}
+	
 }

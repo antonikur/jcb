@@ -17,7 +17,6 @@ import com.nexsoft.jcb.pom.JCBMonitoringPage;
 
 public class TestModulDashboard {
 	protected WebDriver driver;
-//	protected WebDriverWait wait;
 	protected Tools tool;
 	protected JCBHomePage homePage;
 	
