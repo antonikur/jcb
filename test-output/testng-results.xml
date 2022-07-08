@@ -2,24 +2,24 @@
 <testng-results ignored="91" total="92" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-07-07T20:26:13 WIB" name="Default suite" finished-at="2022-07-07T20:26:23 WIB" duration-ms="10087">
+  <suite started-at="2022-07-07T23:09:16 WIB" name="Default suite" finished-at="2022-07-07T23:09:32 WIB" duration-ms="15176">
     <groups>
     </groups>
-    <test started-at="2022-07-07T20:26:13 WIB" name="Default test" finished-at="2022-07-07T20:26:23 WIB" duration-ms="10087">
+    <test started-at="2022-07-07T23:09:16 WIB" name="Default test" finished-at="2022-07-07T23:09:32 WIB" duration-ms="15176">
       <class name="com.nexsoft.jcb.test.TestModulMaster">
-        <test-method is-config="true" signature="initial()[pri:0, instance:com.nexsoft.jcb.test.TestModulMaster@6bbe85a8]" started-at="2022-07-07T20:26:13 WIB" name="initial" finished-at="2022-07-07T20:26:17 WIB" duration-ms="3954" status="PASS">
+        <test-method is-config="true" signature="initial()[pri:0, instance:com.nexsoft.jcb.test.TestModulMaster@4be29ed9]" started-at="2022-07-07T23:09:17 WIB" name="initial" finished-at="2022-07-07T23:09:22 WIB" duration-ms="5805" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initial -->
-        <test-method is-config="true" signature="reset()[pri:0, instance:com.nexsoft.jcb.test.TestModulMaster@6bbe85a8]" started-at="2022-07-07T20:26:17 WIB" name="reset" finished-at="2022-07-07T20:26:19 WIB" duration-ms="2720" status="PASS">
+        <test-method is-config="true" signature="reset()[pri:0, instance:com.nexsoft.jcb.test.TestModulMaster@4be29ed9]" started-at="2022-07-07T23:09:22 WIB" name="reset" finished-at="2022-07-07T23:09:25 WIB" duration-ms="2912" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reset -->
-        <test-method signature="tekan_tombol_collapse_or_expand_di_user()[pri:12, instance:com.nexsoft.jcb.test.TestModulMaster@6bbe85a8]" started-at="2022-07-07T20:26:19 WIB" name="tekan_tombol_collapse_or_expand_di_user" finished-at="2022-07-07T20:26:22 WIB" duration-ms="3080" status="PASS">
+        <test-method signature="tekan_tombol_delete_pada_baris_user_ketika_kotak_view_data_user_di_expand()[pri:41, instance:com.nexsoft.jcb.test.TestModulMaster@4be29ed9]" started-at="2022-07-07T23:09:25 WIB" name="tekan_tombol_delete_pada_baris_user_ketika_kotak_view_data_user_di_expand" finished-at="2022-07-07T23:09:31 WIB" duration-ms="5275" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tekan_tombol_collapse_or_expand_di_user -->
-        <test-method is-config="true" signature="logout()[pri:0, instance:com.nexsoft.jcb.test.TestModulMaster@6bbe85a8]" started-at="2022-07-07T20:26:22 WIB" name="logout" finished-at="2022-07-07T20:26:23 WIB" duration-ms="288" status="PASS">
+        </test-method> <!-- tekan_tombol_delete_pada_baris_user_ketika_kotak_view_data_user_di_expand -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:com.nexsoft.jcb.test.TestModulMaster@4be29ed9]" started-at="2022-07-07T23:09:31 WIB" name="logout" finished-at="2022-07-07T23:09:32 WIB" duration-ms="1073" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logout -->

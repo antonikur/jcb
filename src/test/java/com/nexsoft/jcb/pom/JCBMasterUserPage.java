@@ -8,7 +8,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.nexsoft.jcb.other.Tools;
 
@@ -120,6 +122,7 @@ public class JCBMasterUserPage {
 	
 	
 	public JCBMasterUserPage clickAddNewUser() {
+		tool.scrollVerticalWindows(driver, -1000);
 		btnAddNewUser.click();
 		tool.stopForMoment();
 		return PageFactory.initElements(driver, JCBMasterUserPage.class);
@@ -183,28 +186,53 @@ public class JCBMasterUserPage {
 	}
 	
 	//edit user
-	public JCBMasterUserPage clickEditUserByNo(String index) {
+	public JCBMasterUserPage clickEditUserByNo(String no) {
 		//button to view edit and delete
-		driver.findElement(By.xpath("//td[normalize-space()='"+index+"']")).click();		
+		driver.findElement(By.xpath("//td[normalize-space()='"+no+"']")).click();		
+		
+		//search index
+		int index = Integer.parseInt(no)%10;
 		
 		//button edit
-		driver.findElement(By.xpath("//table[@id='data-table-default']/tbody/tr["+ (Integer.parseInt(index)+1) +"]/td/ul/li/span[2]/a[1]/i")).click();
+		driver.findElement(By.xpath("//table[@id='data-table-default']/tbody/tr["+ (index+1) +"]/td/ul/li/span[2]/a[1]/i")).click();
 		
 		tool.stopForMoment();
 		
 		return PageFactory.initElements(driver, JCBMasterUserPage.class);
 	}
 	
+	public JCBMasterUserPage clickEditUserByIndexWhenExpand(String index) {
+		//table[@id='data-table-default']/tbody/tr[1]/td[5]/a/i
+		//table[@id='data-table-default']/tbody/tr[2]/td[5]/a/i
+		driver.findElement(By.xpath("//table[@id='data-table-default']/tbody/tr["+index+"]/td[5]/a/i")).click();
+		
+		return PageFactory.initElements(driver, JCBMasterUserPage.class);
+	}
 	
-	public JCBMasterUserPage clickDeleteUserByNo(String index) {
+	public JCBMasterUserPage clickPlusForExpandActionByNoInUser(String noUser) {
+		driver.findElement(By.xpath("//td[normalize-space()='"+noUser+"']")).click();
+		return PageFactory.initElements(driver, JCBMasterUserPage.class);
+	}
+	
+	public JCBMasterUserPage clickDeleteUserByNo(String no) {
 		//button to view edit and delete
-		driver.findElement(By.xpath("//td[normalize-space()='"+index+"']")).click();
+		driver.findElement(By.xpath("//td[normalize-space()='"+no+"']")).click();
+		
+		//search index
+		int index = Integer.parseInt(no)%10;
 		
 		//button delete
-		driver.findElement(By.xpath("//table[@id='data-table-default']/tbody/tr["+(Integer.parseInt(index)+1)+"]/td/ul/li/span[2]/a[2]/i")).click();
-		
+		driver.findElement(By.xpath("//table[@id='data-table-default']/tbody/tr["+(index+1)+"]/td/ul/li/span[2]/a[2]/i")).click();
 		driver.switchTo().alert().accept();
 		
+		return PageFactory.initElements(driver, JCBMasterUserPage.class);
+	}
+	
+	public JCBMasterUserPage clickDeleteUserByIndexWhenExpand(String index) {
+		//table[@id='data-table-default']/tbody/tr[1]/td[5]/a[2]/i
+		//table[@id='data-table-default']/tbody/tr[2]/td[5]/a[2]/i
+		driver.findElement(By.xpath("//table[@id='data-table-default']/tbody/tr["+index+"]/td[5]/a[2]/i")).click();
+		driver.switchTo().alert().accept();
 		return PageFactory.initElements(driver, JCBMasterUserPage.class);
 	}
 	
@@ -273,5 +301,9 @@ public class JCBMasterUserPage {
 	
 	public WebDriver getDriver() {
 		return driver;
+	}
+	
+	public WebElement getElementTitlePopupEditUser() {
+		return titlePopupEditUser;
 	}
 }

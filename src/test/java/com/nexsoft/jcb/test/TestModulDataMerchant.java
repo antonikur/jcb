@@ -56,26 +56,27 @@ public class TestModulDataMerchant {
 		driver.findElement(By.xpath("//span[normalize-space()='Logout']")).click();;
 	}
 	
-	@Test(priority = 46)
-	public void tekan_menu_data_merchant(){
-		String actual = homePage.clickAndGotoMenuDataMerchant()
-		.getTitleDataMerchantPage().trim();
-		
-		assertEquals(actual, "Data Merchant");
-	}
+
 	
 	//other tools
 	//#############################################################################################
 	//#############################################################################################
-	public int getNoLastInLastPageThanGoBackToStart(WebDriver driver) {
+	public int getNoLastInLastPage(WebDriver driver) {
 		int lastNo = 0;
 		JCBDataMerchantPage merchantPage = PageFactory.initElements(driver, JCBDataMerchantPage.class);
 		merchantPage.clickBtnLastPage();
 		List<WebElement> listNo = merchantPage.getColumnNo();
 		lastNo = Integer.parseInt(listNo.get(listNo.size()-1).getText());
 		
-		//go to start page
-		merchantPage.clickBtnFirstPage();
+		
+		
+		return lastNo;
+	}
+	
+	public int getNoLastInCurrentPage(List<WebElement> listNo) {
+		int lastNo = 0;
+		
+		lastNo = Integer.parseInt(listNo.get(listNo.size()-1).getText());
 		
 		return lastNo;
 	}
@@ -107,6 +108,14 @@ public class TestModulDataMerchant {
 	
 	//#############################################################################################
 	//#############################################################################################
+	
+	@Test(priority = 46)
+	public void tekan_menu_data_merchant(){
+		String actual = homePage.clickAndGotoMenuDataMerchant()
+		.getTitleDataMerchantPage().trim();
+		
+		assertEquals(actual, "Data Merchant");
+	}
 	
 	@Test(priority = 47)
 	public void input_search_merchant_name_by_nama_merchant_dan_tekan_search() {
@@ -310,7 +319,7 @@ public class TestModulDataMerchant {
 	
 	@Test(priority = 21)
 	public void data_batch_kosong_or_tidak_pilih_di_new_merchant_dan_save(){
-
+		homePage.clickAndGotoMenuDataMerchant();
 	}
 	
 	@Test(priority = 22)

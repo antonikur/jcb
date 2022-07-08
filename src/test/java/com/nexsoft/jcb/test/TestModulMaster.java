@@ -384,17 +384,34 @@ public class TestModulMaster {
 	
 	@Test(priority = 13)
 	public void tekan_tombol_navigasi_previous_halaman_di_user(){
+		JCBMasterUserPage userPage = homePage.clickAndGotoMenuMasterUser();
+		userPage.clickPageNumber("2");
+		
+		userPage.clickPreviousPage();
+		
+		int noLast = getNoLastInPage(userPage.getColumnNo());
+		assertTrue(noLast == 10);
 		
 	}
 	
 	@Test(priority = 14)
 	public void tekan_tombol_navigasi_nomor_halaman_di_user(){
+		int pageNo = 3;
+		JCBMasterUserPage userPage = homePage.clickAndGotoMenuMasterUser();
+		userPage.clickPageNumber(Integer.toString(pageNo));
+		
+		int noLast = getNoLastInPage(userPage.getColumnNo());
+		assertTrue(noLast == (pageNo*10));
 		
 	}
 	
 	@Test(priority = 15)
 	public void tekan_tombol_navigasi_next_halaman_di_user(){
+		JCBMasterUserPage userPage = homePage.clickAndGotoMenuMasterUser();
+		userPage.clickNextPage();
 		
+		int noLast = getNoLastInPage(userPage.getColumnNo());
+		assertTrue(noLast == 20);
 	}
 	
 	@Test(priority = 16)
@@ -422,97 +439,303 @@ public class TestModulMaster {
 		
 		//after add
 		int sizeAfterAddData = getNoLastInLastPage(userPage.getDriver());
-		assertTrue(sizeBeforeAddData < sizeAfterAddData);
+		//data is increased because data success added
+		assertTrue(sizeBeforeAddData < sizeAfterAddData, "Data should be increased because data success created");
 	}
 	
 	@Test(priority = 18)
 	public void input_data_nik_invalid_di_new_user_dan_save(){
-
+		JCBMasterUserPage userPage = homePage.clickAndGotoMenuMasterUser();
+		//before add
+		int sizeBeforeAddData = getNoLastInLastPage(userPage.getDriver());
+		
+		userPage.clickAddNewUser()
+				.inputAllAddUserField("&@^$%!#ad#$!134#", "kur nia", "kur_niawan", "123@!$4ad5", "4")
+				.clickBtnSave();
+		
+		//after add
+		int sizeAfterAddData = getNoLastInLastPage(userPage.getDriver());
+		//should be same sine its was error and no new data created
+		assertTrue(sizeBeforeAddData == sizeAfterAddData, "Data amount should be same since its was error and no new data created");
 	}
 	
 	@Test(priority = 19)
 	public void input_data_name_invalid_di_new_user_dan_save(){
-
+		JCBMasterUserPage userPage = homePage.clickAndGotoMenuMasterUser();
+		//before add
+		int sizeBeforeAddData = getNoLastInLastPage(userPage.getDriver());
+		
+		userPage.clickAddNewUser()
+				.inputAllAddUserField("K1234654", "&@^$%!#ad#$!134#", "kur_niawan", "123@!$4ad5", "4")
+				.clickBtnSave();
+		
+		//after add
+		int sizeAfterAddData = getNoLastInLastPage(userPage.getDriver());
+		//should be same sine its was error and no new data created
+		assertTrue(sizeBeforeAddData == sizeAfterAddData, "Data amount should be same since its was error and no new data created");
 	}
 	
 	@Test(priority = 20)
 	public void input_data_username_invalid_di_new_user_dan_save(){
-
+		JCBMasterUserPage userPage = homePage.clickAndGotoMenuMasterUser();
+		//before add
+		int sizeBeforeAddData = getNoLastInLastPage(userPage.getDriver());
+		
+		userPage.clickAddNewUser()
+				.inputAllAddUserField("K1234654", "kur nia", "&@^$%!#ad#$!134#", "123@!$4ad5", "4")
+				.clickBtnSave();
+		
+		//after add
+		int sizeAfterAddData = getNoLastInLastPage(userPage.getDriver());
+		//should be same sine its was error and no new data created
+		assertTrue(sizeBeforeAddData == sizeAfterAddData, "Data amount should be same since its was error and no new data created");
 	}
 	
 	@Test(priority = 21)
 	public void data_nik_kosong_di_new_user_dan_save(){
-
+		JCBMasterUserPage userPage = homePage.clickAndGotoMenuMasterUser();
+		//before add
+		int sizeBeforeAddData = getNoLastInLastPage(userPage.getDriver());
+		
+		userPage.clickAddNewUser()
+				.inputAllAddUserField("", "kur nia", "kur_niawan", "123@!$4ad5", "4")
+				.clickBtnSave();
+		
+		//after add
+		int sizeAfterAddData = getNoLastInLastPage(userPage.getDriver());
+		//should be same sine its was error and no new data created
+		assertTrue(sizeBeforeAddData == sizeAfterAddData, "Data amount should be same since its was error and no new data created");
 	}
 	
 	@Test(priority = 22)
 	public void data_name_kosong_di_new_user_dan_save(){
-
+		JCBMasterUserPage userPage = homePage.clickAndGotoMenuMasterUser();
+		//before add
+		int sizeBeforeAddData = getNoLastInLastPage(userPage.getDriver());
+		
+		userPage.clickAddNewUser()
+				.inputAllAddUserField("K1234654", "", "kur_niawan", "123@!$4ad5", "4")
+				.clickBtnSave();
+		
+		//after add
+		int sizeAfterAddData = getNoLastInLastPage(userPage.getDriver());
+		//should be same sine its was error and no new data created
+		assertTrue(sizeBeforeAddData == sizeAfterAddData, "Data amount should be same since its was error and no new data created");
 	}
 	
 	@Test(priority = 23)
 	public void data_username_kosong_di_new_user_dan_save(){
-
+		JCBMasterUserPage userPage = homePage.clickAndGotoMenuMasterUser();
+		//before add
+		int sizeBeforeAddData = getNoLastInLastPage(userPage.getDriver());
+		
+		userPage.clickAddNewUser()
+				.inputAllAddUserField("K1234654", "kur nia", "", "123@!$4ad5", "4")
+				.clickBtnSave();
+		
+		//after add
+		int sizeAfterAddData = getNoLastInLastPage(userPage.getDriver());
+		//should be same sine its was error and no new data created
+		assertTrue(sizeBeforeAddData == sizeAfterAddData, "Data amount should be same since its was error and no new data created");
 	}
 	
 	@Test(priority = 24)
 	public void data_password_kosong_di_new_user_dan_save(){
-
+		JCBMasterUserPage userPage = homePage.clickAndGotoMenuMasterUser();
+		//before add
+		int sizeBeforeAddData = getNoLastInLastPage(userPage.getDriver());
+		
+		userPage.clickAddNewUser()
+				.inputAllAddUserField("K1234654", "kur nia", "kur_niawan", "", "4")
+				.clickBtnSave();
+		
+		//after add
+		int sizeAfterAddData = getNoLastInLastPage(userPage.getDriver());
+		//should be same sine its was error and no new data created
+		assertTrue(sizeBeforeAddData == sizeAfterAddData, "Data amount should be same since its was error and no new data created");
 	}
 	
 	@Test(priority = 25)
 	public void data_privilage_pilih_default_di_new_user_dan_save(){
-
+		JCBMasterUserPage userPage = homePage.clickAndGotoMenuMasterUser();
+		//before add
+		int sizeBeforeAddData = getNoLastInLastPage(userPage.getDriver());
+		
+		userPage.clickAddNewUser()
+				.inputAllAddUserField("K1234654", "kur nia", "kur_niawan", "123@!$4ad5", "")
+				.clickBtnSave();
+		
+		//after add
+		int sizeAfterAddData = getNoLastInLastPage(userPage.getDriver());
+		//should be same sine its was error and no new data created
+		assertTrue(sizeBeforeAddData == sizeAfterAddData, "Data amount should be same since its was error and no new data created");
 	}
 	
 	@Test(priority = 26)
 	public void data_nik_panjang_di_new_user_dan_save(){
-
+		JCBMasterUserPage userPage = homePage.clickAndGotoMenuMasterUser();
+		//before add
+		int sizeBeforeAddData = getNoLastInLastPage(userPage.getDriver());
+		
+		userPage.clickAddNewUser()
+				.inputAllAddUserField("K1231231231231312313122413413412312312312312312313123131224134134123123123123123123131231312241341341231231231231231231312313122413413412312312312312312313123131224134134123123123123123123131231312241341341231231231231231231312313122413413412312312312312312313123131224134134123123452434", 
+						"kur nia", "kur_niawan", "123@!$4ad5", "4")
+				.clickBtnSave();
+		
+		//after add
+		int sizeAfterAddData = getNoLastInLastPage(userPage.getDriver());
+		//should be same sine its was error and no new data created
+		assertTrue(sizeBeforeAddData == sizeAfterAddData, "Data amount should be same since its was error and no new data created");
 	}
 	
 	@Test(priority = 27)
 	public void data_name_panjang_di_new_user_dan_save(){
-
+		JCBMasterUserPage userPage = homePage.clickAndGotoMenuMasterUser();
+		//before add
+		int sizeBeforeAddData = getNoLastInLastPage(userPage.getDriver());
+		
+		userPage.clickAddNewUser()
+				.inputAllAddUserField("K1234654", 
+						"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 
+						"kur_niawan", "123@!$4ad5", "4")
+				.clickBtnSave();
+		
+		//after add
+		int sizeAfterAddData = getNoLastInLastPage(userPage.getDriver());
+		//should be same sine its was error and no new data created
+		assertTrue(sizeBeforeAddData == sizeAfterAddData, "Data amount should be same since its was error and no new data created");
 	}
 	
 	@Test(priority = 28)
 	public void data_username_panjang_di_new_user_dan_save(){
-
+		JCBMasterUserPage userPage = homePage.clickAndGotoMenuMasterUser();
+		//before add
+		int sizeBeforeAddData = getNoLastInLastPage(userPage.getDriver());
+		
+		userPage.clickAddNewUser()
+				.inputAllAddUserField("K1234654", "kur nia", 
+						"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa_aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 
+						"123@!$4ad5", "4")
+				.clickBtnSave();
+		
+		//after add
+		int sizeAfterAddData = getNoLastInLastPage(userPage.getDriver());
+		//should be same sine its was error and no new data created
+		assertTrue(sizeBeforeAddData == sizeAfterAddData, "Data amount should be same since its was error and no new data created");
 	}
 	
 	@Test(priority = 29)
 	public void data_password_panjang_di_new_user_dan_save(){
-
+		JCBMasterUserPage userPage = homePage.clickAndGotoMenuMasterUser();
+		//before add
+		int sizeBeforeAddData = getNoLastInLastPage(userPage.getDriver());
+		
+		userPage.clickAddNewUser()
+				.inputAllAddUserField("K1234654", "kur nia", "kur_niawan", 
+						"aaaa@aaaaaaaaaaaaaaa6aaaaaaaaaaaaaaaaaaaaaaa4aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa8aaaaaaaaa2aaaaaaaaaa2aaaaaaaaaaaaaaaaaa5aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa$aaaaaaaa9aaaa", 
+						"4")
+				.clickBtnSave();
+		
+		//after add
+		int sizeAfterAddData = getNoLastInLastPage(userPage.getDriver());
+		//should be same sine its was error and no new data created
+		assertTrue(sizeBeforeAddData == sizeAfterAddData, "Data amount should be same since its was error and no new data created");
 	}
 	
 	@Test(priority = 30)
 	public void data_nik_di_isi_white_space_di_new_user_dan_save(){
-
+		JCBMasterUserPage userPage = homePage.clickAndGotoMenuMasterUser();
+		//before add
+		int sizeBeforeAddData = getNoLastInLastPage(userPage.getDriver());
+		
+		userPage.clickAddNewUser()
+				.inputAllAddUserField("     ", "kur nia", "kur_niawan", "123@!$4ad5","4")
+				.clickBtnSave();
+		
+		//after add
+		int sizeAfterAddData = getNoLastInLastPage(userPage.getDriver());
+		//should be same sine its was error and no new data created
+		assertTrue(sizeBeforeAddData == sizeAfterAddData, "Data amount should be same since its was error and no new data created");
 	}
 	
 	@Test(priority = 31)
 	public void data_name_di_isi_white_space_di_new_user_dan_save(){
-
+		JCBMasterUserPage userPage = homePage.clickAndGotoMenuMasterUser();
+		//before add
+		int sizeBeforeAddData = getNoLastInLastPage(userPage.getDriver());
+		
+		userPage.clickAddNewUser()
+				.inputAllAddUserField("K1234654", "     ", "kur_niawan", "123@!$4ad5","4")
+				.clickBtnSave();
+		
+		//after add
+		int sizeAfterAddData = getNoLastInLastPage(userPage.getDriver());
+		//should be same sine its was error and no new data created
+		assertTrue(sizeBeforeAddData == sizeAfterAddData, "Data amount should be same since its was error and no new data created");
 	}
 	
 	@Test(priority = 32)
 	public void data_username_di_isi_white_space_di_new_user_dan_save(){
-
+		JCBMasterUserPage userPage = homePage.clickAndGotoMenuMasterUser();
+		//before add
+		int sizeBeforeAddData = getNoLastInLastPage(userPage.getDriver());
+		
+		userPage.clickAddNewUser()
+				.inputAllAddUserField("K1234654", "kur nia", "     ", "123@!$4ad5","4")
+				.clickBtnSave();
+		
+		//after add
+		int sizeAfterAddData = getNoLastInLastPage(userPage.getDriver());
+		//should be same sine its was error and no new data created
+		assertTrue(sizeBeforeAddData == sizeAfterAddData, "Data amount should be same since its was error and no new data created");
 	}
 	
 	@Test(priority = 33)
 	public void data_pass_di_isi_white_space_di_new_user_dan_save(){
-
+		JCBMasterUserPage userPage = homePage.clickAndGotoMenuMasterUser();
+		//before add
+		int sizeBeforeAddData = getNoLastInLastPage(userPage.getDriver());
+		
+		userPage.clickAddNewUser()
+				.inputAllAddUserField("K1234654", "kur nia", "kur_niawan", "     ","4")
+				.clickBtnSave();
+		
+		//after add
+		int sizeAfterAddData = getNoLastInLastPage(userPage.getDriver());
+		//should be same sine its was error and no new data created
+		assertTrue(sizeBeforeAddData == sizeAfterAddData, "Data amount should be same since its was error and no new data created");
 	}
 	
 	@Test(priority = 34)
 	public void input_data_valid_di_new_user_dan_cancel(){
-
+		JCBMasterUserPage userPage = homePage.clickAndGotoMenuMasterUser();
+		//before add
+		int sizeBeforeAddData = getNoLastInLastPage(userPage.getDriver());
+		
+		userPage.clickAddNewUser()
+				.inputAllAddUserField("K1234654", "kur nia", "kur_niawan", "123@!$4ad5","4")
+				.clickBtnCancel();
+		
+		//after add
+		int sizeAfterAddData = getNoLastInLastPage(userPage.getDriver());
+		//should be same sine its was error and no new data created
+		assertTrue(sizeBeforeAddData == sizeAfterAddData, "Data amount should be same since there is no new data created");
 	}
 	
 	@Test(priority = 35)
 	public void input_atau_buat_data_valid_yang_sama_persisi(){
-
+		JCBMasterUserPage userPage = homePage.clickAndGotoMenuMasterUser();
+		//before add
+		int sizeBeforeAddData = getNoLastInLastPage(userPage.getDriver());
+		
+		userPage.clickAddNewUser()
+				.inputAllAddUserField("K1234654", "kur nia", "kur_niawan", "123@!$4ad5","4")
+				.clickBtnSave();
+		
+		//after add
+		int sizeAfterAddData = getNoLastInLastPage(userPage.getDriver());
+		//should be same sine its was error and no new data created
+		assertTrue(sizeBeforeAddData == sizeAfterAddData, "Data amount should be same since its was error and no new data created");
 	}
 	
 	@Test(priority = 36)
@@ -530,32 +753,61 @@ public class TestModulMaster {
 	
 	@Test(priority = 37)
 	public void tekan_tombol_edit_pada_baris_user_ketika_kotak_view_data_user_di_expand(){
+//		String actual
+		JCBMasterUserPage userPage = homePage.clickAndGotoMenuMasterUser();
+		userPage.clickBtnExpandCompress();
+		userPage.clickEditUserByIndexWhenExpand("1");
 		
+		boolean titleIsDisplayed = userPage.getElementTitlePopupEditUser().isDisplayed();
+		System.out.println(titleIsDisplayed);
+//		.getTitlePopupEditUser();
+		
+		//for logout
+		userPage.clickBtnExpandCompress();
+		userPage.clickBtnCancelPopupEdit();
+		
+		assertTrue(titleIsDisplayed, "Popup is not displayed");
 	}
 	
 	@Test(priority = 38)
 	public void ubah_data_user_di_pop_up_edit_dan_tekan_save(){
-		fail("No field in edit popup");
+		fail("No field in edit popup user");
 	}
 	
 	@Test(priority = 39)
 	public void ubah_data_user_di_pop_up_edit_dan_tekan_cancel_or_silang_di_user(){
-		fail("No field in edit popup");
+		fail("No field in edit popup user");
 	}
 	
 	@Test(priority = 40)
 	public void tekan_tombol_delete_pada_baris_user(){
-		String actual = homePage.clickAndGotoMenuMasterUser()
-		.selectDropdownListEntriesByValue("100")
-		.clickDeleteUserByNo("100")
-		.getMessageDeleteSuccess();
 		
+		JCBMasterUserPage userPage = homePage.clickAndGotoMenuMasterUser();
+		int sizeBeforeDelete = getNoLastInLastPage(driver);
 		
-		assertTrue(actual.contains("Data berhasil dihapus."));
+		//delete
+		String lastNo = Integer.toString(getNoLastInPage(userPage.getColumnNo()));
+		userPage.clickDeleteUserByNo(lastNo);
+		
+		int sizeAfterDelete = getNoLastInLastPage(driver);
+		assertTrue(sizeBeforeDelete > sizeAfterDelete);
 	}
 	
 	@Test(priority = 41)
 	public void tekan_tombol_delete_pada_baris_user_ketika_kotak_view_data_user_di_expand(){
+		JCBMasterUserPage userPage = homePage.clickAndGotoMenuMasterUser();
+		int sizeBeforeDelete = getNoLastInLastPage(userPage.getDriver());
+		
+		//delete when expand
+		int lastNo = getNoLastInPage(userPage.getColumnNo());
+		String index = Integer.toString(lastNo % 10);
+		userPage.clickBtnExpandCompress();
+		userPage.clickDeleteUserByIndexWhenExpand(index);
+		
+		int sizeAfterDelete = getNoLastInLastPage(userPage.getDriver());
+				
+		//assert
+		assertTrue(sizeBeforeDelete > sizeAfterDelete);
 		
 	}
 	

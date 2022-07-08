@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.nexsoft.jcb.test.TestModulDataMerchant">
+      <class name="com.nexsoft.jcb.test.TestModulMaster">
         <methods>
-          <include name="tekan_tombol_collapse_or_expand"/>
-          <include name="initial"/>
-          <include name="reset"/>
           <include name="logout"/>
+          <include name="tekan_tombol_delete_pada_baris_user_ketika_kotak_view_data_user_di_expand"/>
+          <include name="reset"/>
+          <include name="initial"/>
         </methods>
-      </class> <!-- com.nexsoft.jcb.test.TestModulDataMerchant -->
+      </class> <!-- com.nexsoft.jcb.test.TestModulMaster -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
