@@ -86,6 +86,7 @@ public class JCBHomePage {
 	public JCBDashboardPage clickAndGotoMenuDashboard() {
 		tool.stopForMoment();
 		menuDashboard.click();
+		tool.stopForMoment(1500);
 		return PageFactory.initElements(driver, JCBDashboardPage.class);
 	}
 	
@@ -115,6 +116,7 @@ public class JCBHomePage {
 	}
 	
 	public String getTxtInfoUser() {
+		tool.stopForMoment(2000);
 		return txtInfoUser.getText();
 	}
 	

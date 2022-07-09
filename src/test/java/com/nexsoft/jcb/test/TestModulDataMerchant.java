@@ -20,7 +20,6 @@ import com.nexsoft.jcb.other.Tools;
 import com.nexsoft.jcb.pom.JCBDataMerchantPage;
 import com.nexsoft.jcb.pom.JCBHomePage;
 import com.nexsoft.jcb.pom.JCBLoginPage;
-import com.nexsoft.jcb.pom.JCBMasterUserPage;
 
 public class TestModulDataMerchant {
 	
@@ -56,8 +55,6 @@ public class TestModulDataMerchant {
 		driver.findElement(By.xpath("//span[normalize-space()='Logout']")).click();;
 	}
 	
-
-	
 	//other tools
 	//#############################################################################################
 	//#############################################################################################
@@ -67,20 +64,22 @@ public class TestModulDataMerchant {
 		merchantPage.clickBtnLastPage();
 		List<WebElement> listNo = merchantPage.getColumnNo();
 		lastNo = Integer.parseInt(listNo.get(listNo.size()-1).getText());
-		
-		
-		
 		return lastNo;
 	}
 	
 	public int getNoLastInCurrentPage(List<WebElement> listNo) {
 		int lastNo = 0;
-		
 		lastNo = Integer.parseInt(listNo.get(listNo.size()-1).getText());
-		
 		return lastNo;
 	}
 	
+	public int getNoFirstInCurrentPage(List<WebElement> listNo) {
+		int firstNo = 0;
+		
+		firstNo = Integer.parseInt(listNo.get(0).getText());
+		
+		return firstNo;
+	}
 	
 	public boolean checkSearchIsCorrect(String keyword, List<List<WebElement>> actualTableMerchant) {
 		boolean isCorrect = false;
@@ -88,9 +87,7 @@ public class TestModulDataMerchant {
 		if(actualTableMerchant.get(3).size() <= 0) {
 			isCorrect = true;
 			System.out.println("No Result");
-//			fail("There is no result form keyword, use keyword that have data");
 		}
-			
 		
 		for(int i=0; i<actualTableMerchant.get(3).size(); i++) {//check data merchant name per row if it contains keyword
 			//if it contain keyword in nama merchant
@@ -106,6 +103,19 @@ public class TestModulDataMerchant {
 		return isCorrect;
 	}
 	
+	public boolean isAttrRequiredPresent(WebElement element) {
+		boolean check = false;
+		try {
+			String value = element.getAttribute("required");
+			if (value != null) {
+				check = true;
+			}
+			return check;
+		} catch (Exception e) {
+			// TODO: handle exception
+			return check = false;
+		}
+	}
 	//#############################################################################################
 	//#############################################################################################
 	
@@ -132,66 +142,137 @@ public class TestModulDataMerchant {
 	
 	@Test(priority = 48)
 	public void input_search_merchant_name_by_no_dan_tekan_search() {
+		String keyword = "30";//input keyword that must have result/data
 		
-//		System.out.println(getNoLastInLastPage(homePage.clickAndGotoMenuDataMerchant().getDriver()) );
+		List<List<WebElement>> actualTableMerchant = homePage.clickAndGotoMenuDataMerchant()
+		.inputAndClickSearch(keyword)
+		.getTableDataMerchant();
+		
+		boolean isCorrect = checkSearchIsCorrect(keyword, actualTableMerchant);
+		
+		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
 	}
 	
 	@Test(priority = 49)
 	public void input_search_merchant_name_by_area_dan_tekan_search() {
+		String keyword = "pelaza senayan";//input keyword that must have result/data
 		
+		List<List<WebElement>> actualTableMerchant = homePage.clickAndGotoMenuDataMerchant()
+		.inputAndClickSearch(keyword)
+		.getTableDataMerchant();
+		
+		boolean isCorrect = checkSearchIsCorrect(keyword, actualTableMerchant);
+		
+		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
 	}
 	
 	@Test(priority = 50)
 	public void input_search_merchant_name_by_batch_dan_tekan_search() {
+		String keyword = "november 2021";//input keyword that must have result/data
 		
+		List<List<WebElement>> actualTableMerchant = homePage.clickAndGotoMenuDataMerchant()
+		.inputAndClickSearch(keyword)
+		.getTableDataMerchant();
+		
+		boolean isCorrect = checkSearchIsCorrect(keyword, actualTableMerchant);
+		
+		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
 	}
 	
 	
 	@Test(priority = 0)
 	public void input_search_merchant_name_by_address_dan_tekan_search(){
+		String keyword = "metro pondok indah";//input keyword that must have result/data
 		
+		List<List<WebElement>> actualTableMerchant = homePage.clickAndGotoMenuDataMerchant()
+		.inputAndClickSearch(keyword)
+		.getTableDataMerchant();
+		
+		boolean isCorrect = checkSearchIsCorrect(keyword, actualTableMerchant);
+		
+		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
 	}
 	
 	@Test(priority = 1)
 	public void input_search_merchant_name_by_category_dan_tekan_search(){
-
+		String keyword = "grocery";//input keyword that must have result/data
+		
+		List<List<WebElement>> actualTableMerchant = homePage.clickAndGotoMenuDataMerchant()
+		.inputAndClickSearch(keyword)
+		.getTableDataMerchant();
+		
+		boolean isCorrect = checkSearchIsCorrect(keyword, actualTableMerchant);
+		
+		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
 	}
 	
 	@Test(priority = 2)
 	public void input_search_merchant_name_by_officer_dan_tekan_search(){
-
+		String keyword = "K1133611";//input keyword that must have result/data
+		
+		List<List<WebElement>> actualTableMerchant = homePage.clickAndGotoMenuDataMerchant()
+		.inputAndClickSearch(keyword)
+		.getTableDataMerchant();
+		
+		boolean isCorrect = checkSearchIsCorrect(keyword, actualTableMerchant);
+		
+		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
 	}
 	
 	@Test(priority = 3)
 	public void input_search_merchant_name_by_status_visit_dan_tekan_search(){
-
+		String keyword = "visited";//input keyword that must have result/data
+		
+		List<List<WebElement>> actualTableMerchant = homePage.clickAndGotoMenuDataMerchant()
+		.inputAndClickSearch(keyword)
+		.getTableDataMerchant();
+		
+		boolean isCorrect = checkSearchIsCorrect(keyword, actualTableMerchant);
+		
+		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
 	}
 	
 	@Test(priority = 4)
 	public void input_search_merchant_name_by_nama_merchant_dengan_spasi_di_awal_dan_akhir_kemudian_tekan_search(){
-
+		String keyword = " shihlin ";//input keyword that must have result/data
+		
+		List<List<WebElement>> actualTableMerchant = homePage.clickAndGotoMenuDataMerchant()
+		.inputAndClickSearch(keyword)
+		.getTableDataMerchant();
+		
+		boolean isCorrect = checkSearchIsCorrect(keyword, actualTableMerchant);
+		
+		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
 	}
 	
 	@Test(priority = 5)
 	public void kolom_search_kosong(){
-
+		String keyword = "";//input keyword that must have result/data
+		
+		List<List<WebElement>> actualTableMerchant = homePage.clickAndGotoMenuDataMerchant()
+		.inputAndClickSearch(keyword)
+		.getTableDataMerchant();
+		
+		boolean isCorrect = checkSearchIsCorrect(keyword, actualTableMerchant);
+		
+		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
 	}
 	
 	@Test(priority = 6)
 	public void tekan_tombol_expand_or_compress(){
 		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant();
-		int totalSizeCompress = merchantPage.getPanelViewDataMerchant().getSize().getHeight() + merchantPage.getPanelViewDataMerchant().getSize().getWidth();
-		System.out.println("compress size: "+totalSizeCompress);
+		int compressWidth = merchantPage.getPanelViewDataMerchant().getSize().getWidth();
+		System.out.println("Compress size: "+compressWidth);
 		
 		merchantPage.clickBtnExpandCompress();
 		
-		int totalSizeExpand = merchantPage.getPanelViewDataMerchant().getSize().getHeight() + merchantPage.getPanelViewDataMerchant().getSize().getWidth();
-		System.out.println("Expand size: "+totalSizeExpand);
+		int expandWidth = merchantPage.getPanelViewDataMerchant().getSize().getWidth();
+		System.out.println("Expand size: "+expandWidth);
 		
 		//compress for logout
 		merchantPage.clickBtnExpandCompress();
 		
-		assertTrue(totalSizeCompress < totalSizeExpand);
+		assertTrue(compressWidth < expandWidth);
 	}
 	
 	@Test(priority = 7)
@@ -211,32 +292,66 @@ public class TestModulDataMerchant {
 	
 	@Test(priority = 8)
 	public void tekan_tombol_navigasi_previous_halaman(){
-
+		String page = "2";
+		List<WebElement> listNo = homePage.clickAndGotoMenuDataMerchant()
+		.clickBtnNumberPage(page)
+		.clickBtnPrevPage()
+		.getColumnNo();
+		int lastNo = getNoLastInCurrentPage(listNo);
+		assertTrue(lastNo > 0 && lastNo < 11);
 	}
 	
 	@Test(priority = 9)
 	public void tekan_tombol_navigasi_nomor_halaman(){
-
+		String page = "3";
+		List<WebElement> listNo = homePage.clickAndGotoMenuDataMerchant()
+		.clickBtnNumberPage(page)
+		.getColumnNo();
+		int lastNo = getNoLastInCurrentPage(listNo);
+		assertTrue(lastNo > ( (Integer.parseInt(page)-1) *10) && lastNo <= (Integer.parseInt(page)*10) );
 	}
 	
 	@Test(priority = 10)
 	public void tekan_tombol_navigasi_next_halaman(){
-
+		List<WebElement> listNo = homePage.clickAndGotoMenuDataMerchant()
+		.clickBtnNextPage()
+		.getColumnNo();
+		int lastNo = getNoLastInCurrentPage(listNo);
+		assertTrue(lastNo > 10 && lastNo <= 20);
 	}
 	
 	@Test(priority = 11)
 	public void tekan_tombol_navigasi_first_halaman(){
-
+		List<WebElement> listNo = homePage.clickAndGotoMenuDataMerchant()
+		.clickBtnLastPage()
+		.clickBtnFirstPage()
+		.getColumnNo();
+		
+		int lastNo = getNoLastInCurrentPage(listNo);
+		
+		assertTrue(lastNo > 0 && lastNo <= 10);
 	}
 	
 	@Test(priority = 12)
 	public void tekan_tombol_navigasi_last_halaman(){
-
+		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant()
+		.clickBtnLastPage();
+		
+		List<WebElement> listNo = merchantPage.getColumnNo();
+		List<WebElement> listPage = merchantPage.getListButtonForNavigate();
+		
+		//get last page
+		int lastPage = Integer.parseInt(listPage.get(listPage.size()-1).getText());
+		System.out.println("last page is: "+lastPage);
+		
+		int lastNo = getNoLastInCurrentPage(listNo);
+		
+		assertTrue(lastNo > ( (lastPage-1) * 10)&& lastNo <= (lastPage * 10));
 	}
 	
 	@Test(priority = 13)
 	public void tekan_tombol_delete_di_dari_data_merchant(){
-		String search = "the duke";
+		String search = "the duke";//using search to reduce accident to other test since this data is created in this test
 		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant()
 		.inputAndClickSearch(search);//before delete, search data first to know how many
 		
@@ -263,30 +378,28 @@ public class TestModulDataMerchant {
 	
 	@Test(priority = 15)
 	public void input_data_valid_di_new_merchant_dan_save(){
-		String search = "the duke";//search for testing
-		
 		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant();
 		
 		//get how many data from search result before add data
-		int beforeAdd = merchantPage.inputAndClickSearch(search)
-		.getColumnNo().size();
+		int beforeAdd = getNoLastInLastPage(merchantPage.getDriver());
+		System.out.println("before add: "+beforeAdd);
 		
 		//add new data valid
 		merchantPage.clickBtnAddNewMerchant()
-		.inputAllFieldAddNewMerchant("November 2021", "JAKARTA", "Plaza Indonesia", "The Duke", "jl. sudirman", "f2", "fnb", "Achmad Faizal")
+		.inputAllFieldAddNewMerchant(
+				"November 2021", 
+				"JAKARTA", 
+				"Plaza Indonesia", 
+				"The Duke", 
+				"jl. sudirman", 
+				"f2", 
+				"fnb", 
+				"Achmad Faizal")
 		.clickBtnSaveAddNewMerchant();
 		
-//		//........................
-//		String message = merchantPage.getMessageAddNewMerchantSuccess();
-//		System.out.println("show message : "+message);
-//		WebElement element = merchantPage.getElementMessageAddMerchantSuccess();
-//		System.out.println("displayed: "+element.isDisplayed());
-//		System.out.println("size: "+element.getSize());
-//		//........................
-		
 		//get how many data from search result after add data
-		int afterAdd = merchantPage.inputAndClickSearch(search)
-				.getColumnNo().size();
+		int afterAdd = getNoLastInLastPage(merchantPage.getDriver());
+		System.out.println("after add: "+afterAdd);
 		
 		//assert
 		assertTrue(beforeAdd < afterAdd);
@@ -294,122 +407,576 @@ public class TestModulDataMerchant {
 	
 	@Test(priority = 16)
 	public void input_batch_invalid_di_new_merchant_dan_save(){
+		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant();
 		
+		//get how many data from search result before add data
+		int beforeAdd = getNoLastInLastPage(merchantPage.getDriver());
+		System.out.println("before add: "+beforeAdd);
+		
+		//add new data valid
+		merchantPage.clickBtnAddNewMerchant()
+		.inputAllFieldAddNewMerchant(
+				"No@34vm 1902", 
+				"JAKARTA", 
+				"Plaza Indonesia", 
+				"The Duke", 
+				"jl. sudirman", 
+				"f2", 
+				"fnb", 
+				"Achmad Faizal")
+		.clickBtnSaveAddNewMerchant();
+		
+		//get how many data from search result after add data
+		int afterAdd = getNoLastInLastPage(merchantPage.getDriver());
+		System.out.println("after add: "+afterAdd);
+		
+		//assert
+		assertTrue(beforeAdd == afterAdd);
 	}
 	
 	@Test(priority = 17)
 	public void input_merchant_name_invalid_di_new_merchant_dan_save(){
+		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant();
 		
+		//get how many data from search result before add data
+		int beforeAdd = getNoLastInLastPage(merchantPage.getDriver());
+		System.out.println("before add: "+beforeAdd);
+		
+		//add new data valid
+		merchantPage.clickBtnAddNewMerchant()
+		.inputAllFieldAddNewMerchant(
+				"November 2021", 
+				"JAKARTA", 
+				"Plaza Indonesia", 
+				"!@%)#$*af!{13]$", 
+				"jl. sudirman", 
+				"f2", 
+				"fnb", 
+				"Achmad Faizal")
+		.clickBtnSaveAddNewMerchant();
+		
+		//get how many data from search result after add data
+		int afterAdd = getNoLastInLastPage(merchantPage.getDriver());
+		System.out.println("after add: "+afterAdd);
+		
+		//assert
+		assertTrue(beforeAdd == afterAdd);
 	}
 	
 	@Test(priority = 18)
 	public void input_address_invalid_di_new_merchant_dan_save(){
-
+		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant();
+		
+		//get how many data from search result before add data
+		int beforeAdd = getNoLastInLastPage(merchantPage.getDriver());
+		System.out.println("before add: "+beforeAdd);
+		
+		//add new data valid
+		merchantPage.clickBtnAddNewMerchant()
+		.inputAllFieldAddNewMerchant(
+				"November 2021", 
+				"JAKARTA", 
+				"Plaza Indonesia", 
+				"The Duke", 
+				"!@%)#$*af!{13]$", 
+				"f2", 
+				"fnb", 
+				"Achmad Faizal")
+		.clickBtnSaveAddNewMerchant();
+		
+		//get how many data from search result after add data
+		int afterAdd = getNoLastInLastPage(merchantPage.getDriver());
+		System.out.println("after add: "+afterAdd);
+		
+		//assert
+		assertTrue(beforeAdd == afterAdd);
 	}
 	
 	@Test(priority = 19)
 	public void input_address_by_floor_invalid_di_new_merchant_dan_save(){
-
+		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant();
+		
+		//get how many data from search result before add data
+		int beforeAdd = getNoLastInLastPage(merchantPage.getDriver());
+		System.out.println("before add: "+beforeAdd);
+		
+		//add new data valid
+		merchantPage.clickBtnAddNewMerchant()
+		.inputAllFieldAddNewMerchant(
+				"November 2021", 
+				"JAKARTA", 
+				"Plaza Indonesia", 
+				"The Duke", 
+				"jl. sudirman", 
+				"!@%)#$*af!{13]$", 
+				"fnb", 
+				"Achmad Faizal")
+		.clickBtnSaveAddNewMerchant();
+		
+		//get how many data from search result after add data
+		int afterAdd = getNoLastInLastPage(merchantPage.getDriver());
+		System.out.println("after add: "+afterAdd);
+		
+		//assert
+		assertTrue(beforeAdd == afterAdd);
 	}
 	
 	@Test(priority = 20)
 	public void input_category_invalid_di_new_merchant_dan_save(){
-
+		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant();
+		
+		//get how many data from search result before add data
+		int beforeAdd = getNoLastInLastPage(merchantPage.getDriver());
+		System.out.println("before add: "+beforeAdd);
+		
+		//add new data valid
+		merchantPage.clickBtnAddNewMerchant()
+		.inputAllFieldAddNewMerchant(
+				"November 2021", 
+				"JAKARTA", 
+				"Plaza Indonesia", 
+				"The Duke", 
+				"jl. sudirman", 
+				"f2", 
+				"!@%)#$*af!{13]$", 
+				"Achmad Faizal")
+		.clickBtnSaveAddNewMerchant();
+		
+		//get how many data from search result after add data
+		int afterAdd = getNoLastInLastPage(merchantPage.getDriver());
+		System.out.println("after add: "+afterAdd);
+		
+		//assert
+		assertTrue(beforeAdd == afterAdd);
 	}
 	
 	@Test(priority = 21)
 	public void data_batch_kosong_or_tidak_pilih_di_new_merchant_dan_save(){
-		homePage.clickAndGotoMenuDataMerchant();
+		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant();
+		merchantPage.clickBtnAddNewMerchant()
+		.inputAllFieldAddNewMerchant(
+				"", 
+				"JAKARTA", 
+				"Plaza Indonesia", 
+				"The Duke", 
+				"jl. sudirman", 
+				"f2", 
+				"fnb", 
+				"Achmad Faizal")
+		.clickBtnSaveAddNewMerchant();
+		boolean elementAttReqPresent = isAttrRequiredPresent(merchantPage.getElementBatch());
+		
+		assertTrue(elementAttReqPresent);
+		merchantPage.clickBtnCancelAddNewMerchant();
 	}
 	
 	@Test(priority = 22)
 	public void data_kota_kosong_or_tidak_pilih_di_new_merchant_dan_save(){
-
+		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant();
+		merchantPage.clickBtnAddNewMerchant()
+		.inputAllFieldAddNewMerchant(
+				"November 2021", 
+				"-- Pilih --", 
+				"Plaza Indonesia", 
+				"The Duke", 
+				"jl. sudirman", 
+				"f2", 
+				"fnb", 
+				"Achmad Faizal")
+		.clickBtnSaveAddNewMerchant();
+		boolean elementAttReqPresent = isAttrRequiredPresent(merchantPage.getElementKota());
+		
+		assertTrue(elementAttReqPresent);
+		merchantPage.clickBtnCancelAddNewMerchant();
 	}
 	
 	@Test(priority = 23)
 	public void data_area_kosong_or_tidak_pilih_di_new_merchant_dan_save(){
-
+		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant();
+		merchantPage.clickBtnAddNewMerchant()
+		.inputAllFieldAddNewMerchant(
+				"November 2021", 
+				"JAKARTA", 
+				"-- Pilih --", 
+				"The Duke", 
+				"jl. sudirman", 
+				"f2", 
+				"fnb", 
+				"Achmad Faizal")
+		.clickBtnSaveAddNewMerchant();
+		boolean elementAttReqPresent = isAttrRequiredPresent(merchantPage.getElementKota());
+		
+		assertTrue(elementAttReqPresent);
+		merchantPage.clickBtnCancelAddNewMerchant();
 	}
 	
 	@Test(priority = 24)
 	public void data_merchant_name_kosong_or_tidak_pilih_di_new_merchant_dan_save(){
-
+		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant();
+		merchantPage.clickBtnAddNewMerchant()
+		.inputAllFieldAddNewMerchant(
+				"November 2021", 
+				"JAKARTA", 
+				"Plaza Indonesia", 
+				"", 
+				"jl. sudirman", 
+				"f2", 
+				"fnb", 
+				"Achmad Faizal")
+		.clickBtnSaveAddNewMerchant();
+		boolean elementAttReqPresent = isAttrRequiredPresent(merchantPage.getElementKota());
+		
+		assertTrue(elementAttReqPresent);
+		merchantPage.clickBtnCancelAddNewMerchant();
 	}
 	
 	@Test(priority = 25)
 	public void data_address_kosong_or_tidak_pilih_di_new_merchant_dan_save(){
-
+		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant();
+		merchantPage.clickBtnAddNewMerchant()
+		.inputAllFieldAddNewMerchant(
+				"November 2021", 
+				"JAKARTA", 
+				"Plaza Indonesia", 
+				"The Duke", 
+				"", 
+				"f2", 
+				"fnb", 
+				"Achmad Faizal")
+		.clickBtnSaveAddNewMerchant();
+		boolean elementAttReqPresent = isAttrRequiredPresent(merchantPage.getElementKota());
+		
+		assertTrue(elementAttReqPresent);
+		merchantPage.clickBtnCancelAddNewMerchant();
 	}
 	
 	@Test(priority = 26)
 	public void data_address_by_floor_kosong_or_tidak_pilih_di_new_merchant_dan_save(){
-
+		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant();
+		merchantPage.clickBtnAddNewMerchant()
+		.inputAllFieldAddNewMerchant(
+				"November 2021", 
+				"JAKARTA", 
+				"Plaza Indonesia", 
+				"The Duke", 
+				"jl. sudirman", 
+				"", 
+				"fnb", 
+				"Achmad Faizal")
+		.clickBtnSaveAddNewMerchant();
+		boolean elementAttReqPresent = isAttrRequiredPresent(merchantPage.getElementKota());
+		
+		assertTrue(elementAttReqPresent);
+		merchantPage.clickBtnCancelAddNewMerchant();
 	}
 	
 	@Test(priority = 27)
 	public void data_category_kosong_or_tidak_pilih_di_new_merchant_dan_save(){
-
+		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant();
+		merchantPage.clickBtnAddNewMerchant()
+		.inputAllFieldAddNewMerchant(
+				"November 2021", 
+				"JAKARTA", 
+				"Plaza Indonesia", 
+				"The Duke", 
+				"jl. sudirman", 
+				"f2", 
+				"", 
+				"Achmad Faizal")
+		.clickBtnSaveAddNewMerchant();
+		boolean elementAttReqPresent = isAttrRequiredPresent(merchantPage.getElementKota());
+		
+		assertTrue(elementAttReqPresent);
+		merchantPage.clickBtnCancelAddNewMerchant();
 	}
 	
 	@Test(priority = 28)
 	public void data_users_kosong_or_tidak_pilih_di_new_merchant_dan_save(){
-
+		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant();
+		merchantPage.clickBtnAddNewMerchant()
+		.inputAllFieldAddNewMerchant(
+				"November 2021", 
+				"JAKARTA", 
+				"Plaza Indonesia", 
+				"The Duke", 
+				"jl. sudirman", 
+				"f2", 
+				"fnb", 
+				"-- Pilih --")
+		.clickBtnSaveAddNewMerchant();
+		boolean elementAttReqPresent = isAttrRequiredPresent(merchantPage.getElementKota());
+		
+		assertTrue(elementAttReqPresent);
+		merchantPage.clickBtnCancelAddNewMerchant();
 	}
 	
 	@Test(priority = 29)
 	public void data_batch_panjang_di_new_merchant_dan_save(){
-
+		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant();
+		
+		//size before add
+		int sizeBeforeAdd = getNoLastInLastPage(merchantPage.getDriver());
+		
+		//test add
+		merchantPage.clickBtnAddNewMerchant()
+		.inputAllFieldAddNewMerchant(
+				"NNnnnnnnnnnnnnnnnnnnnnnoooooooooooooooovvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeemmmmmmmmmmmmmmmmmmmmbbbbbbbbbbbbbbeeeeeeeeeeeeeeeerrrrrrrrrrrrrrr 222222222222222220000000000000000000002222222222222222222222222221111111111111111111111111111111", 
+				"JAKARTA", 
+				"Plaza Indonesia", 
+				"The Duke", 
+				"jl. sudirman", 
+				"f2", 
+				"fnb", 
+				"Achmad Faizal")
+		.clickBtnSaveAddNewMerchant();
+		
+		//size after add
+		int sizeAfterAdd = getNoLastInLastPage(merchantPage.getDriver());
+		assertTrue(sizeBeforeAdd == sizeAfterAdd, "Data is created, should be not since it suppose to be error");
 	}
 	
 	@Test(priority = 30)
 	public void data_merchant_name_panjang_di_new_merchant_dan_save(){
-
+		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant();
+		
+		//size before add
+		int sizeBeforeAdd = getNoLastInLastPage(merchantPage.getDriver());
+		
+		//test add
+		merchantPage.clickBtnAddNewMerchant()
+		.inputAllFieldAddNewMerchant(
+				"November 2021", 
+				"JAKARTA", 
+				"Plaza Indonesia", 
+				"TTTTTTTTTTTTTTTTTTTTTTTTTtttttttttttttttttttthhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhheeeeeeeeeeeeeeeeeeeeeeeeeee DDDDDDDDDDDDDDDDDDDDdddddddddddddddddddddduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuukkkkkkkkkkkkkkkkkkkkkkkkkkkkkkeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee", 
+				"jl. sudirman", 
+				"f2", 
+				"fnb", 
+				"Achmad Faizal")
+		.clickBtnSaveAddNewMerchant();
+		
+		//size after add
+		int sizeAfterAdd = getNoLastInLastPage(merchantPage.getDriver());
+		assertTrue(sizeBeforeAdd == sizeAfterAdd, "Data is created, should be not since it suppose to be error");
 	}
 	
 	@Test(priority = 31)
 	public void data_address_panjang_di_new_merchant_dan_save(){
-
+		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant();
+		
+		//size before add
+		int sizeBeforeAdd = getNoLastInLastPage(merchantPage.getDriver());
+		
+		//test add
+		merchantPage.clickBtnAddNewMerchant()
+		.inputAllFieldAddNewMerchant(
+				"November 2021", 
+				"JAKARTA", 
+				"Plaza Indonesia", 
+				"The Duke", 
+				"JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJjjjjjjjjjjjjjjjjjjjjjjjjjjjllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll...................              SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSsssssssssssssssssssssssssssssssssssssssssssssuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuddddddddddddddddddddddddddddddddddddddddddddddddddddddddddiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiirrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaannnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn", 
+				"f2", 
+				"fnb", 
+				"Achmad Faizal")
+		.clickBtnSaveAddNewMerchant();
+		
+		//size after add
+		int sizeAfterAdd = getNoLastInLastPage(merchantPage.getDriver());
+		assertTrue(sizeBeforeAdd == sizeAfterAdd, "Data is created, should be not since it suppose to be error");
 	}
 	
 	@Test(priority = 32)
 	public void data_address_by_floor_panjang_di_new_merchant_dan_save(){
-
+		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant();
+		
+		//size before add
+		int sizeBeforeAdd = getNoLastInLastPage(merchantPage.getDriver());
+		
+		//test add
+		merchantPage.clickBtnAddNewMerchant()
+		.inputAllFieldAddNewMerchant(
+				"November 2021", 
+				"JAKARTA", 
+				"Plaza Indonesia", 
+				"The Duke", 
+				"jl. sudirman", 
+				"FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff    Lllllllllllllllllllllllllllllllllllllaaaaaaaaaaaaaaaaaaannnnnnnnnnnnnnnnnttttttttttttttttttttttttaaaaaaaaaaaaaaaaaaaaaiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii    222222222222222222222222222222222222222222222222222222222222222222", 
+				"fnb", 
+				"Achmad Faizal")
+		.clickBtnSaveAddNewMerchant();
+		
+		//size after add
+		int sizeAfterAdd = getNoLastInLastPage(merchantPage.getDriver());
+		assertTrue(sizeBeforeAdd == sizeAfterAdd, "Data is created, should be not since it suppose to be error");
 	}
 	
 	@Test(priority = 33)
 	public void data_category_panjang_di_new_merchant_dan_save(){
-
+		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant();
+		
+		//size before add
+		int sizeBeforeAdd = getNoLastInLastPage(merchantPage.getDriver());
+		
+		//test add
+		merchantPage.clickBtnAddNewMerchant()
+		.inputAllFieldAddNewMerchant(
+				"November 2021", 
+				"JAKARTA", 
+				"Plaza Indonesia", 
+				"The Duke", 
+				"jl. sudirman", 
+				"f2", 
+				"CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCccccccccccccccccaaaaaaaaaaaaaaaaaaaaaattttttttttttttttttttttttttttttteeeeeeeeeeeeeeeeeegggggggggggggggggoooooooooooooooooorrrrrrrrrrrrrrrrrrrrryyyyyyyyyyyyyyyyyyyyyyyyyy               FFFFFFFFFFFFFFFFFFFFFnnnnnnnnnnnnnnnnnnnnnnnnBBBBBBBBBBBBBBBBBBBBBBBBBBBBB", 
+				"Achmad Faizal")
+		.clickBtnSaveAddNewMerchant();
+		
+		//size after add
+		int sizeAfterAdd = getNoLastInLastPage(merchantPage.getDriver());
+		assertTrue(sizeBeforeAdd == sizeAfterAdd, "Data is created, should be not since it suppose to be error");
 	}
 	
 	@Test(priority = 34)
 	public void input_data_valid_di_new_merchant_dan_cancel_or_silang(){
-
+		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant();
+		
+		//get how many data from search result before add data
+		int beforeAdd = getNoLastInLastPage(merchantPage.getDriver());
+		System.out.println("before add: "+beforeAdd);
+		
+		//add new data valid
+		merchantPage.clickBtnAddNewMerchant()
+		.inputAllFieldAddNewMerchant(
+				"November 2021", 
+				"JAKARTA", 
+				"Plaza Indonesia", 
+				"The Duke", 
+				"jl. sudirman", 
+				"f2", 
+				"fnb", 
+				"Achmad Faizal")
+		.clickBtnCancelAddNewMerchant();
+		
+		//get how many data from search result after add data
+		int afterAdd = getNoLastInCurrentPage(merchantPage.getColumnNo());
+		System.out.println("after add: "+afterAdd);
+		
+		//assert
+		assertTrue(beforeAdd == afterAdd);
 	}
 	
 	@Test(priority = 35)
 	public void data_batch_di_isi_white_space_di_new_merchant_dan_save(){
-
+		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant();
+		int sizeBeforeAdd = getNoLastInLastPage(merchantPage.getDriver());
+		
+		//test add
+		merchantPage.clickBtnAddNewMerchant()
+		.inputAllFieldAddNewMerchant(
+				"    ", 
+				"JAKARTA", 
+				"Plaza Indonesia", 
+				"The Duke", 
+				"jl. sudirman", 
+				"f2", 
+				"fnb", 
+				"Achmad Faizal")
+		.clickBtnSaveAddNewMerchant();
+		
+		
+		int sizeAfterAdd = getNoLastInLastPage(merchantPage.getDriver());
+		assertTrue(sizeBeforeAdd == sizeAfterAdd, "Data is created, should be not since it suppose to be error");
 	}
 	
 	@Test(priority = 36)
 	public void data_merchant_name_di_isi_white_space_di_new_merchant_dan_save(){
-
+		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant();
+		int sizeBeforeAdd = getNoLastInLastPage(merchantPage.getDriver());
+		
+		//test add
+		merchantPage.clickBtnAddNewMerchant()
+		.inputAllFieldAddNewMerchant(
+				"November 2021", 
+				"JAKARTA", 
+				"Plaza Indonesia", 
+				"     ", 
+				"jl. sudirman", 
+				"f2", 
+				"fnb", 
+				"Achmad Faizal")
+		.clickBtnSaveAddNewMerchant();
+		
+		
+		int sizeAfterAdd = getNoLastInLastPage(merchantPage.getDriver());
+		assertTrue(sizeBeforeAdd == sizeAfterAdd, "Data is created, should be not since it suppose to be error");
 	}
 	
 	@Test(priority = 37)
 	public void data_address_di_isi_white_space_di_new_merchant_dan_save(){
-
+		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant();
+		int sizeBeforeAdd = getNoLastInLastPage(merchantPage.getDriver());
+		
+		//test add
+		merchantPage.clickBtnAddNewMerchant()
+		.inputAllFieldAddNewMerchant(
+				"November 2021", 
+				"JAKARTA", 
+				"Plaza Indonesia", 
+				"The Duke", 
+				"     ", 
+				"f2", 
+				"fnb", 
+				"Achmad Faizal")
+		.clickBtnSaveAddNewMerchant();
+		
+		
+		int sizeAfterAdd = getNoLastInLastPage(merchantPage.getDriver());
+		assertTrue(sizeBeforeAdd == sizeAfterAdd, "Data is created, should be not since it suppose to be error");
 	}
 	
 	@Test(priority = 38)
 	public void data_address_by_floor_di_isi_white_space_di_new_merchant_dan_save(){
-
+		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant();
+		int sizeBeforeAdd = getNoLastInLastPage(merchantPage.getDriver());
+		
+		//test add
+		merchantPage.clickBtnAddNewMerchant()
+		.inputAllFieldAddNewMerchant(
+				"November 2021", 
+				"JAKARTA", 
+				"Plaza Indonesia", 
+				"The Duke", 
+				"jl. sudirman", 
+				"     ", 
+				"fnb", 
+				"Achmad Faizal")
+		.clickBtnSaveAddNewMerchant();
+		
+		
+		int sizeAfterAdd = getNoLastInLastPage(merchantPage.getDriver());
+		assertTrue(sizeBeforeAdd == sizeAfterAdd, "Data is created, should be not since it suppose to be error");
 	}
 	
 	@Test(priority = 39)
 	public void data_category_di_isi_white_space_di_new_merchant_dan_save(){
-
+		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant();
+		int sizeBeforeAdd = getNoLastInLastPage(merchantPage.getDriver());
+		
+		//test add
+		merchantPage.clickBtnAddNewMerchant()
+		.inputAllFieldAddNewMerchant(
+				"November 2021", 
+				"JAKARTA", 
+				"Plaza Indonesia", 
+				"The Duke", 
+				"jl. sudirman", 
+				"f2", 
+				"     ", 
+				"Achmad Faizal")
+		.clickBtnSaveAddNewMerchant();
+		
+		
+		int sizeAfterAdd = getNoLastInLastPage(merchantPage.getDriver());
+		assertTrue(sizeBeforeAdd == sizeAfterAdd, "Data is created, should be not since it suppose to be error");
 	}
 	
 	@Test(priority = 40)

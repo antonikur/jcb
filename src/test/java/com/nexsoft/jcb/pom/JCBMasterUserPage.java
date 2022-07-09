@@ -8,9 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.nexsoft.jcb.other.Tools;
 
@@ -220,6 +218,12 @@ public class JCBMasterUserPage {
 		
 		//search index
 		int index = Integer.parseInt(no)%10;
+		
+		//if last No at 10 the % will make index to 0, 
+		//therefore we will set it to 10
+		if(index == 0) {
+			index = 10;
+		}
 		
 		//button delete
 		driver.findElement(By.xpath("//table[@id='data-table-default']/tbody/tr["+(index+1)+"]/td/ul/li/span[2]/a[2]/i")).click();

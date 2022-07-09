@@ -5,8 +5,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.nexsoft.jcb.other.Tools;
+
 public class JCBLoginPage {
 	protected WebDriver driver;
+	protected Tools tool = new Tools();
 	
 	@FindBy(xpath = "//input[@placeholder='User']")
 	private WebElement fieldUsername;
@@ -63,6 +66,7 @@ public class JCBLoginPage {
 	}
 	
 	public String getErrMsgInvalidUsernamePassword() {
+		tool.stopForMoment(2000);
 		return pesanErrorInvalidUserPassword.getText();
 	}
 	
@@ -71,6 +75,12 @@ public class JCBLoginPage {
 		return PageFactory.initElements(driver, JCBHomePage.class);
 	}
 	
+	public WebElement getElementFieldUsername() {
+		return fieldUsername;
+	}
 	
+	public WebElement getElementFieldPassword() {
+		return fieldPassword;
+	}
 	
 }

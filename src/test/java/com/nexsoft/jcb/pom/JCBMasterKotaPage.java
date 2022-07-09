@@ -75,7 +75,18 @@ public class JCBMasterKotaPage {
 	@FindBy(xpath = "//td[normalize-space()][2]")
 	private List<WebElement> tableKolomKota;
 
+	//panel
+	@FindBy(xpath = "//*[@id=\"content\"]/div[1]/div[3]/div/div[2]")
+	private WebElement panelListTableKota;
 	
+	@FindBy(xpath = "//*[@id=\"content\"]/div[1]/div[3]/div")
+	private WebElement panelViewDataKota;
+	
+	@FindBy(xpath = "//i[@class='fa fa-expand']")
+	private WebElement btnExpandCompress;
+	
+	@FindBy(xpath = "//i[@class='fa fa-minus']")
+	private WebElement btnCollapseExpand;
 	
 	@FindBy(xpath = "//span[normalize-space()='Logout']")
 	private WebElement menuLogout;
@@ -90,6 +101,17 @@ public class JCBMasterKotaPage {
 		return PageFactory.initElements(driver, JCBMasterKotaPage.class);
 	}
 	
+	public JCBMasterUserPage clickNextPage() {
+		btnPageNavNext.click();
+		return PageFactory.initElements(driver, JCBMasterUserPage.class);
+	}
+	
+	public JCBMasterUserPage clickPreviousPage() {
+		btnPageNavPrev.click();
+		return PageFactory.initElements(driver, JCBMasterUserPage.class);
+	}
+	
+	
 	public JCBMasterKotaPage selectDropdownListEntriesByValue(String value) {
 		Select select = new Select(dropdownListEntries);
 		select.selectByValue(value);
@@ -103,6 +125,7 @@ public class JCBMasterKotaPage {
 	//add kota
 	public JCBMasterKotaPage clickAddNewKota() {
 		btnAddNewKota.click();
+		tool.stopForMoment(2000);
 		return PageFactory.initElements(driver, JCBMasterKotaPage.class);
 	}
 	
@@ -117,6 +140,11 @@ public class JCBMasterKotaPage {
 	
 	public JCBMasterKotaPage clickBtnSavePopupAddKota() {
 		btnSavePopupAddNewKota.click();
+		return PageFactory.initElements(driver, JCBMasterKotaPage.class);
+	}
+	
+	public JCBMasterKotaPage clickBtnCancelPopupAddKota() {
+		btnCancelPopupAddNewKota.click();
 		return PageFactory.initElements(driver, JCBMasterKotaPage.class);
 	}
 	
@@ -175,6 +203,46 @@ public class JCBMasterKotaPage {
 	
 	public List<WebElement> getColumnNo(){
 		return tableKolomNo;
+	}
+	
+	//panel
+	public WebElement getElementPanelViewDataKota() {
+		return panelViewDataKota;
+	}
+	
+	public WebElement getElementPanelListTableKota() {
+		return panelListTableKota;
+	}
+	
+	public JCBMasterKotaPage clickBtnCollapseExpand() {
+		btnCollapseExpand.click();
+		tool.stopForMoment(1500);
+		return PageFactory.initElements(driver, JCBMasterKotaPage.class);
+	}
+	
+	public JCBMasterKotaPage clickBtnExpandCompress() {
+		btnExpandCompress.click();
+		tool.stopForMoment(1500);
+		return PageFactory.initElements(driver, JCBMasterKotaPage.class);
+	}
+	
+	
+	//click edit when expand
+	public JCBMasterKotaPage clickEditKotaByIndexWhenExpand(String index) {
+		//table[@id='data-table-default']/tbody/tr[1]/td[3]/a/i
+		//table[@id='data-table-default']/tbody/tr[2]/td[3]/a/i
+		driver.findElement(By.xpath("//table[@id='data-table-default']/tbody/tr["+index+"]/td[3]/a/i")).click();
+		
+		return PageFactory.initElements(driver, JCBMasterKotaPage.class);
+	}
+	
+	public WebElement getElementTitlePopupEditKota() {
+		return titlePopupEditKota;
+	}
+	
+	public JCBMasterKotaPage clickBtnCancelPopupEdit() {
+		btnCancelPopupEditKota.click();
+		return PageFactory.initElements(driver, JCBMasterKotaPage.class);
 	}
 	
 	public WebDriver getDriver() {

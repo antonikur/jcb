@@ -213,6 +213,24 @@ public class JCBDataMerchantPage {
 		return PageFactory.initElements(driver, JCBDataMerchantPage.class);
 	}
 	
+	public JCBDataMerchantPage clickBtnNextPage() {
+		btnNextPage.click();
+		tool.stopForMoment(1000);
+		return PageFactory.initElements(driver, JCBDataMerchantPage.class);
+	}
+	
+	public JCBDataMerchantPage clickBtnPrevPage() {
+		btnPrevPage.click();
+		tool.stopForMoment(1000);
+		return PageFactory.initElements(driver, JCBDataMerchantPage.class);
+	}
+	
+	public JCBDataMerchantPage clickBtnNumberPage(String pageNo) {
+		driver.findElement(By.xpath("//a[normalize-space()='"+pageNo+"']")).click();
+		tool.stopForMoment(1000);
+		return PageFactory.initElements(driver, JCBDataMerchantPage.class);
+	}
+	
 	
 	//add new
 	public JCBDataMerchantPage clickBtnAddNewMerchant() {
@@ -244,6 +262,7 @@ public class JCBDataMerchantPage {
 	
 	public JCBDataMerchantPage clickBtnCancelAddNewMerchant() {
 		btnCancelAddNewMerchant.click();
+		tool.stopForMoment(2000);
 		return PageFactory.initElements(driver, JCBDataMerchantPage.class);
 	}
 	
@@ -362,5 +381,43 @@ public class JCBDataMerchantPage {
 	public List<WebElement> getListButtonForNavigate(){
 		return listButton;
 	}
+	
+	//get element field add merchant
+	public WebElement getElementBatch() {
+		return fieldBatchPopupAddNewMerchant;
+	}
+	
+	public WebElement getElementKota() {
+		return dropdownListKotaAddNewMerchant;
+	}
+	
+	public WebElement getElementArea() {
+		return dropdownListAreaAddNewMerchant;
+	}
+	
+	public WebElement getElementMerchantName() {
+		return fieldMerchantNameAddNewMerchant;
+	}
+	
+	public WebElement getElementAddress() {
+		return fieldAddressAddNewMerchant;
+	}
+	
+	public WebElement getElementAddByFloor() {
+		return fieldAddressByFloorAddNewMerchant;
+	}
+	
+	public WebElement getElementCategory() {
+		return fieldCategoryAddNewMerchant;
+	}
+	
+	public WebElement getElementUser() {
+		return dropdownListUserAddNewMerchant;
+	}
+	
+	
+	
+	////
+	
 	
 }
