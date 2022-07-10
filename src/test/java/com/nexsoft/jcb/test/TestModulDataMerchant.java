@@ -24,7 +24,6 @@ import com.nexsoft.jcb.pom.JCBLoginPage;
 public class TestModulDataMerchant {
 	
 	protected WebDriver driver;
-//	protected WebDriverWait wait;
 	protected Tools tool = new Tools();
 	protected JCBHomePage homePage;
 	
@@ -119,7 +118,7 @@ public class TestModulDataMerchant {
 	//#############################################################################################
 	//#############################################################################################
 	
-	@Test(priority = 46)
+	@Test(priority = 0)
 	public void tekan_menu_data_merchant(){
 		String actual = homePage.clickAndGotoMenuDataMerchant()
 		.getTitleDataMerchantPage().trim();
@@ -127,7 +126,7 @@ public class TestModulDataMerchant {
 		assertEquals(actual, "Data Merchant");
 	}
 	
-	@Test(priority = 47)
+	@Test(priority = 1)
 	public void input_search_merchant_name_by_nama_merchant_dan_tekan_search() {
 		String keyword = "Shihlin";//input keyword that must have result/data
 		
@@ -140,7 +139,7 @@ public class TestModulDataMerchant {
 		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
 	}
 	
-	@Test(priority = 48)
+	@Test(priority = 2)
 	public void input_search_merchant_name_by_no_dan_tekan_search() {
 		String keyword = "30";//input keyword that must have result/data
 		
@@ -153,7 +152,7 @@ public class TestModulDataMerchant {
 		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
 	}
 	
-	@Test(priority = 49)
+	@Test(priority = 3)
 	public void input_search_merchant_name_by_area_dan_tekan_search() {
 		String keyword = "pelaza senayan";//input keyword that must have result/data
 		
@@ -166,7 +165,7 @@ public class TestModulDataMerchant {
 		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
 	}
 	
-	@Test(priority = 50)
+	@Test(priority = 4)
 	public void input_search_merchant_name_by_batch_dan_tekan_search() {
 		String keyword = "november 2021";//input keyword that must have result/data
 		
@@ -180,7 +179,7 @@ public class TestModulDataMerchant {
 	}
 	
 	
-	@Test(priority = 0)
+	@Test(priority = 5)
 	public void input_search_merchant_name_by_address_dan_tekan_search(){
 		String keyword = "metro pondok indah";//input keyword that must have result/data
 		
@@ -193,7 +192,7 @@ public class TestModulDataMerchant {
 		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
 	}
 	
-	@Test(priority = 1)
+	@Test(priority = 6)
 	public void input_search_merchant_name_by_category_dan_tekan_search(){
 		String keyword = "grocery";//input keyword that must have result/data
 		
@@ -206,7 +205,7 @@ public class TestModulDataMerchant {
 		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
 	}
 	
-	@Test(priority = 2)
+	@Test(priority = 7)
 	public void input_search_merchant_name_by_officer_dan_tekan_search(){
 		String keyword = "K1133611";//input keyword that must have result/data
 		
@@ -219,7 +218,7 @@ public class TestModulDataMerchant {
 		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
 	}
 	
-	@Test(priority = 3)
+	@Test(priority = 8)
 	public void input_search_merchant_name_by_status_visit_dan_tekan_search(){
 		String keyword = "visited";//input keyword that must have result/data
 		
@@ -232,7 +231,7 @@ public class TestModulDataMerchant {
 		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
 	}
 	
-	@Test(priority = 4)
+	@Test(priority = 9)
 	public void input_search_merchant_name_by_nama_merchant_dengan_spasi_di_awal_dan_akhir_kemudian_tekan_search(){
 		String keyword = " shihlin ";//input keyword that must have result/data
 		
@@ -245,7 +244,7 @@ public class TestModulDataMerchant {
 		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
 	}
 	
-	@Test(priority = 5)
+	@Test(priority = 10)
 	public void kolom_search_kosong(){
 		String keyword = "";//input keyword that must have result/data
 		
@@ -258,7 +257,7 @@ public class TestModulDataMerchant {
 		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
 	}
 	
-	@Test(priority = 6)
+	@Test(priority = 11)
 	public void tekan_tombol_expand_or_compress(){
 		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant();
 		int compressWidth = merchantPage.getPanelViewDataMerchant().getSize().getWidth();
@@ -275,7 +274,7 @@ public class TestModulDataMerchant {
 		assertTrue(compressWidth < expandWidth);
 	}
 	
-	@Test(priority = 7)
+	@Test(priority = 12)
 	public void tekan_tombol_collapse_or_expand(){
 		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant();
 		
@@ -290,7 +289,7 @@ public class TestModulDataMerchant {
 		assertTrue(panelIsDisplayed && panelIsHidden);
 	}
 	
-	@Test(priority = 8)
+	@Test(priority = 13)
 	public void tekan_tombol_navigasi_previous_halaman(){
 		String page = "2";
 		List<WebElement> listNo = homePage.clickAndGotoMenuDataMerchant()
@@ -301,7 +300,7 @@ public class TestModulDataMerchant {
 		assertTrue(lastNo > 0 && lastNo < 11);
 	}
 	
-	@Test(priority = 9)
+	@Test(priority = 14)
 	public void tekan_tombol_navigasi_nomor_halaman(){
 		String page = "3";
 		List<WebElement> listNo = homePage.clickAndGotoMenuDataMerchant()
@@ -311,7 +310,7 @@ public class TestModulDataMerchant {
 		assertTrue(lastNo > ( (Integer.parseInt(page)-1) *10) && lastNo <= (Integer.parseInt(page)*10) );
 	}
 	
-	@Test(priority = 10)
+	@Test(priority = 15)
 	public void tekan_tombol_navigasi_next_halaman(){
 		List<WebElement> listNo = homePage.clickAndGotoMenuDataMerchant()
 		.clickBtnNextPage()
@@ -320,7 +319,7 @@ public class TestModulDataMerchant {
 		assertTrue(lastNo > 10 && lastNo <= 20);
 	}
 	
-	@Test(priority = 11)
+	@Test(priority = 16)
 	public void tekan_tombol_navigasi_first_halaman(){
 		List<WebElement> listNo = homePage.clickAndGotoMenuDataMerchant()
 		.clickBtnLastPage()
@@ -332,7 +331,7 @@ public class TestModulDataMerchant {
 		assertTrue(lastNo > 0 && lastNo <= 10);
 	}
 	
-	@Test(priority = 12)
+	@Test(priority = 17)
 	public void tekan_tombol_navigasi_last_halaman(){
 		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant()
 		.clickBtnLastPage();
@@ -349,7 +348,7 @@ public class TestModulDataMerchant {
 		assertTrue(lastNo > ( (lastPage-1) * 10)&& lastNo <= (lastPage * 10));
 	}
 	
-	@Test(priority = 13)
+	@Test(priority = 18)
 	public void tekan_tombol_delete_di_dari_data_merchant(){
 		String search = "the duke";//using search to reduce accident to other test since this data is created in this test
 		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant()
@@ -365,7 +364,7 @@ public class TestModulDataMerchant {
 		assertTrue(beforeDeleteResult > afterDeleteResult, "Data tidak terdelete");
 	}
 	
-	@Test(priority = 14)
+	@Test(priority = 19)
 	public void tekan_tombol_add_new_merchant(){
 		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant()
 				.clickBtnAddNewMerchant();
@@ -376,7 +375,7 @@ public class TestModulDataMerchant {
 		assertEquals(actual, "Form Input Merchant Baru");
 	}
 	
-	@Test(priority = 15)
+	@Test(priority = 20)
 	public void input_data_valid_di_new_merchant_dan_save(){
 		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant();
 		
@@ -405,7 +404,7 @@ public class TestModulDataMerchant {
 		assertTrue(beforeAdd < afterAdd);
 	}
 	
-	@Test(priority = 16)
+	@Test(priority = 21)
 	public void input_batch_invalid_di_new_merchant_dan_save(){
 		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant();
 		
@@ -434,7 +433,7 @@ public class TestModulDataMerchant {
 		assertTrue(beforeAdd == afterAdd);
 	}
 	
-	@Test(priority = 17)
+	@Test(priority = 22)
 	public void input_merchant_name_invalid_di_new_merchant_dan_save(){
 		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant();
 		
@@ -463,7 +462,7 @@ public class TestModulDataMerchant {
 		assertTrue(beforeAdd == afterAdd);
 	}
 	
-	@Test(priority = 18)
+	@Test(priority = 23)
 	public void input_address_invalid_di_new_merchant_dan_save(){
 		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant();
 		
@@ -492,7 +491,7 @@ public class TestModulDataMerchant {
 		assertTrue(beforeAdd == afterAdd);
 	}
 	
-	@Test(priority = 19)
+	@Test(priority = 24)
 	public void input_address_by_floor_invalid_di_new_merchant_dan_save(){
 		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant();
 		
@@ -521,7 +520,7 @@ public class TestModulDataMerchant {
 		assertTrue(beforeAdd == afterAdd);
 	}
 	
-	@Test(priority = 20)
+	@Test(priority = 25)
 	public void input_category_invalid_di_new_merchant_dan_save(){
 		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant();
 		
@@ -550,7 +549,7 @@ public class TestModulDataMerchant {
 		assertTrue(beforeAdd == afterAdd);
 	}
 	
-	@Test(priority = 21)
+	@Test(priority = 26)
 	public void data_batch_kosong_or_tidak_pilih_di_new_merchant_dan_save(){
 		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant();
 		merchantPage.clickBtnAddNewMerchant()
@@ -570,7 +569,7 @@ public class TestModulDataMerchant {
 		merchantPage.clickBtnCancelAddNewMerchant();
 	}
 	
-	@Test(priority = 22)
+	@Test(priority = 27)
 	public void data_kota_kosong_or_tidak_pilih_di_new_merchant_dan_save(){
 		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant();
 		merchantPage.clickBtnAddNewMerchant()
@@ -590,7 +589,7 @@ public class TestModulDataMerchant {
 		merchantPage.clickBtnCancelAddNewMerchant();
 	}
 	
-	@Test(priority = 23)
+	@Test(priority = 28)
 	public void data_area_kosong_or_tidak_pilih_di_new_merchant_dan_save(){
 		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant();
 		merchantPage.clickBtnAddNewMerchant()
@@ -610,7 +609,7 @@ public class TestModulDataMerchant {
 		merchantPage.clickBtnCancelAddNewMerchant();
 	}
 	
-	@Test(priority = 24)
+	@Test(priority = 29)
 	public void data_merchant_name_kosong_or_tidak_pilih_di_new_merchant_dan_save(){
 		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant();
 		merchantPage.clickBtnAddNewMerchant()
@@ -630,7 +629,7 @@ public class TestModulDataMerchant {
 		merchantPage.clickBtnCancelAddNewMerchant();
 	}
 	
-	@Test(priority = 25)
+	@Test(priority = 30)
 	public void data_address_kosong_or_tidak_pilih_di_new_merchant_dan_save(){
 		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant();
 		merchantPage.clickBtnAddNewMerchant()
@@ -650,7 +649,7 @@ public class TestModulDataMerchant {
 		merchantPage.clickBtnCancelAddNewMerchant();
 	}
 	
-	@Test(priority = 26)
+	@Test(priority = 31)
 	public void data_address_by_floor_kosong_or_tidak_pilih_di_new_merchant_dan_save(){
 		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant();
 		merchantPage.clickBtnAddNewMerchant()
@@ -670,7 +669,7 @@ public class TestModulDataMerchant {
 		merchantPage.clickBtnCancelAddNewMerchant();
 	}
 	
-	@Test(priority = 27)
+	@Test(priority = 32)
 	public void data_category_kosong_or_tidak_pilih_di_new_merchant_dan_save(){
 		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant();
 		merchantPage.clickBtnAddNewMerchant()
@@ -690,7 +689,7 @@ public class TestModulDataMerchant {
 		merchantPage.clickBtnCancelAddNewMerchant();
 	}
 	
-	@Test(priority = 28)
+	@Test(priority = 33)
 	public void data_users_kosong_or_tidak_pilih_di_new_merchant_dan_save(){
 		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant();
 		merchantPage.clickBtnAddNewMerchant()
@@ -710,7 +709,7 @@ public class TestModulDataMerchant {
 		merchantPage.clickBtnCancelAddNewMerchant();
 	}
 	
-	@Test(priority = 29)
+	@Test(priority = 34)
 	public void data_batch_panjang_di_new_merchant_dan_save(){
 		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant();
 		
@@ -735,7 +734,7 @@ public class TestModulDataMerchant {
 		assertTrue(sizeBeforeAdd == sizeAfterAdd, "Data is created, should be not since it suppose to be error");
 	}
 	
-	@Test(priority = 30)
+	@Test(priority = 35)
 	public void data_merchant_name_panjang_di_new_merchant_dan_save(){
 		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant();
 		
@@ -760,7 +759,7 @@ public class TestModulDataMerchant {
 		assertTrue(sizeBeforeAdd == sizeAfterAdd, "Data is created, should be not since it suppose to be error");
 	}
 	
-	@Test(priority = 31)
+	@Test(priority = 36)
 	public void data_address_panjang_di_new_merchant_dan_save(){
 		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant();
 		
@@ -785,7 +784,7 @@ public class TestModulDataMerchant {
 		assertTrue(sizeBeforeAdd == sizeAfterAdd, "Data is created, should be not since it suppose to be error");
 	}
 	
-	@Test(priority = 32)
+	@Test(priority = 37)
 	public void data_address_by_floor_panjang_di_new_merchant_dan_save(){
 		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant();
 		
@@ -810,7 +809,7 @@ public class TestModulDataMerchant {
 		assertTrue(sizeBeforeAdd == sizeAfterAdd, "Data is created, should be not since it suppose to be error");
 	}
 	
-	@Test(priority = 33)
+	@Test(priority = 38)
 	public void data_category_panjang_di_new_merchant_dan_save(){
 		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant();
 		
@@ -835,7 +834,7 @@ public class TestModulDataMerchant {
 		assertTrue(sizeBeforeAdd == sizeAfterAdd, "Data is created, should be not since it suppose to be error");
 	}
 	
-	@Test(priority = 34)
+	@Test(priority = 39)
 	public void input_data_valid_di_new_merchant_dan_cancel_or_silang(){
 		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant();
 		
@@ -864,7 +863,7 @@ public class TestModulDataMerchant {
 		assertTrue(beforeAdd == afterAdd);
 	}
 	
-	@Test(priority = 35)
+	@Test(priority = 40)
 	public void data_batch_di_isi_white_space_di_new_merchant_dan_save(){
 		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant();
 		int sizeBeforeAdd = getNoLastInLastPage(merchantPage.getDriver());
@@ -887,7 +886,7 @@ public class TestModulDataMerchant {
 		assertTrue(sizeBeforeAdd == sizeAfterAdd, "Data is created, should be not since it suppose to be error");
 	}
 	
-	@Test(priority = 36)
+	@Test(priority = 41)
 	public void data_merchant_name_di_isi_white_space_di_new_merchant_dan_save(){
 		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant();
 		int sizeBeforeAdd = getNoLastInLastPage(merchantPage.getDriver());
@@ -910,7 +909,7 @@ public class TestModulDataMerchant {
 		assertTrue(sizeBeforeAdd == sizeAfterAdd, "Data is created, should be not since it suppose to be error");
 	}
 	
-	@Test(priority = 37)
+	@Test(priority = 42)
 	public void data_address_di_isi_white_space_di_new_merchant_dan_save(){
 		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant();
 		int sizeBeforeAdd = getNoLastInLastPage(merchantPage.getDriver());
@@ -933,7 +932,7 @@ public class TestModulDataMerchant {
 		assertTrue(sizeBeforeAdd == sizeAfterAdd, "Data is created, should be not since it suppose to be error");
 	}
 	
-	@Test(priority = 38)
+	@Test(priority = 43)
 	public void data_address_by_floor_di_isi_white_space_di_new_merchant_dan_save(){
 		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant();
 		int sizeBeforeAdd = getNoLastInLastPage(merchantPage.getDriver());
@@ -956,7 +955,7 @@ public class TestModulDataMerchant {
 		assertTrue(sizeBeforeAdd == sizeAfterAdd, "Data is created, should be not since it suppose to be error");
 	}
 	
-	@Test(priority = 39)
+	@Test(priority = 44)
 	public void data_category_di_isi_white_space_di_new_merchant_dan_save(){
 		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant();
 		int sizeBeforeAdd = getNoLastInLastPage(merchantPage.getDriver());
@@ -979,7 +978,7 @@ public class TestModulDataMerchant {
 		assertTrue(sizeBeforeAdd == sizeAfterAdd, "Data is created, should be not since it suppose to be error");
 	}
 	
-	@Test(priority = 40)
+	@Test(priority = 45)
 	public void tekan_tombol_download_template(){
 		try {
 			String message = homePage.clickAndGotoMenuDataMerchant()
@@ -998,7 +997,7 @@ public class TestModulDataMerchant {
 		fail("Message error found");
 	}
 	
-	@Test(priority = 41)
+	@Test(priority = 46)
 	public void tekan_tombol_upload_data(){
 		JCBDataMerchantPage merchantPage = homePage.clickAndGotoMenuDataMerchant();
 		
@@ -1011,7 +1010,7 @@ public class TestModulDataMerchant {
 		assertEquals(actual, "Form Upload");
 	}
 	
-	@Test(priority = 42)
+	@Test(priority = 47)
 	public void tekan_choose_file_dan_pilih_file_dengan_format_valid_kemudian_pilih_process(){
 		try {
 			String message = homePage.clickAndGotoMenuDataMerchant()
@@ -1032,7 +1031,7 @@ public class TestModulDataMerchant {
 		fail("There is error message");
 	}
 	
-	@Test(priority = 43)
+	@Test(priority = 48)
 	public void tekan_choose_file_dan_pilih_file_degan_format_invalid_kemudian_pilih_process(){
 		
 		String message = homePage.clickAndGotoMenuDataMerchant()
@@ -1047,7 +1046,7 @@ public class TestModulDataMerchant {
 		driver.navigate().back();
 	}
 	
-	@Test(priority = 44)
+	@Test(priority = 49)
 	public void tekan_choose_file_dan_pilih_file_dengan_format_valid_kemudian_pilih_cancel_di_popup_upload(){
 		
 		boolean isDisplayed = homePage.clickAndGotoMenuDataMerchant()
@@ -1058,7 +1057,7 @@ public class TestModulDataMerchant {
 		assertTrue(isDisplayed == false);
 	}
 	
-	@Test(priority = 45)
+	@Test(priority = 50)
 	public void tekan_process_tanpa_pilih_file(){
 		String message = homePage.clickAndGotoMenuDataMerchant()
 		.clickBtnUploadData()
