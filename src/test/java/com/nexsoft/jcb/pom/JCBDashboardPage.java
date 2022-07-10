@@ -34,9 +34,6 @@ public class JCBDashboardPage {
 	
 	
 	//panel for expand/compress and collapse/expand
-	//*[@id=\"content\"]/div[2]/div/div
-	//*[@id="content"]/div[2]/div
-	//*[@id="content"]/div[2]/div/div
 	@FindBy(xpath = "//*[@id=\"content\"]/div[2]/div/div")
 	private WebElement panelSummaryByArea;
 	
@@ -169,5 +166,8 @@ public class JCBDashboardPage {
 		return totalPriceHeader.getText();
 	}
 	
+	public WebDriver getDriver() {
+		return driver;
+	}
 	
 }

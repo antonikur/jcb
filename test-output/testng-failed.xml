@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.nexsoft.jcb.test.TestModulLogin">
+      <class name="com.nexsoft.jcb.test.TestModulDashboard">
         <methods>
-          <include name="input_username_valid_dengan_huruf_besar_kecil_dan_tekan_login"/>
           <include name="reset"/>
           <include name="initial"/>
+          <include name="logout"/>
+          <include name="tekan_tombol_reload"/>
         </methods>
-      </class> <!-- com.nexsoft.jcb.test.TestModulLogin -->
+      </class> <!-- com.nexsoft.jcb.test.TestModulDashboard -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

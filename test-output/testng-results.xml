@@ -1,25 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="11" total="12" passed="1" failed="0" skipped="0">
+<testng-results ignored="8" total="9" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-07-09T17:23:42 WIB" name="Default suite" finished-at="2022-07-09T17:23:53 WIB" duration-ms="11180">
+  <suite started-at="2022-07-10T16:41:10 WIB" name="Default suite" finished-at="2022-07-10T16:41:33 WIB" duration-ms="22660">
     <groups>
     </groups>
-    <test started-at="2022-07-09T17:23:42 WIB" name="Default test" finished-at="2022-07-09T17:23:53 WIB" duration-ms="11180">
-      <class name="com.nexsoft.jcb.test.TestModulLogin">
-        <test-method is-config="true" signature="initial()[pri:0, instance:com.nexsoft.jcb.test.TestModulLogin@368247b9]" started-at="2022-07-09T17:23:42 WIB" name="initial" finished-at="2022-07-09T17:23:46 WIB" duration-ms="4226" status="PASS">
+    <test started-at="2022-07-10T16:41:10 WIB" name="Default test" finished-at="2022-07-10T16:41:33 WIB" duration-ms="22660">
+      <class name="com.nexsoft.jcb.test.TestModulDashboard">
+        <test-method is-config="true" signature="initial()[pri:0, instance:com.nexsoft.jcb.test.TestModulDashboard@6c1a5b54]" started-at="2022-07-10T16:41:10 WIB" name="initial" finished-at="2022-07-10T16:41:13 WIB" duration-ms="2991" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initial -->
-        <test-method is-config="true" signature="reset()[pri:0, instance:com.nexsoft.jcb.test.TestModulLogin@368247b9]" started-at="2022-07-09T17:23:46 WIB" name="reset" finished-at="2022-07-09T17:23:47 WIB" duration-ms="190" status="PASS">
+        <test-method is-config="true" signature="reset()[pri:0, instance:com.nexsoft.jcb.test.TestModulDashboard@6c1a5b54]" started-at="2022-07-10T16:41:13 WIB" name="reset" finished-at="2022-07-10T16:41:15 WIB" duration-ms="1695" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reset -->
-        <test-method signature="input_username_dan_password_valid_sebagai_admin()[pri:9, instance:com.nexsoft.jcb.test.TestModulLogin@368247b9]" started-at="2022-07-09T17:23:47 WIB" name="input_username_dan_password_valid_sebagai_admin" finished-at="2022-07-09T17:23:53 WIB" duration-ms="6702" status="PASS">
+        <test-method signature="tekan_tombol_reload()[pri:2, instance:com.nexsoft.jcb.test.TestModulDashboard@6c1a5b54]" started-at="2022-07-10T16:41:15 WIB" name="tekan_tombol_reload" finished-at="2022-07-10T16:41:32 WIB" duration-ms="17498" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Data is not updated expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Data is not updated expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1413)
+at org.testng.Assert.assertTrue(Assert.java:56)
+at com.nexsoft.jcb.test.TestModulDashboard.tekan_tombol_reload(TestModulDashboard.java:151)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:806)
+at org.testng.TestRunner.run(TestRunner.java:601)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- input_username_dan_password_valid_sebagai_admin -->
-      </class> <!-- com.nexsoft.jcb.test.TestModulLogin -->
+        </test-method> <!-- tekan_tombol_reload -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:com.nexsoft.jcb.test.TestModulDashboard@6c1a5b54]" started-at="2022-07-10T16:41:32 WIB" name="logout" finished-at="2022-07-10T16:41:33 WIB" duration-ms="434" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+      </class> <!-- com.nexsoft.jcb.test.TestModulDashboard -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

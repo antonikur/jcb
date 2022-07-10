@@ -2,12 +2,10 @@ package com.nexsoft.jcb.test;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
-import static org.testng.Assert.fail;
 
 import java.util.List;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -99,38 +97,51 @@ public class TestModulDashboard {
 	
 	@Test(priority = 2)
 	public void tekan_tombol_reload(){
-		//link add merchant
-//		https://dev.ptdika.com/jcb/new/master_merchant
-//		https://dev.ptdika.com/jcb/new/master_merchant
-		
-		//link dash board
-//		https://dev.ptdika.com/jcb/new/dashboard
+		//driver for dash board
 		JCBDashboardPage dashboardPage= homePage.clickAndGotoMenuDashboard();
-		
 		
 		//get first data (plaza indonesia)
 		int beforeAdd = Integer.parseInt(dashboardPage.getListColumnJumlahMerchant().get(0).getText());
 		System.out.println("before add: "+beforeAdd);
 		
+		//new driver for input data merchant
+		WebDriver driverDataMerchant = new ChromeDriver();
+		driverDataMerchant.get(System.getProperty("url"));
+		driverDataMerchant.manage().window().maximize();
+		PageFactory.initElements(driverDataMerchant, JCBLoginPage.class)
+		.inputFieldUsername("antonii")
+		.inputFieldPassword("antonii")
+		.clickBtnLogin()
+		.gotoHomePage()
+		.clickAndGotoMenuDataMerchant()
+		.clickBtnAddNewMerchant()
+		.inputAllFieldAddNewMerchant(
+				"November 2021", 
+				"JAKARTA", 
+				"Plaza Indonesia", 
+				"The Duke", 
+				"jl. sudirman", 
+				"f2", 
+				"fnb", 
+				"Achmad Faizal")
+		.clickBtnSaveAddNewMerchant();
+		tool.stopForMoment();
+		//logout
+		driverDataMerchant.findElement(By.xpath("//span[normalize-space()='Logout']")).click();
+		tool.stopForMoment(1500);
+		//close driver after add data merchant
+		driverDataMerchant.close();
 		
-		//open new tab to data merchant
-		String newTab = Keys.chord(Keys.CONTROL, Keys.ENTER);
-		driver.findElement(By.xpath("//span[normalize-space()='Data Merchant']")).sendKeys(newTab);
+		//click reload button in dash board
+		dashboardPage.clickBtnReload();
+		tool.stopForMoment();
 		
-		//body/div[@id='content']/div[1]
+		//get data after add merchant
+		int afterAdd = Integer.parseInt(dashboardPage.getListColumnJumlahMerchant().get(0).getText());
+		System.out.println("before add: "+afterAdd);
 		
-		
-		
-		//goto new tab
-		driver.get("https://dev.ptdika.com/jcb/new/master_merchant");
-//		driver.manage().window().maximize();
-		
-		
-//		dashboardPage.clickBtnReload();
-		
-//		int afterAdd = Integer.parseInt(dashboardPage.getListColumnJumlahMerchant().get(0).getText());
-		tool.stopForMoment(10000);
-		fail("not yet implemented");
+		//assert
+		assertTrue(beforeAdd < afterAdd, "Data is not updated");
 	}
 	
 	@Test(priority = 3)
