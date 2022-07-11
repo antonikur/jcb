@@ -8,11 +8,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-public class JCBNewDataPage {
+public class JCBReturnPage {
 
 	protected WebDriver driver;
 
-	@FindBy(xpath = "//select[@id='id_area']")
+	@FindBy(xpath = "//*[@id=\"id_area\"]")
 	private WebElement areaBtn;
 
 	@FindBy(xpath = "//button[@id='btn-filter']")
@@ -24,7 +24,7 @@ public class JCBNewDataPage {
 	@FindBy(xpath = "//button[@id='btnSearch']")
 	private WebElement searchBtn;
 
-	@FindBy(xpath = "//table[@id='data-worklist']/tbody/tr/td[2]/a/i")
+	@FindBy(xpath = "//table[@id='data-worklist']/tbody/tr/td[2]/a")
 	private WebElement visitBtn;
 
 	@FindBy(xpath = "//table[@id='data-worklist']/tbody/tr/td[2]/a[2]")
@@ -42,7 +42,7 @@ public class JCBNewDataPage {
 	@FindBy(xpath = "//strong[normalize-space()='Success!']")
 	private WebElement textSuccessUploadPhoto;
 
-	public JCBNewDataPage(WebDriver driver) {
+	public JCBReturnPage(WebDriver driver) {
 		this.driver = driver;
 	}
 
@@ -54,50 +54,50 @@ public class JCBNewDataPage {
 		return textSuccessUploadPhoto;
 	}
 
-	public JCBNewDataPage clickBtnFilter() {
+	public JCBReturnPage clickBtnFilter() {
 		filterBtn.click();
-		return PageFactory.initElements(driver, JCBNewDataPage.class);
+		return PageFactory.initElements(driver, JCBReturnPage.class);
 
 	}
 
-	public JCBNewDataPage clickSearchField(String search) {
+	public JCBReturnPage clickSearchField(String search) {
 		searchField.sendKeys(search);
-		return PageFactory.initElements(driver, JCBNewDataPage.class);
+		return PageFactory.initElements(driver, JCBReturnPage.class);
 
 	}
 
-	public JCBNewDataPage clickBtnSearch() {
+	public JCBReturnPage clickBtnSearch() {
 		searchBtn.click();
-		return PageFactory.initElements(driver, JCBNewDataPage.class);
+		return PageFactory.initElements(driver, JCBReturnPage.class);
 
 	}
 
-	public JCBNewDataVisitPage clickBtnVisitAndGoToVisitPage() {
+	public JCBReturnVisitPage clickBtnVisitAndGoToVisitPage() {
 		visitBtn.click();
-		return PageFactory.initElements(driver, JCBNewDataVisitPage.class);
+		return PageFactory.initElements(driver, JCBReturnVisitPage.class);
 
 	}
 
-	public JCBNewDataOtherConPage clickBtnOtherConditionAndGoToOtherConditionPage() {
+	public JCBReturnOtherConPage clickBtnOtherConditionAndGoToOtherConditionPage() {
 		otherConditionBtn.click();
-		return PageFactory.initElements(driver, JCBNewDataOtherConPage.class);
+		return PageFactory.initElements(driver, JCBReturnOtherConPage.class);
 
 	}
 
-	public JCBNewDataPage LogOut() {
+	public JCBReturnPage LogOut() {
 		profile.click();
 		btnLogout.click();
-		return PageFactory.initElements(driver, JCBNewDataPage.class);
+		return PageFactory.initElements(driver, JCBReturnPage.class);
 	}
 
 	public JCBLoginPage gotoLoginPage() {
 		return PageFactory.initElements(driver, JCBLoginPage.class);
 	}
 
-	public JCBNewDataPage selectDropdownListEntriesByValue(String value) {
+	public JCBReturnPage selectDropdownListEntriesByValue(String value) {
 		Select select = new Select(areaBtn);
 		select.selectByValue(value);
-		return PageFactory.initElements(driver, JCBNewDataPage.class);
+		return PageFactory.initElements(driver, JCBReturnPage.class);
 	}
 
 	public String getSelectedOption() {

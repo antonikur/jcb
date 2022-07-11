@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.nexsoft.jcb.test.TestFiturNewData">
+      <class name="com.nexsoft.jcb.test.TestFiturRejectVisitPage">
         <methods>
+          <include name="edit_data_valid_data_merchant"/>
+          <include name="logout"/>
           <include name="initial"/>
           <include name="reset"/>
-          <include name="cek_fitur_search_newData"/>
         </methods>
-      </class> <!-- com.nexsoft.jcb.test.TestFiturNewData -->
+      </class> <!-- com.nexsoft.jcb.test.TestFiturRejectVisitPage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

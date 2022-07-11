@@ -1,25 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+<testng-results ignored="11" total="12" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-07-06T23:51:14 ICT" name="Default suite" finished-at="2022-07-06T23:51:22 ICT" duration-ms="8669">
+  <suite started-at="2022-07-11T13:16:56 ICT" name="Default suite" finished-at="2022-07-11T13:17:20 ICT" duration-ms="23744">
     <groups>
     </groups>
-    <test started-at="2022-07-06T23:51:14 ICT" name="Default test" finished-at="2022-07-06T23:51:22 ICT" duration-ms="8669">
-      <class name="com.nexsoft.jcb.test.TestFiturNewData">
-        <test-method is-config="true" signature="initial()[pri:0, instance:com.nexsoft.jcb.test.TestFiturNewData@8458f04]" started-at="2022-07-06T23:51:14 ICT" name="initial" finished-at="2022-07-06T23:51:18 ICT" duration-ms="4054" status="PASS">
+    <test started-at="2022-07-11T13:16:56 ICT" name="Default test" finished-at="2022-07-11T13:17:20 ICT" duration-ms="23744">
+      <class name="com.nexsoft.jcb.test.TestFiturRejectVisitPage">
+        <test-method is-config="true" signature="initial()[pri:0, instance:com.nexsoft.jcb.test.TestFiturRejectVisitPage@5032714f]" started-at="2022-07-11T13:16:56 ICT" name="initial" finished-at="2022-07-11T13:17:00 ICT" duration-ms="3744" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initial -->
-        <test-method is-config="true" signature="reset()[pri:0, instance:com.nexsoft.jcb.test.TestFiturNewData@8458f04]" started-at="2022-07-06T23:51:18 ICT" name="reset" finished-at="2022-07-06T23:51:18 ICT" duration-ms="200" status="PASS">
+        <test-method is-config="true" signature="reset()[pri:0, instance:com.nexsoft.jcb.test.TestFiturRejectVisitPage@5032714f]" started-at="2022-07-11T13:17:00 ICT" name="reset" finished-at="2022-07-11T13:17:00 ICT" duration-ms="223" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reset -->
-        <test-method signature="cek_fitur_search_newData()[pri:1, instance:com.nexsoft.jcb.test.TestFiturNewData@8458f04]" started-at="2022-07-06T23:51:18 ICT" name="cek_fitur_search_newData" finished-at="2022-07-06T23:51:22 ICT" duration-ms="4339" status="PASS">
+        <test-method signature="edit_data_valid_data_merchant()[pri:1, instance:com.nexsoft.jcb.test.TestFiturRejectVisitPage@5032714f]" started-at="2022-07-11T13:17:00 ICT" name="edit_data_valid_data_merchant" finished-at="2022-07-11T13:17:14 ICT" duration-ms="13978" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- cek_fitur_search_newData -->
-      </class> <!-- com.nexsoft.jcb.test.TestFiturNewData -->
+        </test-method> <!-- edit_data_valid_data_merchant -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:com.nexsoft.jcb.test.TestFiturRejectVisitPage@5032714f]" started-at="2022-07-11T13:17:14 ICT" name="logout" finished-at="2022-07-11T13:17:20 ICT" duration-ms="5753" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+      </class> <!-- com.nexsoft.jcb.test.TestFiturRejectVisitPage -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

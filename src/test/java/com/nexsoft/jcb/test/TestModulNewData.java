@@ -13,27 +13,23 @@ import org.testng.annotations.BeforeMethod;
 import static org.testng.Assert.assertTrue;
 
 import java.io.File;
+import java.util.Iterator;
+import java.util.List;
+
+import javax.tools.Tool;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeClass;
 
-public class TestFiturNewData {
+public class TestModulNewData {
 	
 	protected WebDriver driver;
-	
-	public void stopForMoment(int miliSec) {
-		try {
-			Thread.sleep(miliSec);
-		} catch (Exception e) {
-			e.getStackTrace();
-		}
-	}
-	
-	
- 
+	protected Tools tools = new Tools();
+
 	@BeforeClass
 	public void initial() {
 		System.setProperty("url", "https://dev.ptdika.com/jcb/");
@@ -54,42 +50,68 @@ public class TestFiturNewData {
 	public void cek_fitur_filter_newData() {
 
 		JCBLoginPage login = PageFactory.initElements(driver, JCBLoginPage.class);
-		login.inputFieldUsername("admindika").inputFieldPassword("d1k4@passw0rd").clickBtnLogin().gotoHomePage();
+		login.inputFieldUsername("admindika3").inputFieldPassword("d1k4@passw0rd").clickBtnLogin().gotoHomePage();
 		JCBHomePage home = PageFactory.initElements(driver, JCBHomePage.class);
+		
 		home.clickMenuWorklist();
 		home.clickAndGotoMenuNewData();
 		JCBNewDataPage newData = PageFactory.initElements(driver, JCBNewDataPage.class);
 		newData.clickBtnFilter();
+		tools.stopForMoment(2000);
 		newData.selectDropdownListEntriesByValue("76");
+		tools.stopForMoment(2000);
 		newData.clickBtnFilter();
+		String selected = newData.getSelectedOption();
 		
-		stopForMoment(2000);
-		String actualString = driver.findElement(By.xpath("//h4[normalize-space()='DOMINO']")).getText();
-		assertTrue(actualString.contains("DOMINO"));
-		stopForMoment(2000);
+		tools.stopForMoment(2000);
+		String textArea = newData.clickBtnVisitAndGoToVisitPage().getTextArea();
+		
+		
+		
 		
 		
 		newData.LogOut();
 		newData.gotoLoginPage();
+		
+		assertTrue(selected.contains(textArea));
 	}
 	
 	@Test(priority = 1)
 	public void cek_fitur_search_newData() {
-
+		String keyword = "domino";
 		JCBLoginPage login = PageFactory.initElements(driver, JCBLoginPage.class);
 		login.inputFieldUsername("admindika").inputFieldPassword("d1k4@passw0rd").clickBtnLogin().gotoHomePage();
 		JCBHomePage home = PageFactory.initElements(driver, JCBHomePage.class);
+		Tools tools = PageFactory.initElements(driver, Tools.class);
 		home.clickMenuWorklist();
 		home.clickAndGotoMenuNewData();
 		JCBNewDataPage newData = PageFactory.initElements(driver, JCBNewDataPage.class);
-		stopForMoment(2000);
-		newData.clickSearchField("Domino");
+		tools.stopForMoment(2000);
+		newData.clickSearchField(keyword);
 		newData.clickBtnSearch();
+		tools.stopForMoment(1000);
 		
+		boolean isCorrect = false;
 		
-		
+		List<WebElement> columnName = newData.getListTableColumnName();
+		for (int i = 0; i < columnName.size(); i++) {
+			if (columnName.get(i).getText().toLowerCase().contains(keyword.toLowerCase())) {
+				
+				isCorrect = true;
+				
+			} else {
+				isCorrect = false;
+				break;
+			}
+			
+		}
 		newData.LogOut();
 		newData.gotoLoginPage();
+		
+		assertTrue(isCorrect);
+		
+		
+		
 	}
 	
 	

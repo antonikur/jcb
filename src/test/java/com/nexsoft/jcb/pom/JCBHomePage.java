@@ -124,5 +124,15 @@ public class JCBHomePage {
 		menuWorklistNewData.click();
 		return PageFactory.initElements(driver, JCBNewDataPage.class);
 	}
+	
+	public JCBReturnPage clickAndGotoMenuReturn() {
+		menuWorklistReturn.click();
+		return PageFactory.initElements(driver, JCBReturnPage.class);
+	}
+	
+	public JCBRejectPage clickAndGotoMenuReject() {
+		menuWorklistReject.click();
+		return PageFactory.initElements(driver, JCBRejectPage.class);
+	}
 
 }
