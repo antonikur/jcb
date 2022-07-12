@@ -1,26 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name = "SuiteTest">
 
-<test name = "JCB">
+<test name = "Test_Login">
 <classes>
-<class name = "com.nexsoft.jcb.test.TestModulDataMaster">
-	<methods>
-		<include name="tekan_menu_master_kota"/>
-		<include name="input_kolom_search_by_kota"/>
-		<include name="pilih_show_entries_50_di_kota"/>
-		<include name="tekan_tombol_add_new_kota"/>
-		<include name="input_data_kota_valid_dan_save"/>
-		<include name="tekan_tombol_edit_pada_baris_kota"/>
-		<include name="ubah_data_kota_di_pop_up_edit_dan_tekan_save"/>
-		<include name="tekan_menu_master_area"/>
-		<include name="input_kolom_search_by_area"/>
-		<include name="pilih_show_entries_50_di_area"/>
-		<include name="tekan_tombol_add_new_area"/>
-		<include name="input_data_area_valid_dan_save"/>
-		<include name="tekan_tombol_edit_pada_baris_area"/>
-		<include name="ubah_data_area_di_pop_up_edit_dan_tekan_save"/>
-	</methods>
-</class>
+<class name = "com.nexsoft.jcb.test.TestModulLogin"/>
+</classes>
+</test>
+
+<test name = "Test_Dashboard">
+<classes>
+<class name = "com.nexsoft.jcb.test.TestModulDashboard"/>
+</classes>
+</test>
+
+<test name = "Test_Master">
+<classes>
+<class name = "com.nexsoft.jcb.test.TestModulMaster"/>
+</classes>
+</test>
+
+<test name = "Test_DataMerchant">
+<classes>
+<class name = "com.nexsoft.jcb.test.TestModulDataMerchant"/>
 </classes>
 </test>
 
