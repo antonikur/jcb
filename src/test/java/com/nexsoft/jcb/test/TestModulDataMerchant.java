@@ -53,10 +53,12 @@ public class TestModulDataMerchant {
 	@AfterMethod
 	public void logout() {
 		driver.findElement(By.xpath("//span[normalize-space()='Logout']")).click();;
+		tool.stopForMoment(2000);
 	}
 	
 	@AfterClass
 	public void driverClose() {
+		tool.stopForMoment(2000);
 		driver.close();
 	}
 	
@@ -435,6 +437,9 @@ public class TestModulDataMerchant {
 		int afterAdd = getNoLastInLastPage(merchantPage.getDriver());
 		System.out.println("after add: "+afterAdd);
 		
+		//screen shoot
+		tool.screenShoot(driver);
+		
 		//assert
 		assertTrue(beforeAdd == afterAdd);
 	}
@@ -464,6 +469,9 @@ public class TestModulDataMerchant {
 		int afterAdd = getNoLastInLastPage(merchantPage.getDriver());
 		System.out.println("after add: "+afterAdd);
 		
+		//screen shoot
+		tool.screenShoot(driver);
+
 		//assert
 		assertTrue(beforeAdd == afterAdd);
 	}
@@ -493,6 +501,9 @@ public class TestModulDataMerchant {
 		int afterAdd = getNoLastInLastPage(merchantPage.getDriver());
 		System.out.println("after add: "+afterAdd);
 		
+		//screen shoot
+		tool.screenShoot(driver);
+
 		//assert
 		assertTrue(beforeAdd == afterAdd);
 	}
@@ -521,6 +532,9 @@ public class TestModulDataMerchant {
 		//get how many data from search result after add data
 		int afterAdd = getNoLastInLastPage(merchantPage.getDriver());
 		System.out.println("after add: "+afterAdd);
+		
+		//screen shoot
+		tool.screenShoot(driver);
 		
 		//assert
 		assertTrue(beforeAdd == afterAdd);
@@ -551,6 +565,9 @@ public class TestModulDataMerchant {
 		int afterAdd = getNoLastInLastPage(merchantPage.getDriver());
 		System.out.println("after add: "+afterAdd);
 		
+		//screen shoot
+		tool.screenShoot(driver);
+
 		//assert
 		assertTrue(beforeAdd == afterAdd);
 	}
@@ -737,6 +754,10 @@ public class TestModulDataMerchant {
 		
 		//size after add
 		int sizeAfterAdd = getNoLastInLastPage(merchantPage.getDriver());
+		
+		//screen shoot
+		tool.screenShoot(driver);
+
 		assertTrue(sizeBeforeAdd == sizeAfterAdd, "Data is created, should be not since it suppose to be error");
 	}
 	
@@ -762,6 +783,10 @@ public class TestModulDataMerchant {
 		
 		//size after add
 		int sizeAfterAdd = getNoLastInLastPage(merchantPage.getDriver());
+		
+		//screen shoot
+		tool.screenShoot(driver);
+
 		assertTrue(sizeBeforeAdd == sizeAfterAdd, "Data is created, should be not since it suppose to be error");
 	}
 	
@@ -787,6 +812,10 @@ public class TestModulDataMerchant {
 		
 		//size after add
 		int sizeAfterAdd = getNoLastInLastPage(merchantPage.getDriver());
+		
+		//screen shoot
+		tool.screenShoot(driver);
+
 		assertTrue(sizeBeforeAdd == sizeAfterAdd, "Data is created, should be not since it suppose to be error");
 	}
 	
@@ -812,6 +841,10 @@ public class TestModulDataMerchant {
 		
 		//size after add
 		int sizeAfterAdd = getNoLastInLastPage(merchantPage.getDriver());
+		
+		//screen shoot
+		tool.screenShoot(driver);
+
 		assertTrue(sizeBeforeAdd == sizeAfterAdd, "Data is created, should be not since it suppose to be error");
 	}
 	
@@ -837,6 +870,10 @@ public class TestModulDataMerchant {
 		
 		//size after add
 		int sizeAfterAdd = getNoLastInLastPage(merchantPage.getDriver());
+		
+		//screen shoot
+		tool.screenShoot(driver);
+
 		assertTrue(sizeBeforeAdd == sizeAfterAdd, "Data is created, should be not since it suppose to be error");
 	}
 	
@@ -889,6 +926,10 @@ public class TestModulDataMerchant {
 		
 		
 		int sizeAfterAdd = getNoLastInLastPage(merchantPage.getDriver());
+		
+		//screen shoot
+		tool.screenShoot(driver);
+
 		assertTrue(sizeBeforeAdd == sizeAfterAdd, "Data is created, should be not since it suppose to be error");
 	}
 	
@@ -912,6 +953,10 @@ public class TestModulDataMerchant {
 		
 		
 		int sizeAfterAdd = getNoLastInLastPage(merchantPage.getDriver());
+		
+		//screen shoot
+		tool.screenShoot(driver);
+
 		assertTrue(sizeBeforeAdd == sizeAfterAdd, "Data is created, should be not since it suppose to be error");
 	}
 	
@@ -935,6 +980,10 @@ public class TestModulDataMerchant {
 		
 		
 		int sizeAfterAdd = getNoLastInLastPage(merchantPage.getDriver());
+		
+		//screen shoot
+		tool.screenShoot(driver);
+
 		assertTrue(sizeBeforeAdd == sizeAfterAdd, "Data is created, should be not since it suppose to be error");
 	}
 	
@@ -958,6 +1007,10 @@ public class TestModulDataMerchant {
 		
 		
 		int sizeAfterAdd = getNoLastInLastPage(merchantPage.getDriver());
+		
+		//screen shoot
+		tool.screenShoot(driver);
+
 		assertTrue(sizeBeforeAdd == sizeAfterAdd, "Data is created, should be not since it suppose to be error");
 	}
 	
@@ -981,6 +1034,10 @@ public class TestModulDataMerchant {
 		
 		
 		int sizeAfterAdd = getNoLastInLastPage(merchantPage.getDriver());
+		
+		//screen shoot
+		tool.screenShoot(driver);
+
 		assertTrue(sizeBeforeAdd == sizeAfterAdd, "Data is created, should be not since it suppose to be error");
 	}
 	
@@ -992,10 +1049,12 @@ public class TestModulDataMerchant {
 			.getMessageError404();
 			System.out.println("Error: "+message);
 		} catch (Exception e) {
-			// TODO: handle exception
 			//no error message found
 			return;
 		}
+		
+		//screen shoot
+		tool.screenShoot(driver);
 		
 		//go back because the error in new page
 		driver.navigate().back();
@@ -1031,6 +1090,10 @@ public class TestModulDataMerchant {
 			//no error message found
 			return;
 		}
+		
+		//screen shoot
+		tool.screenShoot(driver);
+		
 		//go back because the error in new page
 		driver.navigate().back();
 		

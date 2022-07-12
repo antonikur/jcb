@@ -58,11 +58,13 @@ public class TestModulMaster {
 	@AfterMethod
 	public void logout() {
 		driver.findElement(By.xpath("//span[normalize-space()='Logout']")).click();;
+		tool.stopForMoment(2000);
 	}
 	
 	
 	@AfterClass
 	public void driverClose() {
+		tool.stopForMoment(2000);
 		driver.close();
 	}
 	
@@ -462,6 +464,10 @@ public class TestModulMaster {
 		
 		//after add
 		int sizeAfterAddData = getNoLastInLastPage(userPage.getDriver());
+		
+		//screen shoot
+		tool.screenShoot(driver);
+		
 		//should be same sine its was error and no new data created
 		assertTrue(sizeBeforeAddData == sizeAfterAddData, "Data amount should be same since its was error and no new data created");
 	}
@@ -478,6 +484,10 @@ public class TestModulMaster {
 		
 		//after add
 		int sizeAfterAddData = getNoLastInLastPage(userPage.getDriver());
+		
+		//screen shoot
+		tool.screenShoot(driver);
+		
 		//should be same sine its was error and no new data created
 		assertTrue(sizeBeforeAddData == sizeAfterAddData, "Data amount should be same since its was error and no new data created");
 	}
@@ -494,6 +504,10 @@ public class TestModulMaster {
 		
 		//after add
 		int sizeAfterAddData = getNoLastInLastPage(userPage.getDriver());
+		
+		//screenshoot
+		tool.screenShoot(driver);
+		
 		//should be same sine its was error and no new data created
 		assertTrue(sizeBeforeAddData == sizeAfterAddData, "Data amount should be same since its was error and no new data created");
 	}
@@ -510,6 +524,10 @@ public class TestModulMaster {
 		
 		//after add
 		int sizeAfterAddData = getNoLastInLastPage(userPage.getDriver());
+		
+		//screen shoot
+		tool.screenShoot(driver);
+
 		//should be same sine its was error and no new data created
 		assertTrue(sizeBeforeAddData == sizeAfterAddData, "Data amount should be same since its was error and no new data created");
 	}
@@ -526,6 +544,10 @@ public class TestModulMaster {
 		
 		//after add
 		int sizeAfterAddData = getNoLastInLastPage(userPage.getDriver());
+		
+		//screen shoot
+		tool.screenShoot(driver);
+
 		//should be same sine its was error and no new data created
 		assertTrue(sizeBeforeAddData == sizeAfterAddData, "Data amount should be same since its was error and no new data created");
 	}
@@ -542,6 +564,10 @@ public class TestModulMaster {
 		
 		//after add
 		int sizeAfterAddData = getNoLastInLastPage(userPage.getDriver());
+		
+		//screen shoot
+		tool.screenShoot(driver);
+
 		//should be same sine its was error and no new data created
 		assertTrue(sizeBeforeAddData == sizeAfterAddData, "Data amount should be same since its was error and no new data created");
 	}
@@ -558,6 +584,10 @@ public class TestModulMaster {
 		
 		//after add
 		int sizeAfterAddData = getNoLastInLastPage(userPage.getDriver());
+		
+		//screen shoot
+		tool.screenShoot(driver);
+
 		//should be same sine its was error and no new data created
 		assertTrue(sizeBeforeAddData == sizeAfterAddData, "Data amount should be same since its was error and no new data created");
 	}
@@ -574,6 +604,10 @@ public class TestModulMaster {
 		
 		//after add
 		int sizeAfterAddData = getNoLastInLastPage(userPage.getDriver());
+		
+		//screen shoot
+		tool.screenShoot(driver);
+
 		//should be same sine its was error and no new data created
 		assertTrue(sizeBeforeAddData == sizeAfterAddData, "Data amount should be same since its was error and no new data created");
 	}
@@ -591,6 +625,10 @@ public class TestModulMaster {
 		
 		//after add
 		int sizeAfterAddData = getNoLastInLastPage(userPage.getDriver());
+		
+		//screen shoot
+		tool.screenShoot(driver);
+
 		//should be same sine its was error and no new data created
 		assertTrue(sizeBeforeAddData == sizeAfterAddData, "Data amount should be same since its was error and no new data created");
 	}
@@ -609,6 +647,10 @@ public class TestModulMaster {
 		
 		//after add
 		int sizeAfterAddData = getNoLastInLastPage(userPage.getDriver());
+		
+		//screen shoot
+		tool.screenShoot(driver);
+
 		//should be same sine its was error and no new data created
 		assertTrue(sizeBeforeAddData == sizeAfterAddData, "Data amount should be same since its was error and no new data created");
 	}
@@ -627,6 +669,10 @@ public class TestModulMaster {
 		
 		//after add
 		int sizeAfterAddData = getNoLastInLastPage(userPage.getDriver());
+		
+		//screen shoot
+		tool.screenShoot(driver);
+
 		//should be same sine its was error and no new data created
 		assertTrue(sizeBeforeAddData == sizeAfterAddData, "Data amount should be same since its was error and no new data created");
 	}
@@ -645,6 +691,10 @@ public class TestModulMaster {
 		
 		//after add
 		int sizeAfterAddData = getNoLastInLastPage(userPage.getDriver());
+		
+		//screen shoot
+		tool.screenShoot(driver);
+
 		//should be same sine its was error and no new data created
 		assertTrue(sizeBeforeAddData == sizeAfterAddData, "Data amount should be same since its was error and no new data created");
 	}
@@ -661,6 +711,10 @@ public class TestModulMaster {
 		
 		//after add
 		int sizeAfterAddData = getNoLastInLastPage(userPage.getDriver());
+		
+		//screen shoot
+		tool.screenShoot(driver);
+
 		//should be same sine its was error and no new data created
 		assertTrue(sizeBeforeAddData == sizeAfterAddData, "Data amount should be same since its was error and no new data created");
 	}
@@ -677,6 +731,10 @@ public class TestModulMaster {
 		
 		//after add
 		int sizeAfterAddData = getNoLastInLastPage(userPage.getDriver());
+		
+		//screen shoot
+		tool.screenShoot(driver);
+
 		//should be same sine its was error and no new data created
 		assertTrue(sizeBeforeAddData == sizeAfterAddData, "Data amount should be same since its was error and no new data created");
 	}
@@ -693,6 +751,10 @@ public class TestModulMaster {
 		
 		//after add
 		int sizeAfterAddData = getNoLastInLastPage(userPage.getDriver());
+		
+		//screen shoot
+		tool.screenShoot(driver);
+
 		//should be same sine its was error and no new data created
 		assertTrue(sizeBeforeAddData == sizeAfterAddData, "Data amount should be same since its was error and no new data created");
 	}
@@ -709,6 +771,10 @@ public class TestModulMaster {
 		
 		//after add
 		int sizeAfterAddData = getNoLastInLastPage(userPage.getDriver());
+		
+		//screen shoot
+		tool.screenShoot(driver);
+
 		//should be same sine its was error and no new data created
 		assertTrue(sizeBeforeAddData == sizeAfterAddData, "Data amount should be same since its was error and no new data created");
 	}
@@ -741,6 +807,10 @@ public class TestModulMaster {
 		
 		//after add
 		int sizeAfterAddData = getNoLastInLastPage(userPage.getDriver());
+		
+		//screen shoot
+		tool.screenShoot(driver);
+
 		//should be same sine its was error and no new data created
 		assertTrue(sizeBeforeAddData == sizeAfterAddData, "Data amount should be same since its was error and no new data created");
 	}
@@ -767,6 +837,9 @@ public class TestModulMaster {
 		boolean titleIsDisplayed = userPage.getElementTitlePopupEditUser().isDisplayed();
 		System.out.println(titleIsDisplayed);
 		
+		//screen shoot
+		tool.screenShoot(driver);
+		
 		//for logout
 		userPage.clickBtnExpandCompress();
 		userPage.clickBtnCancelPopupEdit();
@@ -776,11 +849,33 @@ public class TestModulMaster {
 	
 	@Test(priority = 38)
 	public void ubah_data_user_di_pop_up_edit_dan_tekan_save(){
+		homePage.clickAndGotoMenuMasterUser()
+		.clickEditUserByNo("5")
+		.getTitlePopupEditUser();
+		
+		//screen shoot
+		tool.screenShoot(driver);
+		
+		//for logout
+		PageFactory.initElements(driver, JCBMasterUserPage.class)
+		.clickBtnCancelPopupEdit();
+		
 		fail("No field in edit popup user");
 	}
 	
 	@Test(priority = 39)
 	public void ubah_data_user_di_pop_up_edit_dan_tekan_cancel_or_silang_di_user(){
+		homePage.clickAndGotoMenuMasterUser()
+		.clickEditUserByNo("5")
+		.getTitlePopupEditUser();
+		
+		//screen shoot
+		tool.screenShoot(driver);
+		
+		//for logout
+		PageFactory.initElements(driver, JCBMasterUserPage.class)
+		.clickBtnCancelPopupEdit();
+		
 		fail("No field in edit popup user");
 	}
 	
@@ -1035,6 +1130,9 @@ public class TestModulMaster {
 		//after add
 		int sizeAfterAddData = getNoLastInLastPage(kotaPage.getDriver());
 		
+		//screen shoot
+		tool.screenShoot(driver);
+		
 		//should be same since its was invalid and no new data created
 		assertTrue(sizeBeforeAddData == sizeAfterAddData, "Data amount should be same since its was error and no new data created");		
 	}
@@ -1053,6 +1151,9 @@ public class TestModulMaster {
 		//after add
 		int sizeAfterAddData = getNoLastInLastPage(kotaPage.getDriver());
 		
+		//screen shoot
+		tool.screenShoot(driver);
+
 		//should be same since its was invalid and no new data created
 		assertTrue(sizeBeforeAddData == sizeAfterAddData, "Data amount should be same since its was error and no new data created");
 	}
@@ -1070,6 +1171,9 @@ public class TestModulMaster {
 		
 		//after add
 		int sizeAfterAddData = getNoLastInLastPage(kotaPage.getDriver());
+		
+		//screen shoot
+		tool.screenShoot(driver);
 		
 		//should be same since its was invalid and no new data created
 		assertTrue(sizeBeforeAddData == sizeAfterAddData, "Data amount should be same since its was error and no new data created");
@@ -1089,6 +1193,9 @@ public class TestModulMaster {
 		//after add
 		int sizeAfterAddData = getNoLastInLastPage(kotaPage.getDriver());
 		
+		//screen shoot
+		tool.screenShoot(driver);
+
 		//should be same since its was invalid and no new data created
 		assertTrue(sizeBeforeAddData == sizeAfterAddData, "Data amount should be same since its was error and no new data created");
 	}
@@ -1131,6 +1238,9 @@ public class TestModulMaster {
 		boolean titleIsDisplayed = kotaPage.getElementTitlePopupEditKota().isDisplayed();
 		System.out.println(titleIsDisplayed);
 		
+		//screen shoot
+		tool.screenShoot(driver);
+		
 		//for logout
 		kotaPage.clickBtnExpandCompress();
 		kotaPage.clickBtnCancelPopupEdit();
@@ -1161,6 +1271,9 @@ public class TestModulMaster {
 		.getColumnNo();
 		
 		int afterSize = countSizeNo(resultAfter);
+		
+		//screen shoot
+		tool.screenShoot(driver);
 		
 		assertTrue(afterSize > beforeSize, "Data not changed");
 	}
@@ -1415,6 +1528,9 @@ public class TestModulMaster {
 		//after add
 		int sizeAfterAddData = getNoLastInLastPage(areaPage.getDriver());
 		
+		//screen shoot
+		tool.screenShoot(driver);
+
 		//should be same since its was invalid and no new data created
 		assertTrue(sizeBeforeAddData == sizeAfterAddData, "Data amount should be same since its was error and no new data created");
 	}
@@ -1433,6 +1549,9 @@ public class TestModulMaster {
 		//after add
 		int sizeAfterAddData = getNoLastInLastPage(areaPage.getDriver());
 		
+		//screen shoot
+		tool.screenShoot(driver);
+
 		//should be same since its was invalid and no new data created
 		assertTrue(sizeBeforeAddData == sizeAfterAddData, "Data amount should be same since its was error and no new data created");
 	}
@@ -1451,6 +1570,9 @@ public class TestModulMaster {
 		//after add
 		int sizeAfterAddData = getNoLastInLastPage(areaPage.getDriver());
 		
+		//screen shoot
+		tool.screenShoot(driver);
+
 		//should be same since its was invalid and no new data created
 		assertTrue(sizeBeforeAddData == sizeAfterAddData, "Data amount should be same since its was error and no new data created");
 	}
@@ -1491,6 +1613,9 @@ public class TestModulMaster {
 		
 		boolean titleIsDisplayed = areaPage.getElementTitlePopupEditArea().isDisplayed();
 		System.out.println(titleIsDisplayed);
+		
+		//screen shoot
+		tool.screenShoot(driver);
 		
 		//for logout
 		areaPage.clickBtnExpandCompress();

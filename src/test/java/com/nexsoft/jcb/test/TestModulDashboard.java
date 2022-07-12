@@ -52,10 +52,12 @@ public class TestModulDashboard {
 	@AfterMethod
 	public void logout() {
 		driver.findElement(By.xpath("//span[normalize-space()='Logout']")).click();;
+		tool.stopForMoment(2000);
 	}
 	
 	@AfterClass
 	public void driverClose() {
+		tool.stopForMoment(2000);
 		driver.close();
 	}
 	
@@ -146,6 +148,9 @@ public class TestModulDashboard {
 		int afterAdd = Integer.parseInt(dashboardPage.getListColumnJumlahMerchant().get(0).getText());
 		System.out.println("before add: "+afterAdd);
 		
+		//screen shoot
+		tool.screenShoot(driver);
+		
 		//assert
 		assertTrue(beforeAdd < afterAdd, "Data is not updated");
 	}
@@ -200,7 +205,11 @@ public class TestModulDashboard {
 		int totalCalcuateUnvisit = calculateAllInListExceptLast(dashBoardPage.getListColumnJumlahUnvisit());
 		int unvisit = Integer.parseInt(dashBoardPage.getTextTotalUnvisit().replace(",", ""));
 		
-		assertEquals(totalCalcuateUnvisit, unvisit);
+		//screen shoot
+		tool.screenShoot(driver);
+		
+		//assert
+		assertEquals(totalCalcuateUnvisit, unvisit, "Unvisit total in header is not same as total in table");
 	}
 	
 	@Test(priority = 8)

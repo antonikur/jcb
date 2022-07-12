@@ -38,10 +38,12 @@ public class TestModulLogin {
 	@BeforeMethod
 	public void reset() {
 		driver.get(System.getProperty("url"));
+		tool.stopForMoment(2000);
 	}
 	
 	@AfterClass
 	public void driverClose() {
+		tool.stopForMoment(2000);
 		driver.close();
 	}
 	
@@ -143,6 +145,9 @@ public class TestModulLogin {
 			tool.stopForMoment(2000);
 			//logout
 			driver.findElement(By.xpath("//span[normalize-space()='Logout']")).click();
+			
+			//screen shoot
+			tool.screenShoot(driver);
 			
 			//assert
 			fail("Login is success, it was suppose to be fail since the username is invalid");
