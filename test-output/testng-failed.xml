@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.nexsoft.jcb.test.TestModulDashboard">
+      <class name="com.nexsoft.jcb.test.TestModulLogin">
         <methods>
           <include name="reset"/>
           <include name="initial"/>
-          <include name="logout"/>
-          <include name="tekan_tombol_reload"/>
+          <include name="driverClose"/>
+          <include name="tekan_tombol_logout_setelah_berhasil_login"/>
         </methods>
-      </class> <!-- com.nexsoft.jcb.test.TestModulDashboard -->
+      </class> <!-- com.nexsoft.jcb.test.TestModulLogin -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

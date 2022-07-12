@@ -9,6 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -21,7 +22,8 @@ public class TestModulLogin {
 	protected WebDriver driver;
 	protected Tools tool = new Tools();
 	
-	
+	protected String adminUsername = "admindika3";
+	protected String adminUsernameCaps = "aDmInDIka3";
 	
 	@BeforeClass
 	public void initial() {
@@ -38,6 +40,10 @@ public class TestModulLogin {
 		driver.get(System.getProperty("url"));
 	}
 	
+	@AfterClass
+	public void driverClose() {
+		driver.close();
+	}
 	
 	//#############################################################################################
 	//#############################################################################################
@@ -60,7 +66,7 @@ public class TestModulLogin {
 	@Test(priority = 0)
 	public void input_username_tanpa_password_dan_tekan_login(){
 		WebElement element = PageFactory.initElements(driver, JCBLoginPage.class)
-		.inputFieldUsername("admindika")
+		.inputFieldUsername(adminUsername)
 		.clickBtnLogin().getElementFieldPassword();
 		
 		boolean isRequired = isAttrRequiredPresent(element);
@@ -91,7 +97,7 @@ public class TestModulLogin {
 	@Test(priority = 3)
 	public void input_username_valid_dan_password_invalid_dan_tekan_login(){
 		String actual = PageFactory.initElements(driver, JCBLoginPage.class)
-		.inputFieldUsername("admindika")
+		.inputFieldUsername(adminUsername)
 		.inputFieldPassword("dummyPass")
 		.clickBtnLogin()
 		.getErrMsgInvalidUsernamePassword().trim();
@@ -113,7 +119,7 @@ public class TestModulLogin {
 	@Test(priority = 5)
 	public void input_password_panjang_dan_tekan_login(){
 		String actual = PageFactory.initElements(driver, JCBLoginPage.class)
-		.inputFieldUsername("admindika")
+		.inputFieldUsername(adminUsername)
 		.inputFieldPassword("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
 		.clickBtnLogin()
 		.getErrMsgInvalidUsernamePassword().trim();
@@ -125,7 +131,7 @@ public class TestModulLogin {
 	public void input_username_valid_dengan_huruf_besar_kecil_dan_tekan_login(){
 		try {
 			String actual = PageFactory.initElements(driver, JCBLoginPage.class)
-			.inputFieldUsername("aDmInDIka")
+			.inputFieldUsername(adminUsernameCaps)
 			.inputFieldPassword("d1k4@passw0rd")
 			.clickBtnLogin()
 			.getErrMsgInvalidUsernamePassword().trim();
@@ -146,7 +152,7 @@ public class TestModulLogin {
 	@Test(priority = 7)
 	public void input_password_valid_dengan_huruf_besar_kecil_dan_tekan_login(){
 		String actual = PageFactory.initElements(driver, JCBLoginPage.class)
-		.inputFieldUsername("admindika")
+		.inputFieldUsername(adminUsername)
 		.inputFieldPassword("d1k4@PasSw0Rd")
 		.clickBtnLogin()
 		.getErrMsgInvalidUsernamePassword().trim();
@@ -167,7 +173,7 @@ public class TestModulLogin {
 	@Test(priority = 9)
 	public void input_username_dan_password_valid_sebagai_admin(){
 		String actual = PageFactory.initElements(driver, JCBLoginPage.class)
-		.inputFieldUsername("admindika")
+		.inputFieldUsername(adminUsername)
 		.inputFieldPassword("d1k4@passw0rd")
 		.clickBtnLogin()
 		.gotoHomePage()
@@ -200,16 +206,12 @@ public class TestModulLogin {
 	@Test(priority = 11)
 	public void tekan_tombol_logout_setelah_berhasil_login(){
 		String actual = PageFactory.initElements(driver, JCBLoginPage.class)
-				.inputFieldUsername("admindika3")
+				.inputFieldUsername(adminUsername)
 				.inputFieldPassword("d1k4@passw0rd")
 				.clickBtnLogin()
 				.gotoHomePage()
 				.clickLogoutAndGotoLoginPage()
 				.getTitleLogin().trim();
-		
-		//logout
-		PageFactory.initElements(driver, JCBHomePage.class)
-		.clickLogoutAndGotoLoginPage();
 		
 		assertEquals(actual, "DIKA | JCB");
 	}

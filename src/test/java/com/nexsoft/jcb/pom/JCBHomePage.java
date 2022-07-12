@@ -126,6 +126,7 @@ public class JCBHomePage {
 	
 	public JCBLoginPage clickLogoutAndGotoLoginPage() {
 		menuLogout.click();
+		tool.stopForMoment(2000);
 		return PageFactory.initElements(driver, JCBLoginPage.class);
 	}
 	

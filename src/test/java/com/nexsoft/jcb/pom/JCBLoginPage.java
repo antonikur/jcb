@@ -54,6 +54,7 @@ public class JCBLoginPage {
 	
 	public JCBLoginPage clickBtnLogin() {
 		btnLogin.click();
+		tool.stopForMoment(2000);
 		return PageFactory.initElements(driver, JCBLoginPage.class);
 	}
 	
