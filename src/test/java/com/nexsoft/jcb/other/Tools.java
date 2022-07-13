@@ -13,6 +13,8 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.Reporter;
 //import org.openqa.selenium.WebElement;
 
 //import io.appium.java_client.TouchAction;
@@ -32,6 +34,11 @@ public class Tools {
 		}
 	}
 	
+	public void scrollByFindElement(WebDriver driver, WebElement element) {
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+		stopForMoment(500);
+	}
+	
 	public void stopForMoment(int miliSec) {
 		try {
 			Thread.sleep(miliSec);
@@ -46,16 +53,26 @@ public class Tools {
 		js.executeScript("window.scrollBy(0,"+y+")", "");
 	}
 	
+	public void scroolHorizontalWindows(WebDriver driver, int x) {
+		//positive y for going down, negative y for going up
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy("+x+",0)", "");
+	}
+	
 	public String screenShoot(WebDriver driver) {
 		File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		String waktu = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
-		String namaFile = "C:\\Antoni\\selenium\\TestNG\\screenshoot\\Error_" + waktu + ".PNG";
+		String namaFile = "D:\\TA\\ScreenShoot\\Fail" + waktu + ".PNG";
 		File screenshoot = new File(namaFile);
 		try {
 			FileUtils.copyFile(srcFile, screenshoot);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		
+		String photoLog = "<img src='file://" + namaFile + "'height=\"350\" width=\"792\"/>";
+		Reporter.log(photoLog);
+		
 		return namaFile;
 	}
 	

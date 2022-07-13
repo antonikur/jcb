@@ -14,11 +14,12 @@ public class TestModulLogin {
 	protected WebDriver driver;
 	protected Tools tool;
 	
+
 	
 	@BeforeClass
 	public void initial() {
 		System.setProperty("url", "https://dev.ptdika.com/jcb/new/login");
-		System.setProperty("webdriver.chrome.driver", "C:\\Antoni\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "D:\\\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get(System.getProperty("url"));
 		driver.manage().window().maximize();

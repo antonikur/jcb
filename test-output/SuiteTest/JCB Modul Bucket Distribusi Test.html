@@ -1,0 +1,440 @@
+<html>
+<head>
+<title>TestNG:  JCB Modul Bucket Distribusi Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>JCB Modul Bucket Distribusi Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>72/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Jul 13 09:39:31 WIB 2022</td>
+</tr>
+<tr><td>Total time:</td><td>875 seconds (875809 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.tekan_bucket_dan_bucket_distribusi()'><b>tekan_bucket_dan_bucket_distribusi</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>4</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.filter_Desc_Untuk_Total_Data()'><b>filter_Desc_Untuk_Total_Data</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>4</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.filter_Desc_Untuk_Name()'><b>filter_Desc_Untuk_Name</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>8</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.input_search_saat_expand_tanpa_isi()'><b>input_search_saat_expand_tanpa_isi</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>13</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.memeriksa_btn_expand_compress_assignment()'><b>memeriksa_btn_expand_compress_assignment</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>9</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.memeriksa_btn_expand_compress_distribusi_data()'><b>memeriksa_btn_expand_compress_distribusi_data</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>8</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.input_kolom_search_by_data_unvisit()'><b>input_kolom_search_by_data_unvisit</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>14</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.input_kolom_search_by_name_huruf_kapital()'><b>input_kolom_search_by_name_huruf_kapital</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>4</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.fungsi_pilih_user()'><b>fungsi_pilih_user</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>28</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.memilih_user_yang_dituju()'><b>memilih_user_yang_dituju</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>13</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.tekan_button_bucket()'><b>tekan_button_bucket</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>0</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.fungsi_button_next()'><b>fungsi_button_next</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>6</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.fungsi_button_3()'><b>fungsi_button_3</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>4</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.fungsi_button_assignment()'><b>fungsi_button_assignment</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>5</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.filter_Asc_Untuk_No()'><b>filter_Asc_Untuk_No</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>9</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.fungsi_button_5()'><b>fungsi_button_5</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>4</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.filter_Desc_Untuk_NIK()'><b>filter_Desc_Untuk_NIK</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>5</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.filter_Desc_Untuk_No()'><b>filter_Desc_Untuk_No</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>5</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.input_kolom_search_by_huruf_random()'><b>input_kolom_search_by_huruf_random</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>4</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.tekan_tombol_collapse_or_expand_pilih_data()'><b>tekan_tombol_collapse_or_expand_pilih_data</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>11</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.fungsi_pilih_data()'><b>fungsi_pilih_data</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>5</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.fungsi_button_7()'><b>fungsi_button_7</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>5</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.input_search_saat_expand_menggunakan_spasi()'><b>input_search_saat_expand_menggunakan_spasi</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>13</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.filter_Desc_Untuk_Data_Unvisit()'><b>filter_Desc_Untuk_Data_Unvisit</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>12</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.input_kolom_search_by_simbol()'><b>input_kolom_search_by_simbol</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>5</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.memilih_1_data_assign()'><b>memilih_1_data_assign</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>8</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.memilih_2_data_assign()'><b>memilih_2_data_assign</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>9</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.memeriksa_fungsi_button_process()'><b>memeriksa_fungsi_button_process</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>17</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.input_search_saat_expand_by_name()'><b>input_search_saat_expand_by_name</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>12</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.tekan_tombol_collapse_or_expand_distribusi_data()'><b>tekan_tombol_collapse_or_expand_distribusi_data</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>7</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.pilih_show_entries_100_di_distribusi_data()'><b>pilih_show_entries_100_di_distribusi_data</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>6</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.input_search_saat_expand_by_no()'><b>input_search_saat_expand_by_no</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>12</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.filter_Asc_Untuk_Name()'><b>filter_Asc_Untuk_Name</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>5</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.filter_Desc_Untuk_Data_Visit()'><b>filter_Desc_Untuk_Data_Visit</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>4</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.fungsi_button_8()'><b>fungsi_button_8</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>6</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.fungsi_button_10()'><b>fungsi_button_10</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>5</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.input_kolom_search_by_data_visit()'><b>input_kolom_search_by_data_visit</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>5</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.input_kolom_search_tanpa_isi()'><b>input_kolom_search_tanpa_isi</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>5</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.input_search_saat_expand_by_nik()'><b>input_search_saat_expand_by_nik</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>12</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.button_x_di_pilih_user()'><b>button_x_di_pilih_user</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>14</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.memeriksa_checkbox_1()'><b>memeriksa_checkbox_1</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>11</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.input_kolom_search_by_no()'><b>input_kolom_search_by_no</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>4</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.fungsi_button_process()'><b>fungsi_button_process</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>23</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.tekan_tombol_collapse_or_expand_assignment()'><b>tekan_tombol_collapse_or_expand_assignment</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>11</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.memeriksa_btn_expand_compress_pilih_data()'><b>memeriksa_btn_expand_compress_pilih_data</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>10</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.fungsi_button_mata()'><b>fungsi_button_mata</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>9</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.fungsi_button_2()'><b>fungsi_button_2</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>4</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.input_kolom_search_by_nik()'><b>input_kolom_search_by_nik</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>4</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.fungsi_button_6()'><b>fungsi_button_6</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>4</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.fungsi_button_4()'><b>fungsi_button_4</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>4</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.pilih_show_entries_25_di_distribusi_data()'><b>pilih_show_entries_25_di_distribusi_data</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>4</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.input_kolom_search_with_spasi()'><b>input_kolom_search_with_spasi</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>5</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.fungsi_previous()'><b>fungsi_previous</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>7</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.fungsi_button_9()'><b>fungsi_button_9</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>5</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.input_kolom_search_by_name()'><b>input_kolom_search_by_name</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>5</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.filter_Asc_Untuk_NIK()'><b>filter_Asc_Untuk_NIK</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>5</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.memeriksa_checkbox_2()'><b>memeriksa_checkbox_2</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>11</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.input_search_saat_expand_by_simbol()'><b>input_search_saat_expand_by_simbol</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>14</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.filter_Asc_Untuk_Total_Data()'><b>filter_Asc_Untuk_Total_Data</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>5</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.fungsi_button_plus_pada_setiap_nomer_1()'><b>fungsi_button_plus_pada_setiap_nomer_1</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>7</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.memeriksa_checkbox_all()'><b>memeriksa_checkbox_all</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>11</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.memilih_user_yang_akan_di_assign()'><b>memilih_user_yang_akan_di_assign</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>11</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.filter_Asc_Untuk_Data_Unvisit()'><b>filter_Asc_Untuk_Data_Unvisit</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>13</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.input_search_saat_expand_by_total_data()'><b>input_search_saat_expand_by_total_data</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>13</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.filter_Asc_Untuk_Data_Visit()'><b>filter_Asc_Untuk_Data_Visit</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>5</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.fungsi_button_1()'><b>fungsi_button_1</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>4</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.button_x_pilih_user_()'><b>button_x_pilih_user_</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>15</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.pilih_show_entries_10_di_distribusi_data()'><b>pilih_show_entries_10_di_distribusi_data</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>5</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.pilih_show_entries_50_di_distribusi_data()'><b>pilih_show_entries_50_di_distribusi_data</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>4</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.memeriksa_button_pilih_data_detail()'><b>memeriksa_button_pilih_data_detail</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>11</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.input_kolom_search_by_total_data()'><b>input_kolom_search_by_total_data</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>4</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketDistribusi.memeriksa_button_pilih_user_dan_button_x()'><b>memeriksa_button_pilih_user_dan_button_x</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketDistribusi</td>
+<td></td>
+<td>19</td>
+<td>com.nexsoft.jcb.test.TestModulBucketDistribusi@201a4587</td></tr>
+</table><p>
+</body>
+</html>
