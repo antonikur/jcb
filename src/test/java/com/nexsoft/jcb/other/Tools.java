@@ -15,6 +15,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 //import org.openqa.selenium.WebElement;
+import org.testng.Reporter;
 
 //import io.appium.java_client.TouchAction;
 //import io.appium.java_client.android.AndroidDriver;
@@ -62,6 +63,9 @@ public class Tools {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		String photoLog = "<img src='file://" + namaFile + "'height=\"350\" width=\"792\"/>";
+		Reporter.log(photoLog);
+		
 		return namaFile;
 	}
 	

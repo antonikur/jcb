@@ -1,23 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [SuiteTest]">
-  <test thread-count="5" name="Test_Login(failed)">
-    <classes>
-      <class name="com.nexsoft.jcb.test.TestModulLogin">
-        <methods>
-          <include name="input_username_valid_dengan_huruf_besar_kecil_dan_tekan_login"/>
-          <include name="reset"/>
-          <include name="initial"/>
-          <include name="driverClose"/>
-        </methods>
-      </class> <!-- com.nexsoft.jcb.test.TestModulLogin -->
-    </classes>
-  </test> <!-- Test_Login(failed) -->
   <test thread-count="5" name="Test_Dashboard(failed)">
     <classes>
       <class name="com.nexsoft.jcb.test.TestModulDashboard">
         <methods>
-          <include name="cek_seluruh_jumlah_total_unvisit_sudah_benar_atau_belum"/>
           <include name="reset"/>
           <include name="initial"/>
           <include name="driverClose"/>

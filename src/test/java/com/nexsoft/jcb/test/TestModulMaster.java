@@ -1091,10 +1091,16 @@ public class TestModulMaster {
 	
 	@Test(priority = 56)
 	public void tekan_tombol_add_new_kota(){
-		String actual = homePage.clickAndGotoMenuMasterKota()
-		.clickAddNewKota()
+		
+		
+		JCBMasterKotaPage kotaPage = homePage.clickAndGotoMenuMasterKota();
+		String actual =	kotaPage.clickAddNewKota()
 		.getTitlePopupAddKota().trim();
-		assertEquals(actual, "Data Kota");
+		
+		//for logout
+		kotaPage.clickBtnCancelPopupAddKota();
+		
+		assertTrue(actual.contains("Form Input Kota"));
 		
 	}
 	
@@ -1489,10 +1495,15 @@ public class TestModulMaster {
 	
 	@Test(priority = 82)
 	public void tekan_tombol_add_new_area(){
-		String actual = homePage.clickAndGotoMenuMasterArea()
-				.clickBtnAddNewArea()
-				.getTitlePopupAddArea().trim();
-		assertEquals(actual, "Form Input Area Baru");
+		
+		JCBMasterAreaPage areaPage = homePage.clickAndGotoMenuMasterArea();
+		String actual = areaPage.clickBtnAddNewArea()
+		.getTitlePopupAddArea().trim();
+				
+		//for logout
+		areaPage.clickCancelPopupNewArea();
+				
+		assertTrue(actual.contains("Form Input Area Baru"));
 	}
 	
 	@Test(priority = 83)

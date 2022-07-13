@@ -206,7 +206,7 @@ public class TestModulDashboard {
 		int unvisit = Integer.parseInt(dashBoardPage.getTextTotalUnvisit().replace(",", ""));
 		
 		//screen shoot
-		tool.screenShoot(driver);
+//		tool.screenShoot(driver);
 		
 		//assert
 		assertEquals(totalCalcuateUnvisit, unvisit, "Unvisit total in header is not same as total in table");

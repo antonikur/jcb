@@ -22,8 +22,8 @@ public class TestModulLogin {
 	protected WebDriver driver;
 	protected Tools tool = new Tools();
 	
-	protected String adminUsername = "admindika3";
-	protected String adminUsernameCaps = "aDmInDIka3";
+	protected String adminUsername = "admindika";
+	protected String adminUsernameCaps = "aDmInDIka";
 	
 	@BeforeClass
 	public void initial() {
@@ -143,11 +143,12 @@ public class TestModulLogin {
 			//if not get error message then its mean login is success
 			//therefore the test is fail
 			tool.stopForMoment(2000);
-			//logout
-			driver.findElement(By.xpath("//span[normalize-space()='Logout']")).click();
 			
 			//screen shoot
 			tool.screenShoot(driver);
+			
+			//logout
+			driver.findElement(By.xpath("//span[normalize-space()='Logout']")).click();
 			
 			//assert
 			fail("Login is success, it was suppose to be fail since the username is invalid");

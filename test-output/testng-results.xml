@@ -1,192 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="21" passed="18" failed="3" skipped="0">
+<testng-results ignored="0" total="9" passed="8" failed="1" skipped="0">
   <reporter-output>
+    <line>
+      <![CDATA[<img src='file://C:\Antoni\selenium\TestNG\screenshoot\Error_20220713_184723.PNG'height="350" width="792"/>]]>
+    </line>
   </reporter-output>
-  <suite started-at="2022-07-12T22:19:21 WIB" name="SuiteTest" finished-at="2022-07-12T22:23:10 WIB" duration-ms="229209">
+  <suite started-at="2022-07-13T18:46:01 WIB" name="SuiteTest" finished-at="2022-07-13T18:49:19 WIB" duration-ms="197242">
     <groups>
     </groups>
-    <test started-at="2022-07-12T22:19:21 WIB" name="Test_Login" finished-at="2022-07-12T22:20:49 WIB" duration-ms="88714">
-      <class name="com.nexsoft.jcb.test.TestModulLogin">
-        <test-method is-config="true" signature="initial()[pri:0, instance:com.nexsoft.jcb.test.TestModulLogin@5824a83d]" started-at="2022-07-12T22:19:21 WIB" name="initial" finished-at="2022-07-12T22:19:25 WIB" duration-ms="4216" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initial -->
-        <test-method is-config="true" signature="reset()[pri:0, instance:com.nexsoft.jcb.test.TestModulLogin@5824a83d]" started-at="2022-07-12T22:19:25 WIB" name="reset" finished-at="2022-07-12T22:19:27 WIB" duration-ms="2087" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- reset -->
-        <test-method signature="input_username_tanpa_password_dan_tekan_login()[pri:0, instance:com.nexsoft.jcb.test.TestModulLogin@5824a83d]" started-at="2022-07-12T22:19:27 WIB" name="input_username_tanpa_password_dan_tekan_login" finished-at="2022-07-12T22:19:29 WIB" duration-ms="2253" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- input_username_tanpa_password_dan_tekan_login -->
-        <test-method is-config="true" signature="reset()[pri:0, instance:com.nexsoft.jcb.test.TestModulLogin@5824a83d]" started-at="2022-07-12T22:19:29 WIB" name="reset" finished-at="2022-07-12T22:19:31 WIB" duration-ms="2095" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- reset -->
-        <test-method signature="input_password_tanpa_username_dan_tekan_login()[pri:1, instance:com.nexsoft.jcb.test.TestModulLogin@5824a83d]" started-at="2022-07-12T22:19:31 WIB" name="input_password_tanpa_username_dan_tekan_login" finished-at="2022-07-12T22:19:33 WIB" duration-ms="2226" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- input_password_tanpa_username_dan_tekan_login -->
-        <test-method is-config="true" signature="reset()[pri:0, instance:com.nexsoft.jcb.test.TestModulLogin@5824a83d]" started-at="2022-07-12T22:19:33 WIB" name="reset" finished-at="2022-07-12T22:19:36 WIB" duration-ms="2134" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- reset -->
-        <test-method signature="input_username_invalid_dan_password_valid_dan_tekan_login()[pri:2, instance:com.nexsoft.jcb.test.TestModulLogin@5824a83d]" started-at="2022-07-12T22:19:36 WIB" name="input_username_invalid_dan_password_valid_dan_tekan_login" finished-at="2022-07-12T22:19:40 WIB" duration-ms="4393" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- input_username_invalid_dan_password_valid_dan_tekan_login -->
-        <test-method is-config="true" signature="reset()[pri:0, instance:com.nexsoft.jcb.test.TestModulLogin@5824a83d]" started-at="2022-07-12T22:19:40 WIB" name="reset" finished-at="2022-07-12T22:19:42 WIB" duration-ms="2097" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- reset -->
-        <test-method signature="input_username_valid_dan_password_invalid_dan_tekan_login()[pri:3, instance:com.nexsoft.jcb.test.TestModulLogin@5824a83d]" started-at="2022-07-12T22:19:42 WIB" name="input_username_valid_dan_password_invalid_dan_tekan_login" finished-at="2022-07-12T22:19:47 WIB" duration-ms="4728" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- input_username_valid_dan_password_invalid_dan_tekan_login -->
-        <test-method is-config="true" signature="reset()[pri:0, instance:com.nexsoft.jcb.test.TestModulLogin@5824a83d]" started-at="2022-07-12T22:19:47 WIB" name="reset" finished-at="2022-07-12T22:19:49 WIB" duration-ms="2087" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- reset -->
-        <test-method signature="input_username_panjang_dan_tekan_login()[pri:4, instance:com.nexsoft.jcb.test.TestModulLogin@5824a83d]" started-at="2022-07-12T22:19:49 WIB" name="input_username_panjang_dan_tekan_login" finished-at="2022-07-12T22:19:54 WIB" duration-ms="4772" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- input_username_panjang_dan_tekan_login -->
-        <test-method is-config="true" signature="reset()[pri:0, instance:com.nexsoft.jcb.test.TestModulLogin@5824a83d]" started-at="2022-07-12T22:19:54 WIB" name="reset" finished-at="2022-07-12T22:19:56 WIB" duration-ms="2069" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- reset -->
-        <test-method signature="input_password_panjang_dan_tekan_login()[pri:5, instance:com.nexsoft.jcb.test.TestModulLogin@5824a83d]" started-at="2022-07-12T22:19:56 WIB" name="input_password_panjang_dan_tekan_login" finished-at="2022-07-12T22:20:00 WIB" duration-ms="4654" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- input_password_panjang_dan_tekan_login -->
-        <test-method is-config="true" signature="reset()[pri:0, instance:com.nexsoft.jcb.test.TestModulLogin@5824a83d]" started-at="2022-07-12T22:20:00 WIB" name="reset" finished-at="2022-07-12T22:20:02 WIB" duration-ms="2095" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- reset -->
-        <test-method signature="input_username_valid_dengan_huruf_besar_kecil_dan_tekan_login()[pri:6, instance:com.nexsoft.jcb.test.TestModulLogin@5824a83d]" started-at="2022-07-12T22:20:02 WIB" name="input_username_valid_dengan_huruf_besar_kecil_dan_tekan_login" finished-at="2022-07-12T22:20:11 WIB" duration-ms="9008" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Login is success, it was suppose to be fail since the username is invalid]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Login is success, it was suppose to be fail since the username is invalid
-at org.testng.Assert.fail(Assert.java:110)
-at com.nexsoft.jcb.test.TestModulLogin.input_username_valid_dengan_huruf_besar_kecil_dan_tekan_login(TestModulLogin.java:153)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:806)
-at org.testng.TestRunner.run(TestRunner.java:601)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- input_username_valid_dengan_huruf_besar_kecil_dan_tekan_login -->
-        <test-method is-config="true" signature="reset()[pri:0, instance:com.nexsoft.jcb.test.TestModulLogin@5824a83d]" started-at="2022-07-12T22:20:11 WIB" name="reset" finished-at="2022-07-12T22:20:14 WIB" duration-ms="2073" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- reset -->
-        <test-method signature="input_password_valid_dengan_huruf_besar_kecil_dan_tekan_login()[pri:7, instance:com.nexsoft.jcb.test.TestModulLogin@5824a83d]" started-at="2022-07-12T22:20:14 WIB" name="input_password_valid_dengan_huruf_besar_kecil_dan_tekan_login" finished-at="2022-07-12T22:20:18 WIB" duration-ms="4350" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- input_password_valid_dengan_huruf_besar_kecil_dan_tekan_login -->
-        <test-method is-config="true" signature="reset()[pri:0, instance:com.nexsoft.jcb.test.TestModulLogin@5824a83d]" started-at="2022-07-12T22:20:18 WIB" name="reset" finished-at="2022-07-12T22:20:20 WIB" duration-ms="2082" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- reset -->
-        <test-method signature="username_dan_password_kosong()[pri:8, instance:com.nexsoft.jcb.test.TestModulLogin@5824a83d]" started-at="2022-07-12T22:20:20 WIB" name="username_dan_password_kosong" finished-at="2022-07-12T22:20:22 WIB" duration-ms="2122" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- username_dan_password_kosong -->
-        <test-method is-config="true" signature="reset()[pri:0, instance:com.nexsoft.jcb.test.TestModulLogin@5824a83d]" started-at="2022-07-12T22:20:22 WIB" name="reset" finished-at="2022-07-12T22:20:24 WIB" duration-ms="2084" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- reset -->
-        <test-method signature="input_username_dan_password_valid_sebagai_admin()[pri:9, instance:com.nexsoft.jcb.test.TestModulLogin@5824a83d]" started-at="2022-07-12T22:20:24 WIB" name="input_username_dan_password_valid_sebagai_admin" finished-at="2022-07-12T22:20:31 WIB" duration-ms="6934" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- input_username_dan_password_valid_sebagai_admin -->
-        <test-method is-config="true" signature="reset()[pri:0, instance:com.nexsoft.jcb.test.TestModulLogin@5824a83d]" started-at="2022-07-12T22:20:31 WIB" name="reset" finished-at="2022-07-12T22:20:33 WIB" duration-ms="2071" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- reset -->
-        <test-method signature="input_username_dan_password_valid_sebagai_surveyor()[pri:10, instance:com.nexsoft.jcb.test.TestModulLogin@5824a83d]" started-at="2022-07-12T22:20:33 WIB" name="input_username_dan_password_valid_sebagai_surveyor" finished-at="2022-07-12T22:20:40 WIB" duration-ms="7032" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- input_username_dan_password_valid_sebagai_surveyor -->
-        <test-method is-config="true" signature="reset()[pri:0, instance:com.nexsoft.jcb.test.TestModulLogin@5824a83d]" started-at="2022-07-12T22:20:40 WIB" name="reset" finished-at="2022-07-12T22:20:42 WIB" duration-ms="2088" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- reset -->
-        <test-method signature="tekan_tombol_logout_setelah_berhasil_login()[pri:11, instance:com.nexsoft.jcb.test.TestModulLogin@5824a83d]" started-at="2022-07-12T22:20:42 WIB" name="tekan_tombol_logout_setelah_berhasil_login" finished-at="2022-07-12T22:20:47 WIB" duration-ms="4804" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tekan_tombol_logout_setelah_berhasil_login -->
-        <test-method is-config="true" signature="driverClose()[pri:0, instance:com.nexsoft.jcb.test.TestModulLogin@5824a83d]" started-at="2022-07-12T22:20:47 WIB" name="driverClose" finished-at="2022-07-12T22:20:49 WIB" duration-ms="2090" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- driverClose -->
-      </class> <!-- com.nexsoft.jcb.test.TestModulLogin -->
-    </test> <!-- Test_Login -->
-    <test started-at="2022-07-12T22:20:49 WIB" name="Test_Dashboard" finished-at="2022-07-12T22:23:10 WIB" duration-ms="140448">
+    <test started-at="2022-07-13T18:46:01 WIB" name="Test_Dashboard" finished-at="2022-07-13T18:49:19 WIB" duration-ms="197242">
       <class name="com.nexsoft.jcb.test.TestModulDashboard">
-        <test-method is-config="true" signature="initial()[pri:0, instance:com.nexsoft.jcb.test.TestModulDashboard@58cbafc2]" started-at="2022-07-12T22:20:49 WIB" name="initial" finished-at="2022-07-12T22:20:52 WIB" duration-ms="2467" status="PASS">
+        <test-method is-config="true" signature="initial()[pri:0, instance:com.nexsoft.jcb.test.TestModulDashboard@52719fb6]" started-at="2022-07-13T18:46:02 WIB" name="initial" finished-at="2022-07-13T18:46:15 WIB" duration-ms="13840" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initial -->
-        <test-method is-config="true" signature="reset()[pri:0, instance:com.nexsoft.jcb.test.TestModulDashboard@58cbafc2]" started-at="2022-07-12T22:20:52 WIB" name="reset" finished-at="2022-07-12T22:20:55 WIB" duration-ms="3462" status="PASS">
+        <test-method is-config="true" signature="reset()[pri:0, instance:com.nexsoft.jcb.test.TestModulDashboard@52719fb6]" started-at="2022-07-13T18:46:15 WIB" name="reset" finished-at="2022-07-13T18:46:23 WIB" duration-ms="7769" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reset -->
-        <test-method signature="tekan_menu_dashboard()[pri:0, instance:com.nexsoft.jcb.test.TestModulDashboard@58cbafc2]" started-at="2022-07-12T22:20:55 WIB" name="tekan_menu_dashboard" finished-at="2022-07-12T22:21:00 WIB" duration-ms="5185" status="PASS">
+        <test-method signature="tekan_menu_dashboard()[pri:0, instance:com.nexsoft.jcb.test.TestModulDashboard@52719fb6]" started-at="2022-07-13T18:46:23 WIB" name="tekan_menu_dashboard" finished-at="2022-07-13T18:46:30 WIB" duration-ms="6463" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tekan_menu_dashboard -->
-        <test-method is-config="true" signature="logout()[pri:0, instance:com.nexsoft.jcb.test.TestModulDashboard@58cbafc2]" started-at="2022-07-12T22:21:00 WIB" name="logout" finished-at="2022-07-12T22:21:03 WIB" duration-ms="2187" status="PASS">
+        <test-method is-config="true" signature="logout()[pri:0, instance:com.nexsoft.jcb.test.TestModulDashboard@52719fb6]" started-at="2022-07-13T18:46:30 WIB" name="logout" finished-at="2022-07-13T18:46:33 WIB" duration-ms="3176" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logout -->
-        <test-method is-config="true" signature="reset()[pri:0, instance:com.nexsoft.jcb.test.TestModulDashboard@58cbafc2]" started-at="2022-07-12T22:21:03 WIB" name="reset" finished-at="2022-07-12T22:21:05 WIB" duration-ms="2782" status="PASS">
+        <test-method is-config="true" signature="reset()[pri:0, instance:com.nexsoft.jcb.test.TestModulDashboard@52719fb6]" started-at="2022-07-13T18:46:33 WIB" name="reset" finished-at="2022-07-13T18:46:39 WIB" duration-ms="6445" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reset -->
-        <test-method signature="tekan_tombol_expand_or_compress()[pri:1, instance:com.nexsoft.jcb.test.TestModulDashboard@58cbafc2]" started-at="2022-07-12T22:21:05 WIB" name="tekan_tombol_expand_or_compress" finished-at="2022-07-12T22:21:13 WIB" duration-ms="7318" status="PASS">
+        <test-method signature="tekan_tombol_expand_or_compress()[pri:1, instance:com.nexsoft.jcb.test.TestModulDashboard@52719fb6]" started-at="2022-07-13T18:46:39 WIB" name="tekan_tombol_expand_or_compress" finished-at="2022-07-13T18:46:47 WIB" duration-ms="8042" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tekan_tombol_expand_or_compress -->
-        <test-method is-config="true" signature="logout()[pri:0, instance:com.nexsoft.jcb.test.TestModulDashboard@58cbafc2]" started-at="2022-07-12T22:21:13 WIB" name="logout" finished-at="2022-07-12T22:21:15 WIB" duration-ms="2210" status="PASS">
+        <test-method is-config="true" signature="logout()[pri:0, instance:com.nexsoft.jcb.test.TestModulDashboard@52719fb6]" started-at="2022-07-13T18:46:47 WIB" name="logout" finished-at="2022-07-13T18:46:50 WIB" duration-ms="2550" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logout -->
-        <test-method is-config="true" signature="reset()[pri:0, instance:com.nexsoft.jcb.test.TestModulDashboard@58cbafc2]" started-at="2022-07-12T22:21:15 WIB" name="reset" finished-at="2022-07-12T22:21:18 WIB" duration-ms="3122" status="PASS">
+        <test-method is-config="true" signature="reset()[pri:0, instance:com.nexsoft.jcb.test.TestModulDashboard@52719fb6]" started-at="2022-07-13T18:46:50 WIB" name="reset" finished-at="2022-07-13T18:46:54 WIB" duration-ms="3761" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reset -->
-        <test-method signature="tekan_tombol_reload()[pri:2, instance:com.nexsoft.jcb.test.TestModulDashboard@58cbafc2]" started-at="2022-07-12T22:21:18 WIB" name="tekan_tombol_reload" finished-at="2022-07-12T22:21:43 WIB" duration-ms="24584" status="FAIL">
+        <test-method signature="tekan_tombol_reload()[pri:2, instance:com.nexsoft.jcb.test.TestModulDashboard@52719fb6]" started-at="2022-07-13T18:46:54 WIB" name="tekan_tombol_reload" finished-at="2022-07-13T18:47:23 WIB" duration-ms="29762" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[Data is not updated expected [true] but found [false]]]>
@@ -229,128 +85,88 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
+            <line>
+              <![CDATA[<img src='file://C:\Antoni\selenium\TestNG\screenshoot\Error_20220713_184723.PNG'height="350" width="792"/>]]>
+            </line>
           </reporter-output>
         </test-method> <!-- tekan_tombol_reload -->
-        <test-method is-config="true" signature="logout()[pri:0, instance:com.nexsoft.jcb.test.TestModulDashboard@58cbafc2]" started-at="2022-07-12T22:21:43 WIB" name="logout" finished-at="2022-07-12T22:21:45 WIB" duration-ms="2655" status="PASS">
+        <test-method is-config="true" signature="logout()[pri:0, instance:com.nexsoft.jcb.test.TestModulDashboard@52719fb6]" started-at="2022-07-13T18:47:23 WIB" name="logout" finished-at="2022-07-13T18:47:26 WIB" duration-ms="2956" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logout -->
-        <test-method is-config="true" signature="reset()[pri:0, instance:com.nexsoft.jcb.test.TestModulDashboard@58cbafc2]" started-at="2022-07-12T22:21:45 WIB" name="reset" finished-at="2022-07-12T22:21:48 WIB" duration-ms="2980" status="PASS">
+        <test-method is-config="true" signature="reset()[pri:0, instance:com.nexsoft.jcb.test.TestModulDashboard@52719fb6]" started-at="2022-07-13T18:47:26 WIB" name="reset" finished-at="2022-07-13T18:47:30 WIB" duration-ms="3683" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reset -->
-        <test-method signature="tekan_tombol_collapse_or_expand()[pri:3, instance:com.nexsoft.jcb.test.TestModulDashboard@58cbafc2]" started-at="2022-07-12T22:21:48 WIB" name="tekan_tombol_collapse_or_expand" finished-at="2022-07-12T22:21:56 WIB" duration-ms="7276" status="PASS">
+        <test-method signature="tekan_tombol_collapse_or_expand()[pri:3, instance:com.nexsoft.jcb.test.TestModulDashboard@52719fb6]" started-at="2022-07-13T18:47:30 WIB" name="tekan_tombol_collapse_or_expand" finished-at="2022-07-13T18:47:38 WIB" duration-ms="7810" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tekan_tombol_collapse_or_expand -->
-        <test-method is-config="true" signature="logout()[pri:0, instance:com.nexsoft.jcb.test.TestModulDashboard@58cbafc2]" started-at="2022-07-12T22:21:56 WIB" name="logout" finished-at="2022-07-12T22:21:58 WIB" duration-ms="2181" status="PASS">
+        <test-method is-config="true" signature="logout()[pri:0, instance:com.nexsoft.jcb.test.TestModulDashboard@52719fb6]" started-at="2022-07-13T18:47:38 WIB" name="logout" finished-at="2022-07-13T18:47:40 WIB" duration-ms="2614" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logout -->
-        <test-method is-config="true" signature="reset()[pri:0, instance:com.nexsoft.jcb.test.TestModulDashboard@58cbafc2]" started-at="2022-07-12T22:21:58 WIB" name="reset" finished-at="2022-07-12T22:22:00 WIB" duration-ms="2581" status="PASS">
+        <test-method is-config="true" signature="reset()[pri:0, instance:com.nexsoft.jcb.test.TestModulDashboard@52719fb6]" started-at="2022-07-13T18:47:40 WIB" name="reset" finished-at="2022-07-13T18:47:44 WIB" duration-ms="3526" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reset -->
-        <test-method signature="tekan_tombol_detail()[pri:4, instance:com.nexsoft.jcb.test.TestModulDashboard@58cbafc2]" started-at="2022-07-12T22:22:00 WIB" name="tekan_tombol_detail" finished-at="2022-07-12T22:22:07 WIB" duration-ms="6567" status="PASS">
+        <test-method signature="tekan_tombol_detail()[pri:4, instance:com.nexsoft.jcb.test.TestModulDashboard@52719fb6]" started-at="2022-07-13T18:47:44 WIB" name="tekan_tombol_detail" finished-at="2022-07-13T18:47:52 WIB" duration-ms="7543" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tekan_tombol_detail -->
-        <test-method is-config="true" signature="logout()[pri:0, instance:com.nexsoft.jcb.test.TestModulDashboard@58cbafc2]" started-at="2022-07-12T22:22:07 WIB" name="logout" finished-at="2022-07-12T22:22:09 WIB" duration-ms="2417" status="PASS">
+        <test-method is-config="true" signature="logout()[pri:0, instance:com.nexsoft.jcb.test.TestModulDashboard@52719fb6]" started-at="2022-07-13T18:47:52 WIB" name="logout" finished-at="2022-07-13T18:47:54 WIB" duration-ms="2844" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logout -->
-        <test-method is-config="true" signature="reset()[pri:0, instance:com.nexsoft.jcb.test.TestModulDashboard@58cbafc2]" started-at="2022-07-12T22:22:09 WIB" name="reset" finished-at="2022-07-12T22:22:12 WIB" duration-ms="2605" status="PASS">
+        <test-method is-config="true" signature="reset()[pri:0, instance:com.nexsoft.jcb.test.TestModulDashboard@52719fb6]" started-at="2022-07-13T18:47:54 WIB" name="reset" finished-at="2022-07-13T18:47:58 WIB" duration-ms="3420" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reset -->
-        <test-method signature="cek_seluruh_jumlah_total_price_sudah_benar_atau_belum()[pri:5, instance:com.nexsoft.jcb.test.TestModulDashboard@58cbafc2]" started-at="2022-07-12T22:22:12 WIB" name="cek_seluruh_jumlah_total_price_sudah_benar_atau_belum" finished-at="2022-07-12T22:22:21 WIB" duration-ms="9332" status="PASS">
+        <test-method signature="cek_seluruh_jumlah_total_price_sudah_benar_atau_belum()[pri:5, instance:com.nexsoft.jcb.test.TestModulDashboard@52719fb6]" started-at="2022-07-13T18:47:58 WIB" name="cek_seluruh_jumlah_total_price_sudah_benar_atau_belum" finished-at="2022-07-13T18:48:13 WIB" duration-ms="14675" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cek_seluruh_jumlah_total_price_sudah_benar_atau_belum -->
-        <test-method is-config="true" signature="logout()[pri:0, instance:com.nexsoft.jcb.test.TestModulDashboard@58cbafc2]" started-at="2022-07-12T22:22:21 WIB" name="logout" finished-at="2022-07-12T22:22:24 WIB" duration-ms="2400" status="PASS">
+        <test-method is-config="true" signature="logout()[pri:0, instance:com.nexsoft.jcb.test.TestModulDashboard@52719fb6]" started-at="2022-07-13T18:48:13 WIB" name="logout" finished-at="2022-07-13T18:48:15 WIB" duration-ms="2687" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logout -->
-        <test-method is-config="true" signature="reset()[pri:0, instance:com.nexsoft.jcb.test.TestModulDashboard@58cbafc2]" started-at="2022-07-12T22:22:24 WIB" name="reset" finished-at="2022-07-12T22:22:26 WIB" duration-ms="2564" status="PASS">
+        <test-method is-config="true" signature="reset()[pri:0, instance:com.nexsoft.jcb.test.TestModulDashboard@52719fb6]" started-at="2022-07-13T18:48:15 WIB" name="reset" finished-at="2022-07-13T18:48:19 WIB" duration-ms="3436" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reset -->
-        <test-method signature="cek_seluruh_jumlah_monthly_price_sudah_benar_atau_belum()[pri:6, instance:com.nexsoft.jcb.test.TestModulDashboard@58cbafc2]" started-at="2022-07-12T22:22:26 WIB" name="cek_seluruh_jumlah_monthly_price_sudah_benar_atau_belum" finished-at="2022-07-12T22:22:35 WIB" duration-ms="9282" status="PASS">
+        <test-method signature="cek_seluruh_jumlah_monthly_price_sudah_benar_atau_belum()[pri:6, instance:com.nexsoft.jcb.test.TestModulDashboard@52719fb6]" started-at="2022-07-13T18:48:19 WIB" name="cek_seluruh_jumlah_monthly_price_sudah_benar_atau_belum" finished-at="2022-07-13T18:48:32 WIB" duration-ms="13694" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cek_seluruh_jumlah_monthly_price_sudah_benar_atau_belum -->
-        <test-method is-config="true" signature="logout()[pri:0, instance:com.nexsoft.jcb.test.TestModulDashboard@58cbafc2]" started-at="2022-07-12T22:22:35 WIB" name="logout" finished-at="2022-07-12T22:22:38 WIB" duration-ms="2298" status="PASS">
+        <test-method is-config="true" signature="logout()[pri:0, instance:com.nexsoft.jcb.test.TestModulDashboard@52719fb6]" started-at="2022-07-13T18:48:32 WIB" name="logout" finished-at="2022-07-13T18:48:35 WIB" duration-ms="2594" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logout -->
-        <test-method is-config="true" signature="reset()[pri:0, instance:com.nexsoft.jcb.test.TestModulDashboard@58cbafc2]" started-at="2022-07-12T22:22:38 WIB" name="reset" finished-at="2022-07-12T22:22:40 WIB" duration-ms="2715" status="PASS">
+        <test-method is-config="true" signature="reset()[pri:0, instance:com.nexsoft.jcb.test.TestModulDashboard@52719fb6]" started-at="2022-07-13T18:48:35 WIB" name="reset" finished-at="2022-07-13T18:48:40 WIB" duration-ms="5150" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reset -->
-        <test-method signature="cek_seluruh_jumlah_total_unvisit_sudah_benar_atau_belum()[pri:7, instance:com.nexsoft.jcb.test.TestModulDashboard@58cbafc2]" started-at="2022-07-12T22:22:40 WIB" name="cek_seluruh_jumlah_total_unvisit_sudah_benar_atau_belum" finished-at="2022-07-12T22:22:51 WIB" duration-ms="10201" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Unvisit total in header is not same as total in table expected [163] but found [160]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Unvisit total in header is not same as total in table expected [163] but found [160]
-at org.testng.Assert.fail(Assert.java:110)
-at org.testng.Assert.failNotEquals(Assert.java:1413)
-at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-at org.testng.Assert.assertEquals(Assert.java:131)
-at org.testng.Assert.assertEquals(Assert.java:1240)
-at com.nexsoft.jcb.test.TestModulDashboard.cek_seluruh_jumlah_total_unvisit_sudah_benar_atau_belum(TestModulDashboard.java:212)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:806)
-at org.testng.TestRunner.run(TestRunner.java:601)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method signature="cek_seluruh_jumlah_total_unvisit_sudah_benar_atau_belum()[pri:7, instance:com.nexsoft.jcb.test.TestModulDashboard@52719fb6]" started-at="2022-07-13T18:48:40 WIB" name="cek_seluruh_jumlah_total_unvisit_sudah_benar_atau_belum" finished-at="2022-07-13T18:48:54 WIB" duration-ms="13540" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cek_seluruh_jumlah_total_unvisit_sudah_benar_atau_belum -->
-        <test-method is-config="true" signature="logout()[pri:0, instance:com.nexsoft.jcb.test.TestModulDashboard@58cbafc2]" started-at="2022-07-12T22:22:51 WIB" name="logout" finished-at="2022-07-12T22:22:53 WIB" duration-ms="2286" status="PASS">
+        <test-method is-config="true" signature="logout()[pri:0, instance:com.nexsoft.jcb.test.TestModulDashboard@52719fb6]" started-at="2022-07-13T18:48:54 WIB" name="logout" finished-at="2022-07-13T18:48:56 WIB" duration-ms="2659" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logout -->
-        <test-method is-config="true" signature="reset()[pri:0, instance:com.nexsoft.jcb.test.TestModulDashboard@58cbafc2]" started-at="2022-07-12T22:22:53 WIB" name="reset" finished-at="2022-07-12T22:22:56 WIB" duration-ms="3029" status="PASS">
+        <test-method is-config="true" signature="reset()[pri:0, instance:com.nexsoft.jcb.test.TestModulDashboard@52719fb6]" started-at="2022-07-13T18:48:56 WIB" name="reset" finished-at="2022-07-13T18:49:00 WIB" duration-ms="3651" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reset -->
-        <test-method signature="cek_seluruh_jumlah_total_visit_sudah_benar_atau_belum()[pri:8, instance:com.nexsoft.jcb.test.TestModulDashboard@58cbafc2]" started-at="2022-07-12T22:22:56 WIB" name="cek_seluruh_jumlah_total_visit_sudah_benar_atau_belum" finished-at="2022-07-12T22:23:05 WIB" duration-ms="9250" status="PASS">
+        <test-method signature="cek_seluruh_jumlah_total_visit_sudah_benar_atau_belum()[pri:8, instance:com.nexsoft.jcb.test.TestModulDashboard@52719fb6]" started-at="2022-07-13T18:49:00 WIB" name="cek_seluruh_jumlah_total_visit_sudah_benar_atau_belum" finished-at="2022-07-13T18:49:14 WIB" duration-ms="13992" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cek_seluruh_jumlah_total_visit_sudah_benar_atau_belum -->
-        <test-method is-config="true" signature="logout()[pri:0, instance:com.nexsoft.jcb.test.TestModulDashboard@58cbafc2]" started-at="2022-07-12T22:23:05 WIB" name="logout" finished-at="2022-07-12T22:23:08 WIB" duration-ms="2404" status="PASS">
+        <test-method is-config="true" signature="logout()[pri:0, instance:com.nexsoft.jcb.test.TestModulDashboard@52719fb6]" started-at="2022-07-13T18:49:14 WIB" name="logout" finished-at="2022-07-13T18:49:17 WIB" duration-ms="2665" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logout -->
-        <test-method is-config="true" signature="driverClose()[pri:0, instance:com.nexsoft.jcb.test.TestModulDashboard@58cbafc2]" started-at="2022-07-12T22:23:08 WIB" name="driverClose" finished-at="2022-07-12T22:23:10 WIB" duration-ms="2090" status="PASS">
+        <test-method is-config="true" signature="driverClose()[pri:0, instance:com.nexsoft.jcb.test.TestModulDashboard@52719fb6]" started-at="2022-07-13T18:49:17 WIB" name="driverClose" finished-at="2022-07-13T18:49:19 WIB" duration-ms="2148" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverClose -->
