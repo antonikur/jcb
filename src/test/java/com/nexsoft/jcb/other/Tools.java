@@ -56,7 +56,7 @@ public class Tools {
 	public String screenShoot(WebDriver driver) {
 		File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		String waktu = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
-		String namaFile = "C:\\Antoni\\selenium\\TestNG\\screenshoot\\Error_" + waktu + ".PNG";
+		String namaFile = "C:\\selenium\\TestNG\\screenshoot\\Error_" + waktu + ".PNG";
 		File screenshoot = new File(namaFile);
 		try {
 			FileUtils.copyFile(srcFile, screenshoot);
