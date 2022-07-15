@@ -1,0 +1,1865 @@
+<html>
+<head>
+<title>TestNG:  Test_Master</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test_Master</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>62/30/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Jul 13 17:40:56 WIB 2022</td>
+</tr>
+<tr><td>Total time:</td><td>871 seconds (871645 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.data_password_panjang_di_new_user_dan_save()'><b>data_password_panjang_di_new_user_dan_save</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster<br/>
+<a href="#Output-1963663371" onClick='toggleBox("Output-1963663371", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1963663371" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1963663371">
+<img src='file://C:\Antoni\selenium\TestNG\screenshoot\Error_20220713_174544.PNG'height="350" width="792"/><br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Data amount should be same since its was error and no new data created expected [true] but found [false]
+	at com.nexsoft.jcb.test.TestModulMaster.data_password_panjang_di_new_user_dan_save(TestModulMaster.java:699)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1963663371", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1963663371'><pre>java.lang.AssertionError: Data amount should be same since its was error and no new data created expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at com.nexsoft.jcb.test.TestModulMaster.data_password_panjang_di_new_user_dan_save(TestModulMaster.java:699)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>6</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.input_data_kota_panjang_dan_save()'><b>input_data_kota_panjang_dan_save</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster<br/>
+<a href="#Output-2090782110" onClick='toggleBox("Output-2090782110", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2090782110" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2090782110">
+<img src='file://C:\Antoni\selenium\TestNG\screenshoot\Error_20220713_175025.PNG'height="350" width="792"/><br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Data amount should be same since its was error and no new data created expected [true] but found [false]
+	at com.nexsoft.jcb.test.TestModulMaster.input_data_kota_panjang_dan_save(TestModulMaster.java:1164)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2090782110", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2090782110'><pre>java.lang.AssertionError: Data amount should be same since its was error and no new data created expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at com.nexsoft.jcb.test.TestModulMaster.input_data_kota_panjang_dan_save(TestModulMaster.java:1164)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>5</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.input_data_nik_invalid_di_new_user_dan_save()'><b>input_data_nik_invalid_di_new_user_dan_save</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster<br/>
+<a href="#Output-426014054" onClick='toggleBox("Output-426014054", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-426014054" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-426014054">
+<img src='file://C:\Antoni\selenium\TestNG\screenshoot\Error_20220713_174334.PNG'height="350" width="792"/><br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Data amount should be same since its was error and no new data created expected [true] but found [false]
+	at com.nexsoft.jcb.test.TestModulMaster.input_data_nik_invalid_di_new_user_dan_save(TestModulMaster.java:472)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace426014054", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace426014054'><pre>java.lang.AssertionError: Data amount should be same since its was error and no new data created expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at com.nexsoft.jcb.test.TestModulMaster.input_data_nik_invalid_di_new_user_dan_save(TestModulMaster.java:472)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>6</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.data_privilage_pilih_default_di_new_user_dan_save()'><b>data_privilage_pilih_default_di_new_user_dan_save</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster<br/>
+<a href="#Output-1974219375" onClick='toggleBox("Output-1974219375", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1974219375" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1974219375">
+<img src='file://C:\Antoni\selenium\TestNG\screenshoot\Error_20220713_174453.PNG'height="350" width="792"/><br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Data amount should be same since its was error and no new data created expected [true] but found [false]
+	at com.nexsoft.jcb.test.TestModulMaster.data_privilage_pilih_default_di_new_user_dan_save(TestModulMaster.java:612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1974219375", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1974219375'><pre>java.lang.AssertionError: Data amount should be same since its was error and no new data created expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at com.nexsoft.jcb.test.TestModulMaster.data_privilage_pilih_default_di_new_user_dan_save(TestModulMaster.java:612)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>6</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.input_data_kota_invalid_dan_save()'><b>input_data_kota_invalid_dan_save</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster<br/>
+<a href="#Output-2070662126" onClick='toggleBox("Output-2070662126", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2070662126" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2070662126">
+<img src='file://C:\Antoni\selenium\TestNG\screenshoot\Error_20220713_175014.PNG'height="350" width="792"/><br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Data amount should be same since its was error and no new data created expected [true] but found [false]
+	at com.nexsoft.jcb.test.TestModulMaster.input_data_kota_invalid_dan_save(TestModulMaster.java:1143)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2070662126", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2070662126'><pre>java.lang.AssertionError: Data amount should be same since its was error and no new data created expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at com.nexsoft.jcb.test.TestModulMaster.input_data_kota_invalid_dan_save(TestModulMaster.java:1143)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>4</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.data_pass_di_isi_white_space_di_new_user_dan_save()'><b>data_pass_di_isi_white_space_di_new_user_dan_save</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster<br/>
+<a href="#Output-2005937878" onClick='toggleBox("Output-2005937878", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2005937878" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2005937878">
+<img src='file://C:\Antoni\selenium\TestNG\screenshoot\Error_20220713_174633.PNG'height="350" width="792"/><br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Data amount should be same since its was error and no new data created expected [true] but found [false]
+	at com.nexsoft.jcb.test.TestModulMaster.data_pass_di_isi_white_space_di_new_user_dan_save(TestModulMaster.java:779)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2005937878", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2005937878'><pre>java.lang.AssertionError: Data amount should be same since its was error and no new data created expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at com.nexsoft.jcb.test.TestModulMaster.data_pass_di_isi_white_space_di_new_user_dan_save(TestModulMaster.java:779)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>6</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.ubah_data_user_di_pop_up_edit_dan_tekan_save()'><b>ubah_data_user_di_pop_up_edit_dan_tekan_save</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster<br/>
+<a href="#Output-421953644" onClick='toggleBox("Output-421953644", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-421953644" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-421953644">
+<img src='file://C:\Antoni\selenium\TestNG\screenshoot\Error_20220713_174726.PNG'height="350" width="792"/><br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: No field in edit popup user
+	at com.nexsoft.jcb.test.TestModulMaster.ubah_data_user_di_pop_up_edit_dan_tekan_save(TestModulMaster.java:863)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace421953644", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace421953644'><pre>java.lang.AssertionError: No field in edit popup user
+	at org.testng.Assert.fail(Assert.java:110)
+	at com.nexsoft.jcb.test.TestModulMaster.ubah_data_user_di_pop_up_edit_dan_tekan_save(TestModulMaster.java:863)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>4</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.data_username_panjang_di_new_user_dan_save()'><b>data_username_panjang_di_new_user_dan_save</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster<br/>
+<a href="#Output-507126135" onClick='toggleBox("Output-507126135", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-507126135" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-507126135">
+<img src='file://C:\Antoni\selenium\TestNG\screenshoot\Error_20220713_174532.PNG'height="350" width="792"/><br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Data amount should be same since its was error and no new data created expected [true] but found [false]
+	at com.nexsoft.jcb.test.TestModulMaster.data_username_panjang_di_new_user_dan_save(TestModulMaster.java:677)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace507126135", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace507126135'><pre>java.lang.AssertionError: Data amount should be same since its was error and no new data created expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at com.nexsoft.jcb.test.TestModulMaster.data_username_panjang_di_new_user_dan_save(TestModulMaster.java:677)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>6</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.data_nik_kosong_di_new_user_dan_save()'><b>data_nik_kosong_di_new_user_dan_save</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster<br/>
+<a href="#Output-304088688" onClick='toggleBox("Output-304088688", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-304088688" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-304088688">
+<img src='file://C:\Antoni\selenium\TestNG\screenshoot\Error_20220713_174409.PNG'height="350" width="792"/><br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Data amount should be same since its was error and no new data created expected [true] but found [false]
+	at com.nexsoft.jcb.test.TestModulMaster.data_nik_kosong_di_new_user_dan_save(TestModulMaster.java:532)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace304088688", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace304088688'><pre>java.lang.AssertionError: Data amount should be same since its was error and no new data created expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at com.nexsoft.jcb.test.TestModulMaster.data_nik_kosong_di_new_user_dan_save(TestModulMaster.java:532)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>6</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.data_name_panjang_di_new_user_dan_save()'><b>data_name_panjang_di_new_user_dan_save</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster<br/>
+<a href="#Output-580735116" onClick='toggleBox("Output-580735116", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-580735116" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-580735116">
+<img src='file://C:\Antoni\selenium\TestNG\screenshoot\Error_20220713_174519.PNG'height="350" width="792"/><br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Data amount should be same since its was error and no new data created expected [true] but found [false]
+	at com.nexsoft.jcb.test.TestModulMaster.data_name_panjang_di_new_user_dan_save(TestModulMaster.java:655)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace580735116", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace580735116'><pre>java.lang.AssertionError: Data amount should be same since its was error and no new data created expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at com.nexsoft.jcb.test.TestModulMaster.data_name_panjang_di_new_user_dan_save(TestModulMaster.java:655)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>7</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.input_data_area_invalid_dan_save()'><b>input_data_area_invalid_dan_save</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster<br/>
+<a href="#Output-1292047121" onClick='toggleBox("Output-1292047121", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1292047121" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1292047121">
+<img src='file://C:\Antoni\selenium\TestNG\screenshoot\Error_20220713_175401.PNG'height="350" width="792"/><br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Data amount should be same since its was error and no new data created expected [true] but found [false]
+	at com.nexsoft.jcb.test.TestModulMaster.input_data_area_invalid_dan_save(TestModulMaster.java:1546)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1292047121", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1292047121'><pre>java.lang.AssertionError: Data amount should be same since its was error and no new data created expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at com.nexsoft.jcb.test.TestModulMaster.input_data_area_invalid_dan_save(TestModulMaster.java:1546)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>5</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.data_name_kosong_di_new_user_dan_save()'><b>data_name_kosong_di_new_user_dan_save</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster<br/>
+<a href="#Output-1495761010" onClick='toggleBox("Output-1495761010", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1495761010" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1495761010">
+<img src='file://C:\Antoni\selenium\TestNG\screenshoot\Error_20220713_174420.PNG'height="350" width="792"/><br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Data amount should be same since its was error and no new data created expected [true] but found [false]
+	at com.nexsoft.jcb.test.TestModulMaster.data_name_kosong_di_new_user_dan_save(TestModulMaster.java:552)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1495761010", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1495761010'><pre>java.lang.AssertionError: Data amount should be same since its was error and no new data created expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at com.nexsoft.jcb.test.TestModulMaster.data_name_kosong_di_new_user_dan_save(TestModulMaster.java:552)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>5</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.data_username_kosong_di_new_user_dan_save()'><b>data_username_kosong_di_new_user_dan_save</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster<br/>
+<a href="#Output-908006983" onClick='toggleBox("Output-908006983", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-908006983" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-908006983">
+<img src='file://C:\Antoni\selenium\TestNG\screenshoot\Error_20220713_174431.PNG'height="350" width="792"/><br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Data amount should be same since its was error and no new data created expected [true] but found [false]
+	at com.nexsoft.jcb.test.TestModulMaster.data_username_kosong_di_new_user_dan_save(TestModulMaster.java:572)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace908006983", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace908006983'><pre>java.lang.AssertionError: Data amount should be same since its was error and no new data created expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at com.nexsoft.jcb.test.TestModulMaster.data_username_kosong_di_new_user_dan_save(TestModulMaster.java:572)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>5</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.tekan_tombol_edit_pada_baris_user_ketika_kotak_view_data_user_di_expand()'><b>tekan_tombol_edit_pada_baris_user_ketika_kotak_view_data_user_di_expand</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster<br/>
+<a href="#Output-912034375" onClick='toggleBox("Output-912034375", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-912034375" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-912034375">
+<img src='file://C:\Antoni\selenium\TestNG\screenshoot\Error_20220713_174714.PNG'height="350" width="792"/><br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Popup is not displayed expected [true] but found [false]
+	at com.nexsoft.jcb.test.TestModulMaster.tekan_tombol_edit_pada_baris_user_ketika_kotak_view_data_user_di_expand(TestModulMaster.java:847)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace912034375", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace912034375'><pre>java.lang.AssertionError: Popup is not displayed expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at com.nexsoft.jcb.test.TestModulMaster.tekan_tombol_edit_pada_baris_user_ketika_kotak_view_data_user_di_expand(TestModulMaster.java:847)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>4</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.data_nik_panjang_di_new_user_dan_save()'><b>data_nik_panjang_di_new_user_dan_save</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster<br/>
+<a href="#Output-2055593048" onClick='toggleBox("Output-2055593048", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2055593048" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2055593048">
+<img src='file://C:\Antoni\selenium\TestNG\screenshoot\Error_20220713_174507.PNG'height="350" width="792"/><br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Data amount should be same since its was error and no new data created expected [true] but found [false]
+	at com.nexsoft.jcb.test.TestModulMaster.data_nik_panjang_di_new_user_dan_save(TestModulMaster.java:633)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2055593048", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2055593048'><pre>java.lang.AssertionError: Data amount should be same since its was error and no new data created expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at com.nexsoft.jcb.test.TestModulMaster.data_nik_panjang_di_new_user_dan_save(TestModulMaster.java:633)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>8</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.tekan_tombol_edit_pada_baris_kota_ketika_kotak_view_data_kota_di_expand()'><b>tekan_tombol_edit_pada_baris_kota_ketika_kotak_view_data_kota_di_expand</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster<br/>
+<a href="#Output-1351326742" onClick='toggleBox("Output-1351326742", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1351326742" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1351326742">
+<img src='file://C:\Antoni\selenium\TestNG\screenshoot\Error_20220713_175112.PNG'height="350" width="792"/><br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Popup is not displayed expected [true] but found [false]
+	at com.nexsoft.jcb.test.TestModulMaster.tekan_tombol_edit_pada_baris_kota_ketika_kotak_view_data_kota_di_expand(TestModulMaster.java:1254)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1351326742", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1351326742'><pre>java.lang.AssertionError: Popup is not displayed expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at com.nexsoft.jcb.test.TestModulMaster.tekan_tombol_edit_pada_baris_kota_ketika_kotak_view_data_kota_di_expand(TestModulMaster.java:1254)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>4</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.input_data_area_panjang_dan_save()'><b>input_data_area_panjang_dan_save</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster<br/>
+<a href="#Output-1972417167" onClick='toggleBox("Output-1972417167", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1972417167" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1972417167">
+<img src='file://C:\Antoni\selenium\TestNG\screenshoot\Error_20220713_175412.PNG'height="350" width="792"/><br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Data amount should be same since its was error and no new data created expected [true] but found [false]
+	at com.nexsoft.jcb.test.TestModulMaster.input_data_area_panjang_dan_save(TestModulMaster.java:1567)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1972417167", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1972417167'><pre>java.lang.AssertionError: Data amount should be same since its was error and no new data created expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at com.nexsoft.jcb.test.TestModulMaster.input_data_area_panjang_dan_save(TestModulMaster.java:1567)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>5</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.data_username_di_isi_white_space_di_new_user_dan_save()'><b>data_username_di_isi_white_space_di_new_user_dan_save</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster<br/>
+<a href="#Output-1455386398" onClick='toggleBox("Output-1455386398", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1455386398" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1455386398">
+<img src='file://C:\Antoni\selenium\TestNG\screenshoot\Error_20220713_174620.PNG'height="350" width="792"/><br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Data amount should be same since its was error and no new data created expected [true] but found [false]
+	at com.nexsoft.jcb.test.TestModulMaster.data_username_di_isi_white_space_di_new_user_dan_save(TestModulMaster.java:759)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1455386398", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1455386398'><pre>java.lang.AssertionError: Data amount should be same since its was error and no new data created expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at com.nexsoft.jcb.test.TestModulMaster.data_username_di_isi_white_space_di_new_user_dan_save(TestModulMaster.java:759)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>6</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.data_kota_kosong_dan_save()'><b>data_kota_kosong_dan_save</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster<br/>
+<a href="#Output-201866476" onClick='toggleBox("Output-201866476", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-201866476" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-201866476">
+<img src='file://C:\Antoni\selenium\TestNG\screenshoot\Error_20220713_175035.PNG'height="350" width="792"/><br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Data amount should be same since its was error and no new data created expected [true] but found [false]
+	at com.nexsoft.jcb.test.TestModulMaster.data_kota_kosong_dan_save(TestModulMaster.java:1185)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace201866476", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace201866476'><pre>java.lang.AssertionError: Data amount should be same since its was error and no new data created expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at com.nexsoft.jcb.test.TestModulMaster.data_kota_kosong_dan_save(TestModulMaster.java:1185)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>4</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.ubah_data_user_di_pop_up_edit_dan_tekan_cancel_or_silang_di_user()'><b>ubah_data_user_di_pop_up_edit_dan_tekan_cancel_or_silang_di_user</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster<br/>
+<a href="#Output-1639962586" onClick='toggleBox("Output-1639962586", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1639962586" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1639962586">
+<img src='file://C:\Antoni\selenium\TestNG\screenshoot\Error_20220713_174736.PNG'height="350" width="792"/><br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: No field in edit popup user
+	at com.nexsoft.jcb.test.TestModulMaster.ubah_data_user_di_pop_up_edit_dan_tekan_cancel_or_silang_di_user(TestModulMaster.java:879)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1639962586", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1639962586'><pre>java.lang.AssertionError: No field in edit popup user
+	at org.testng.Assert.fail(Assert.java:110)
+	at com.nexsoft.jcb.test.TestModulMaster.ubah_data_user_di_pop_up_edit_dan_tekan_cancel_or_silang_di_user(TestModulMaster.java:879)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>4</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.data_area_di_isi_white_space_dan_save()'><b>data_area_di_isi_white_space_dan_save</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster<br/>
+<a href="#Output-1655405261" onClick='toggleBox("Output-1655405261", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1655405261" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1655405261">
+<img src='file://C:\Antoni\selenium\TestNG\screenshoot\Error_20220713_175422.PNG'height="350" width="792"/><br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Data amount should be same since its was error and no new data created expected [true] but found [false]
+	at com.nexsoft.jcb.test.TestModulMaster.data_area_di_isi_white_space_dan_save(TestModulMaster.java:1588)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1655405261", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1655405261'><pre>java.lang.AssertionError: Data amount should be same since its was error and no new data created expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at com.nexsoft.jcb.test.TestModulMaster.data_area_di_isi_white_space_dan_save(TestModulMaster.java:1588)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>5</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.input_atau_buat_data_valid_yang_sama_persisi()'><b>input_atau_buat_data_valid_yang_sama_persisi</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster<br/>
+<a href="#Output-127387260" onClick='toggleBox("Output-127387260", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-127387260" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-127387260">
+<img src='file://C:\Antoni\selenium\TestNG\screenshoot\Error_20220713_174655.PNG'height="350" width="792"/><br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Data amount should be same since its was error and no new data created expected [true] but found [false]
+	at com.nexsoft.jcb.test.TestModulMaster.input_atau_buat_data_valid_yang_sama_persisi(TestModulMaster.java:815)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace127387260", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace127387260'><pre>java.lang.AssertionError: Data amount should be same since its was error and no new data created expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at com.nexsoft.jcb.test.TestModulMaster.input_atau_buat_data_valid_yang_sama_persisi(TestModulMaster.java:815)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>6</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.ubah_data_kota_di_pop_up_edit_dan_tekan_save()'><b>ubah_data_kota_di_pop_up_edit_dan_tekan_save</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster<br/>
+<a href="#Output-1764535170" onClick='toggleBox("Output-1764535170", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1764535170" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1764535170">
+<img src='file://C:\Antoni\selenium\TestNG\screenshoot\Error_20220713_175125.PNG'height="350" width="792"/><br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Data not changed expected [true] but found [false]
+	at com.nexsoft.jcb.test.TestModulMaster.ubah_data_kota_di_pop_up_edit_dan_tekan_save(TestModulMaster.java:1284)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1764535170", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1764535170'><pre>java.lang.AssertionError: Data not changed expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at com.nexsoft.jcb.test.TestModulMaster.ubah_data_kota_di_pop_up_edit_dan_tekan_save(TestModulMaster.java:1284)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>5</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.tekan_tombol_edit_pada_baris_area_ketika_kotak_view_data_area_di_expand()'><b>tekan_tombol_edit_pada_baris_area_ketika_kotak_view_data_area_di_expand</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster<br/>
+<a href="#Output-1795831717" onClick='toggleBox("Output-1795831717", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1795831717" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1795831717">
+<img src='file://C:\Antoni\selenium\TestNG\screenshoot\Error_20220713_175455.PNG'height="350" width="792"/><br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Popup is not displayed expected [true] but found [false]
+	at com.nexsoft.jcb.test.TestModulMaster.tekan_tombol_edit_pada_baris_area_ketika_kotak_view_data_area_di_expand(TestModulMaster.java:1635)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1795831717", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1795831717'><pre>java.lang.AssertionError: Popup is not displayed expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at com.nexsoft.jcb.test.TestModulMaster.tekan_tombol_edit_pada_baris_area_ketika_kotak_view_data_area_di_expand(TestModulMaster.java:1635)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>5</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.data_kota_di_isi_white_space_dan_save()'><b>data_kota_di_isi_white_space_dan_save</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster<br/>
+<a href="#Output-280406023" onClick='toggleBox("Output-280406023", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-280406023" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-280406023">
+<img src='file://C:\Antoni\selenium\TestNG\screenshoot\Error_20220713_175045.PNG'height="350" width="792"/><br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Data amount should be same since its was error and no new data created expected [true] but found [false]
+	at com.nexsoft.jcb.test.TestModulMaster.data_kota_di_isi_white_space_dan_save(TestModulMaster.java:1206)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace280406023", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace280406023'><pre>java.lang.AssertionError: Data amount should be same since its was error and no new data created expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at com.nexsoft.jcb.test.TestModulMaster.data_kota_di_isi_white_space_dan_save(TestModulMaster.java:1206)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>4</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.data_name_di_isi_white_space_di_new_user_dan_save()'><b>data_name_di_isi_white_space_di_new_user_dan_save</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster<br/>
+<a href="#Output-1794843661" onClick='toggleBox("Output-1794843661", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1794843661" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1794843661">
+<img src='file://C:\Antoni\selenium\TestNG\screenshoot\Error_20220713_174609.PNG'height="350" width="792"/><br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Data amount should be same since its was error and no new data created expected [true] but found [false]
+	at com.nexsoft.jcb.test.TestModulMaster.data_name_di_isi_white_space_di_new_user_dan_save(TestModulMaster.java:739)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1794843661", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1794843661'><pre>java.lang.AssertionError: Data amount should be same since its was error and no new data created expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at com.nexsoft.jcb.test.TestModulMaster.data_name_di_isi_white_space_di_new_user_dan_save(TestModulMaster.java:739)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>6</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.data_password_kosong_di_new_user_dan_save()'><b>data_password_kosong_di_new_user_dan_save</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster<br/>
+<a href="#Output-1513467522" onClick='toggleBox("Output-1513467522", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1513467522" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1513467522">
+<img src='file://C:\Antoni\selenium\TestNG\screenshoot\Error_20220713_174442.PNG'height="350" width="792"/><br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Data amount should be same since its was error and no new data created expected [true] but found [false]
+	at com.nexsoft.jcb.test.TestModulMaster.data_password_kosong_di_new_user_dan_save(TestModulMaster.java:592)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1513467522", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1513467522'><pre>java.lang.AssertionError: Data amount should be same since its was error and no new data created expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at com.nexsoft.jcb.test.TestModulMaster.data_password_kosong_di_new_user_dan_save(TestModulMaster.java:592)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>5</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.input_data_name_invalid_di_new_user_dan_save()'><b>input_data_name_invalid_di_new_user_dan_save</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster<br/>
+<a href="#Output-334759054" onClick='toggleBox("Output-334759054", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-334759054" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-334759054">
+<img src='file://C:\Antoni\selenium\TestNG\screenshoot\Error_20220713_174346.PNG'height="350" width="792"/><br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Data amount should be same since its was error and no new data created expected [true] but found [false]
+	at com.nexsoft.jcb.test.TestModulMaster.input_data_name_invalid_di_new_user_dan_save(TestModulMaster.java:492)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace334759054", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace334759054'><pre>java.lang.AssertionError: Data amount should be same since its was error and no new data created expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at com.nexsoft.jcb.test.TestModulMaster.input_data_name_invalid_di_new_user_dan_save(TestModulMaster.java:492)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>6</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.data_nik_di_isi_white_space_di_new_user_dan_save()'><b>data_nik_di_isi_white_space_di_new_user_dan_save</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster<br/>
+<a href="#Output-131084586" onClick='toggleBox("Output-131084586", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-131084586" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-131084586">
+<img src='file://C:\Antoni\selenium\TestNG\screenshoot\Error_20220713_174557.PNG'height="350" width="792"/><br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Data amount should be same since its was error and no new data created expected [true] but found [false]
+	at com.nexsoft.jcb.test.TestModulMaster.data_nik_di_isi_white_space_di_new_user_dan_save(TestModulMaster.java:719)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace131084586", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace131084586'><pre>java.lang.AssertionError: Data amount should be same since its was error and no new data created expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at com.nexsoft.jcb.test.TestModulMaster.data_nik_di_isi_white_space_di_new_user_dan_save(TestModulMaster.java:719)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>6</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.input_data_username_invalid_di_new_user_dan_save()'><b>input_data_username_invalid_di_new_user_dan_save</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster<br/>
+<a href="#Output-1459038473" onClick='toggleBox("Output-1459038473", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1459038473" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1459038473">
+<img src='file://C:\Antoni\selenium\TestNG\screenshoot\Error_20220713_174358.PNG'height="350" width="792"/><br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Data amount should be same since its was error and no new data created expected [true] but found [false]
+	at com.nexsoft.jcb.test.TestModulMaster.input_data_username_invalid_di_new_user_dan_save(TestModulMaster.java:512)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1459038473", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1459038473'><pre>java.lang.AssertionError: Data amount should be same since its was error and no new data created expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at com.nexsoft.jcb.test.TestModulMaster.input_data_username_invalid_di_new_user_dan_save(TestModulMaster.java:512)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>6</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.pilih_show_entries_50_di_user()'><b>pilih_show_entries_50_di_user</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>1</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.tekan_menu_master_area()'><b>tekan_menu_master_area</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>1</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.pilih_show_entries_25_di_user()'><b>pilih_show_entries_25_di_user</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>1</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.pilih_show_entries_25_di_kota()'><b>pilih_show_entries_25_di_kota</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>1</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.input_kolom_search_by_area_dan_tambah_spasi_di_awal_dan_akhir_keyword()'><b>input_kolom_search_by_area_dan_tambah_spasi_di_awal_dan_akhir_keyword</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>1</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.pilih_show_entries_10_di_user()'><b>pilih_show_entries_10_di_user</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>1</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.tekan_tombol_navigasi_nomor_halaman_di_area()'><b>tekan_tombol_navigasi_nomor_halaman_di_area</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>1</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.input_kolom_search_by_name()'><b>input_kolom_search_by_name</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>2</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.tekan_tombol_navigasi_nomor_halaman_di_user()'><b>tekan_tombol_navigasi_nomor_halaman_di_user</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>1</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.tekan_tombol_navigasi_previous_halaman_di_kota()'><b>tekan_tombol_navigasi_previous_halaman_di_kota</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>1</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.tekan_tombol_collapse_or_expand_di_user()'><b>tekan_tombol_collapse_or_expand_di_user</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>2</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.tekan_menu_master_user()'><b>tekan_menu_master_user</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>1</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.input_kolom_search_by_area()'><b>input_kolom_search_by_area</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>2</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.tekan_tombol_add_new_area()'><b>tekan_tombol_add_new_area</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>6</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.pilih_show_entries_50_di_area()'><b>pilih_show_entries_50_di_area</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>1</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.input_data_kota_valid_dan_save()'><b>input_data_kota_valid_dan_save</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>4</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.input_kolom_search_by_kota_dan_tambah_spasi_di_awal_dan_akhir_keyword()'><b>input_kolom_search_by_kota_dan_tambah_spasi_di_awal_dan_akhir_keyword</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>1</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.tekan_tombol_navigasi_previous_halaman_di_area()'><b>tekan_tombol_navigasi_previous_halaman_di_area</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>1</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.tekan_tombol_edit_pada_baris_user()'><b>tekan_tombol_edit_pada_baris_user</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>4</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.pilih_show_entries_100_di_kota()'><b>pilih_show_entries_100_di_kota</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>1</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.tekan_tombol_expand_or_compress_di_area()'><b>tekan_tombol_expand_or_compress_di_area</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>4</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.tekan_tombol_navigasi_nomor_halaman_di_kota()'><b>tekan_tombol_navigasi_nomor_halaman_di_kota</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>1</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.kolom_search_kosong_di_area()'><b>kolom_search_kosong_di_area</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>2</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.tekan_tombol_edit_pada_baris_kota()'><b>tekan_tombol_edit_pada_baris_kota</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>3</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.input_kolom_search_by_nik()'><b>input_kolom_search_by_nik</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>2</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.pilih_show_entries_10_di_kota()'><b>pilih_show_entries_10_di_kota</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>1</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.input_data_valid_di_new_user_dan_cancel()'><b>input_data_valid_di_new_user_dan_cancel</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>5</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.tekan_tombol_add_new_kota()'><b>tekan_tombol_add_new_kota</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>3</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.pilih_show_entries_50_di_kota()'><b>pilih_show_entries_50_di_kota</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>1</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.pilih_show_entries_100_di_area()'><b>pilih_show_entries_100_di_area</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>3</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.pilih_show_entries_100_di_user()'><b>pilih_show_entries_100_di_user</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>1</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.input_kolom_search_by_kota()'><b>input_kolom_search_by_kota</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>1</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.tekan_tombol_delete_pada_baris_user_ketika_kotak_view_data_user_di_expand()'><b>tekan_tombol_delete_pada_baris_user_ketika_kotak_view_data_user_di_expand</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>4</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.tekan_tombol_expand_or_compress_di_kota()'><b>tekan_tombol_expand_or_compress_di_kota</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>4</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.input_kolom_search_by_nik_dan_tambah_spasi_di_awal_dan_akhir_keyword()'><b>input_kolom_search_by_nik_dan_tambah_spasi_di_awal_dan_akhir_keyword</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>1</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.tekan_menu_master_kota()'><b>tekan_menu_master_kota</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>3</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.input_data_area_valid_dan_cancel()'><b>input_data_area_valid_dan_cancel</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>6</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.tekan_tombol_delete_pada_baris_user()'><b>tekan_tombol_delete_pada_baris_user</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>2</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.input_kolom_search_by_kode_area()'><b>input_kolom_search_by_kode_area</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>1</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.tekan_tombol_collapse_or_expand_di_kota()'><b>tekan_tombol_collapse_or_expand_di_kota</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>3</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.tekan_tombol_edit_pada_baris_area()'><b>tekan_tombol_edit_pada_baris_area</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>3</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.input_data_valid_di_new_user_dan_save()'><b>input_data_valid_di_new_user_dan_save</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>6</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.ubah_data_area_di_pop_up_edit_dan_tekan_cancel_or_silang()'><b>ubah_data_area_di_pop_up_edit_dan_tekan_cancel_or_silang</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>5</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.input_kolom_search_by_no_di_kota()'><b>input_kolom_search_by_no_di_kota</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>2</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.tekan_tombol_collapse_or_expand_di_area()'><b>tekan_tombol_collapse_or_expand_di_area</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>3</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.tekan_tombol_navigasi_previous_halaman_di_user()'><b>tekan_tombol_navigasi_previous_halaman_di_user</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>1</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.tekan_tombol_expand_or_compress_di_user()'><b>tekan_tombol_expand_or_compress_di_user</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>4</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.kolom_search_kosong_di_kota()'><b>kolom_search_kosong_di_kota</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>2</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.kolom_search_kosong_di_user()'><b>kolom_search_kosong_di_user</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>1</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.tekan_tombol_navigasi_next_halaman_di_area()'><b>tekan_tombol_navigasi_next_halaman_di_area</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>1</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.input_kolom_search_by_privilage()'><b>input_kolom_search_by_privilage</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>3</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.tekan_tombol_navigasi_next_halaman_di_kota()'><b>tekan_tombol_navigasi_next_halaman_di_kota</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>1</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.input_data_kota_valid_dan_cancel()'><b>input_data_kota_valid_dan_cancel</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>3</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.input_data_area_valid_dan_save()'><b>input_data_area_valid_dan_save</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>5</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.input_kolom_search_by_no_di_area()'><b>input_kolom_search_by_no_di_area</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>1</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.input_kolom_search_by_no_di_user()'><b>input_kolom_search_by_no_di_user</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>3</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.tekan_tombol_add_new_user()'><b>tekan_tombol_add_new_user</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>4</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.ubah_data_kota_di_pop_up_edit_dan_tekan_cancel_or_silang()'><b>ubah_data_kota_di_pop_up_edit_dan_tekan_cancel_or_silang</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>4</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.pilih_show_entries_25_di_area()'><b>pilih_show_entries_25_di_area</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>1</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.pilih_show_entries_10_di_area()'><b>pilih_show_entries_10_di_area</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>1</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.tekan_tombol_navigasi_next_halaman_di_user()'><b>tekan_tombol_navigasi_next_halaman_di_user</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>1</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulMaster.ubah_data_area_di_pop_up_edit_dan_tekan_save()'><b>ubah_data_area_di_pop_up_edit_dan_tekan_save</b><br>Test class: com.nexsoft.jcb.test.TestModulMaster</td>
+<td></td>
+<td>8</td>
+<td>com.nexsoft.jcb.test.TestModulMaster@793f29ff</td></tr>
+</table><p>
+</body>
+</html>

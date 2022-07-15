@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name = "SuiteTest">
+<!--  
+<test name = "Test_Login">
+<classes>
+<class name = "com.nexsoft.jcb.test.TestModulLogin"/>
+</classes>
+</test>-->
+
+<test name = "Test_Dashboard">
+<classes>
+<class name = "com.nexsoft.jcb.test.TestModulDashboard"/>
+</classes>
+</test>
+<!-- 
+<test name = "Test_Master">
+<classes>
+<class name = "com.nexsoft.jcb.test.TestModulMaster"/>
+</classes>
+</test>
+ 
+<test name = "Test_DataMerchant">
+<classes>
+<class name = "com.nexsoft.jcb.test.TestModulDataMerchant"/>
+</classes>
+</test>
+-->
+</suite>

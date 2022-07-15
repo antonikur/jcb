@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [SuiteTest]">
+  <test thread-count="5" name="Test_Dashboard(failed)">
+    <classes>
+      <class name="com.nexsoft.jcb.test.TestModulDashboard">
+        <methods>
+          <include name="reset"/>
+          <include name="initial"/>
+          <include name="driverClose"/>
+          <include name="logout"/>
+          <include name="tekan_tombol_reload"/>
+        </methods>
+      </class> <!-- com.nexsoft.jcb.test.TestModulDashboard -->
+    </classes>
+  </test> <!-- Test_Dashboard(failed) -->
+</suite> <!-- Failed suite [SuiteTest] -->
