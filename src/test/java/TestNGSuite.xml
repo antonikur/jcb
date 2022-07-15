@@ -25,4 +25,31 @@
 </classes>
 </test>
 -->
+
+<!-- Titan -->
+
+
+<!-- Yuninda -->
+
+<!-- 
+<test name = "JCB Modul Bucket Distribusi Test">
+<classes>
+<class name = "com.nexsoft.jcb.test.TestModulBucketDistribusi"> </class>
+</classes>
+</test> -->
+
+
+<test name = "JCB Modul Bucket Validasi Test">
+<classes>
+<class name = "com.nexsoft.jcb.test.TestModulBucketValidasi"> </class>
+</classes>
+</test>
+
+<!-- 
+<test name = "JCB Modul Monitoring Test">
+<classes>
+<class name = "com.nexsoft.jcb.test.TestModulMonitoring"> </class>
+</classes>
+</test> -->
+
 </suite>
