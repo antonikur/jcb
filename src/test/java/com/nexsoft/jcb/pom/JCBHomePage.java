@@ -164,12 +164,53 @@ public class JCBHomePage {
 		tool.stopForMoment(5000);
 		return PageFactory.initElements(driver, JCBMonitoringPage.class);
 	}
+	//####################################################
 	
+	
+	//##############################################Titan
+	public JCBReportPage clickAndGotoMenuReport() {
+		menuReport.click();
+		return PageFactory.initElements(driver, JCBReportPage.class);
+	}
+
+	public JCBHomePage clickMenuWorklist() {
+		menuWorklist.click();
+		return PageFactory.initElements(driver, JCBHomePage.class);
+	}
+	
+	public JCBNewDataPage clickAndGotoMenuNewData() {
+		menuWorklistNewData.click();
+		return PageFactory.initElements(driver, JCBNewDataPage.class);
+	}
+	
+	public JCBReturnPage clickAndGotoMenuReturn() {
+		menuWorklistReturn.click();
+		return PageFactory.initElements(driver, JCBReturnPage.class);
+	}
+	
+	public JCBRejectPage clickAndGotoMenuReject() {
+		menuWorklistReject.click();
+		return PageFactory.initElements(driver, JCBRejectPage.class);
+	}
+	
+	public JCBAddNewDataPage clickAndGotoMenuAddNewData() {
+		menuWorklistAddNewData.click();
+		return PageFactory.initElements(driver, JCBAddNewDataPage.class);
+	}
+	
+	public JCBRejectPage clickAndGotoMenuCompleted() {
+		menuCompleted.click();
+		return PageFactory.initElements(driver, JCBRejectPage.class);
+	}
+	//##############################################
+	
+	//##############################################titan yuninda
 	public JCBCompletedPage clickAndGoToCompleted() {
 		menuCompleted.click();
 		tool.stopForMoment(2000);
 		return PageFactory.initElements(driver, JCBCompletedPage.class);
 	}
-	//####################################################
+	//##############################################
+	
 	
 }
