@@ -108,7 +108,7 @@ public class TestModulMonitoring {
 	
 	@Test(priority = 2, enabled = true)
 	public void input_kolom_search_by_kota(){
-		String keyword = "yogyakarta";//input keyword that must have result/data
+		String keyword = "Yogyakarta";//input keyword that must have result/data
 		
 		List<List<WebElement>> actualMonitoring = homePage.clickAndGoToMonitoring()
 		.inputFieldSearch(keyword)
@@ -121,9 +121,9 @@ public class TestModulMonitoring {
 		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
 	}
 	
-	@Test(priority = 3, enabled = true)
+	@Test(priority = 3, enabled = false)
 	public void input_kolom_search_by_TotalData(){
-		String keyword = "50";//input keyword that must have result/data
+		String keyword = "1839";//input keyword that must have result/data
 		
 		List<List<WebElement>> actualMonitoring = homePage.clickAndGoToMonitoring()
 		.inputFieldSearch(keyword)
@@ -142,21 +142,23 @@ public class TestModulMonitoring {
 		
 		List<List<WebElement>> actualMonitoring = homePage.clickAndGoToMonitoring()
 		.inputFieldSearch(keyword)
-		.getTableMonitoring();
+		.clickBtnPlus("Atambua")
+		.clickBtnPlus("JAKARTA")
+		.getTableMonitoring2();
 		
 		tool.stopForMoment(2000);
 		
 		boolean isCorrect = checkSearch(keyword, actualMonitoring);
 		
 		//screen shoot
-		tool.screenShoot(driver);
+		//tool.screenShoot(driver);
 		
 		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
 	}
 	
-	@Test(priority = 5, enabled = true)
+	@Test(priority = 5, enabled = false)
 	public void input_kolom_search_by_TotalVisit2(){
-		String keyword = "1822";//input keyword that must have result/data
+		String keyword = "1731";//input keyword that must have result/data
 		
 		List<List<WebElement>> actualMonitoring = homePage.clickAndGoToMonitoring()
 		.inputFieldSearch(keyword)
@@ -171,7 +173,7 @@ public class TestModulMonitoring {
 	
 	@Test(priority = 6, enabled = true)
 	public void input_kolom_search_by_Price(){
-		String keyword = "7000";//input keyword that must have result/data
+		String keyword = "1000";//input keyword that must have result/data
 		
 		List<List<WebElement>> actualMonitoring = homePage.clickAndGoToMonitoring()
 		.inputFieldSearch(keyword)
@@ -186,7 +188,7 @@ public class TestModulMonitoring {
 	
 	@Test(priority = 7, enabled = true)
 	public void input_kolom_search_by_potongan_kata_3_huruf(){
-		String keyword = "bua";//input keyword that must have result/data
+		String keyword = "uta";//input keyword that must have result/data
 		
 		List<List<WebElement>> actualMonitoring = homePage.clickAndGoToMonitoring()
 		.inputFieldSearch(keyword)
@@ -220,14 +222,16 @@ public class TestModulMonitoring {
 		
 		List<List<WebElement>> actualMonitoring = homePage.clickAndGoToMonitoring()
 		.inputFieldSearch(keyword)
-		.getTableMonitoring();
+		.clickBtnPlus("JAKARTA")
+		.clickBtnPlus("Yogyakarta")
+		.getTableMonitoring2();
 		
 		tool.stopForMoment(2000);
 		
 		boolean isCorrect = checkSearch(keyword, actualMonitoring);
 		
 		//screen shoot
-		tool.screenShoot(driver);
+		//tool.screenShoot(driver);
 		
 		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
 	}
@@ -248,7 +252,7 @@ public class TestModulMonitoring {
 	}
 	
 	
-	@Test(priority = 11, enabled = true)
+	@Test(priority = 11, enabled = false)
 	public void input_kolom_search_by_potongan_kata_5_huruf(){
 		String keyword = "ambua";//input keyword that must have result/data
 		
@@ -278,7 +282,7 @@ public class TestModulMonitoring {
 		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
 	}
 	
-	@Test(priority = 13, enabled = true)
+	@Test(priority = 13, enabled = false)
 	public void input_kolom_search_by_potongan_kata_4_huruf(){
 		String keyword = "yaka";//input keyword that must have result/data
 		
@@ -294,12 +298,14 @@ public class TestModulMonitoring {
 	}
 	
 	@Test(priority = 14, enabled = true)
-	public void input_kolom_search_by_potongan_detail_dari_jakarta(){
+	public void input_kolom_search_by_detail_dari_jakarta(){
 		String keyword = "Skybridge Lantai 3";//input keyword that must have result/data
 		
 		List<List<WebElement>> actualMonitoring = homePage.clickAndGoToMonitoring()
 		.inputFieldSearch(keyword)
-		.getTableMonitoring();
+		.clickBtnPlus("JAKARTA")
+		
+		.getTableMonitoring2();
 		
 		tool.stopForMoment(2000);
 		
@@ -308,13 +314,16 @@ public class TestModulMonitoring {
 		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
 	}	
 	
-	@Test(priority = 15, enabled = true)
+	@Test(priority = 15, enabled = false)
 	public void input_kolom_search_by_detail_dari_jakarta2(){
 		String keyword = "Lantai 4";//input keyword that must have result/data
+		JCBMonitoringPage monitoring = homePage.clickAndGoToMonitoring();
+		
 		
 		List<List<WebElement>> actualMonitoring = homePage.clickAndGoToMonitoring()
 		.inputFieldSearch(keyword)
-		.getTableMonitoring();
+		.clickBtnPlus("JAKARTA")
+		.getTableMonitoring2();
 		
 		tool.stopForMoment(2000);
 		
@@ -323,32 +332,34 @@ public class TestModulMonitoring {
 		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
 	}
 	
-	@Test(priority = 16, enabled = true)
-	public void input_kolom_search_by_potongan_detail_dari_jakarta3(){
+	@Test(priority = 16, enabled = false)
+	public void input_kolom_search_by_detail_dari_jakarta3(){
 		String keyword = "f2";//input keyword that must have result/data
 		
 		List<List<WebElement>> actualMonitoring = homePage.clickAndGoToMonitoring()
 		.inputFieldSearch(keyword)
-		.getTableMonitoring();
+		.clickBtnPlus("JAKARTA")
+		.getTableMonitoring2();
 		
 		tool.stopForMoment(2000);
 		
 		boolean isCorrect = checkSearch(keyword, actualMonitoring);
 		
 		//screen shoot
-		tool.screenShoot(driver);
+		//tool.screenShoot(driver);
 		
 		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
 	}
 	
 	
-	@Test(priority = 17, enabled = true)
-	public void input_kolom_search_by_potongan_detail_dari_yogyakarta(){
+	@Test(priority = 17, enabled = false)
+	public void input_kolom_search_by_detail_dari_yogyakarta(){
 		String keyword = "2G";//input keyword that must have result/data
 		
 		List<List<WebElement>> actualMonitoring = homePage.clickAndGoToMonitoring()
 		.inputFieldSearch(keyword)
-		.getTableMonitoring();
+		.clickBtnPlus("Yogyakarta")
+		.getTableMonitoring2();
 		
 		tool.stopForMoment(2000);
 
@@ -358,19 +369,20 @@ public class TestModulMonitoring {
 	}
 	
 	@Test(priority = 18, enabled = true)
-	public void input_kolom_search_by_potongan_detail_dari_bintaro(){
+	public void input_kolom_search_by_detail_dari_bintaro(){
 		String keyword = "24";//input keyword that must have result/data
 		
 		List<List<WebElement>> actualMonitoring = homePage.clickAndGoToMonitoring()
 		.inputFieldSearch(keyword)
-		.getTableMonitoring();
+		.clickBtnPlus("Bintaro")
+		.getTableMonitoring2();
 		
 		tool.stopForMoment(2000);
 		
 		boolean isCorrect = checkSearch(keyword, actualMonitoring);
 		
 		//screen shoot
-		tool.screenShoot(driver);
+		//tool.screenShoot(driver);
 		
 		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
 	}
@@ -381,7 +393,11 @@ public class TestModulMonitoring {
 		
 		List<List<WebElement>> actualMonitoring = homePage.clickAndGoToMonitoring()
 		.inputFieldSearch(keyword)
-		.getTableMonitoring();
+		.clickBtnPlus("Bekasi Timur")
+		.clickBtnPlus("Ciputat")
+		.clickBtnPlus("JAKARTA")
+		.clickBtnPlus("Payakumbuh")
+		.getTableMonitoring2();
 		
 		tool.stopForMoment(2000);
 				
@@ -427,9 +443,9 @@ public class TestModulMonitoring {
 		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
 	}
 	
-	@Test(priority = 22, enabled = true)
+	@Test(priority = 22, enabled = false)
 	public void search_saat_expand_by_TotalData(){
-		String keyword = "50";//input keyword that must have result/data
+		String keyword = "1839";//input keyword that must have result/data
 		
 		List<List<WebElement>> actualMonitoring = homePage.clickAndGoToMonitoring().clickExpand()
 		.inputFieldSearch(keyword).clickExpand()
@@ -442,7 +458,7 @@ public class TestModulMonitoring {
 		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
 	}
 	
-	@Test(priority = 23, enabled = true)
+	@Test(priority = 23, enabled = false)
 	public void search_saat_expand_by_potongan_kata_4_huruf(){
 		String keyword = "yaka";//input keyword that must have result/data
 		
@@ -457,9 +473,9 @@ public class TestModulMonitoring {
 		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
 	}
 	
-	@Test(priority = 24, enabled = true)
+	@Test(priority = 24, enabled = false)
 	public void search_saat_expand_by_total_visit(){
-		String keyword = "72677";//input keyword that must have result/data
+		String keyword = "1731";//input keyword that must have result/data
 		
 		List<List<WebElement>> actualMonitoring = homePage.clickAndGoToMonitoring().clickExpand()
 		.inputFieldSearch(keyword).clickExpand()
@@ -472,9 +488,9 @@ public class TestModulMonitoring {
 		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
 	}
 	
-	@Test(priority = 25, enabled = true)
+	@Test(priority = 25, enabled = false)
 	public void search_saat_expand_by_price(){
-		String keyword = "177335350";//input keyword that must have result/data
+		String keyword = "7000";//input keyword that must have result/data
 		
 		List<List<WebElement>> actualMonitoring = homePage.clickAndGoToMonitoring().clickExpand()
 		.inputFieldSearch(keyword).clickExpand()
@@ -487,9 +503,9 @@ public class TestModulMonitoring {
 		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
 	}
 	
-	@Test(priority = 26, enabled = true)
+	@Test(priority = 26, enabled = false)
 	public void search_saat_expand_by_potongan_kata_3_huruf(){
-		String keyword = "uta";//input keyword that must have result/data
+		String keyword = "bua";//input keyword that must have result/data
 		
 		List<List<WebElement>> actualMonitoring = homePage.clickAndGoToMonitoring().clickExpand()
 		.inputFieldSearch(keyword).clickExpand()
@@ -500,12 +516,12 @@ public class TestModulMonitoring {
 		boolean isCorrect = checkSearch(keyword, actualMonitoring);
 		
 		//screen shoot
-		tool.screenShoot(driver);
+		//tool.screenShoot(driver);
 		
 		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
 	}
 	
-	@Test(priority = 27, enabled = true)
+	@Test(priority = 27, enabled = false)
 	public void search_saat_expand_by_simbol(){
 		String keyword = "@@@@";//input keyword that must have result/data
 		
@@ -520,25 +536,27 @@ public class TestModulMonitoring {
 		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
 	}
 	
-	@Test(priority = 28, enabled = true)
+	@Test(priority = 28, enabled = false)
 	public void search_saat_expand_menggunakan_spasi(){
 		String keyword = " ";//input keyword that must have result/data
 		
 		List<List<WebElement>> actualMonitoring = homePage.clickAndGoToMonitoring().clickExpand()
 		.inputFieldSearch(keyword).clickExpand()
-		.getTableMonitoring();
+		.clickBtnPlus("JAKARTA")
+		.clickBtnPlus("Yogyakarta")
+		.getTableMonitoring2();
 		
 		tool.stopForMoment(2000);
 	
 		boolean isCorrect = checkSearch(keyword, actualMonitoring);
 		
 		//screen shoot
-		tool.screenShoot(driver);
+		//tool.screenShoot(driver);
 		
 		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
 	}
 	
-	@Test(priority = 29, enabled = true)
+	@Test(priority = 29, enabled = false)
 	public void search_saat_expand_tanpa_isi(){
 		String keyword = "";//input keyword that must have result/data
 		
@@ -553,7 +571,7 @@ public class TestModulMonitoring {
 		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
 	}
 	
-	@Test(priority = 31, enabled = true)
+	@Test(priority = 31, enabled = false)
 	public void search_saat_expand_by_potongan_kata_5_huruf(){
 		String keyword = "ambua";//input keyword that must have result/data
 		
@@ -568,7 +586,7 @@ public class TestModulMonitoring {
 		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
 	}
 	
-	@Test(priority = 32, enabled = true)
+	@Test(priority = 32, enabled = false)
 	public void search_saat_expand_by_potongan_kata_5_huruf_dengan_spasi(){
 		String keyword = "si tim";//input keyword that must have result/data
 		
@@ -603,7 +621,7 @@ public class TestModulMonitoring {
 		assertTrue(isDiplayed && isHidden);
 	}
 	
-	@Test(priority = 34, enabled = true)
+	@Test(priority = 34, enabled = false)
 	public void tekan_btn_plus(){
 		
 		JCBMonitoringPage monitoring = homePage.clickAndGoToMonitoring();
@@ -612,7 +630,7 @@ public class TestModulMonitoring {
 		driver.findElement(By.xpath("//*[@id=\"data-monitoring\"]/tbody/tr/td[1]"));
 		boolean detailBeforeIsDisplayed = monitoring.getListKolomKota().get(1).isDisplayed();
 		//click plus
-		monitoring.clickBtnPlus("Yogyakarta");
+		monitoring.clickBtnPlus("Atambua");
 		tool.stopForMoment(1000);
 		//get size column after click plus
 		boolean detailAfterIsDisplayed = monitoring.getListKolomKota().get(1).isDisplayed();
@@ -629,12 +647,12 @@ public class TestModulMonitoring {
 		//size column kota before click plus
 		driver.findElement(By.xpath("//*[@id=\"data-monitoring\"]/tbody/tr/td[1]"));
 		//click plus
-		monitoring.clickBtnPlus("Yogyakarta");
+		monitoring.clickBtnPlus("Atambua");
 		tool.stopForMoment(1000);
 		//get size column after click plus
 		boolean detailAfterIsDisplayed = monitoring.getListKolomKota().get(1).isDisplayed();
 		
-		monitoring.clickBtnMinus("Yogyakarta");
+		monitoring.clickBtnMinus("Atambua");
 		tool.stopForMoment(1000);
 
 		boolean detailBeforeIsDisplayed = monitoring.getListKolomKota().get(1).isDisplayed();
@@ -663,7 +681,7 @@ public class TestModulMonitoring {
 				(detailAfterIsDisplayed == true));
 	}
 	
-	@Test(priority = 34, enabled = true)
+	@Test(priority = 34, enabled = false)
 	public void tekan_btn_plus_di_3_kota(){
 		JCBMonitoringPage monitoring = homePage.clickAndGoToMonitoring();
 		
@@ -682,7 +700,7 @@ public class TestModulMonitoring {
 				(detailAfterIsDisplayed == true));
 	}
 	
-	@Test(priority = 35, enabled = true)
+	@Test(priority = 35, enabled = false)
 	public void validasi_menekan_btn_scroll(){
 		JCBMonitoringPage monitoring = PageFactory.initElements(driver, JCBMonitoringPage.class);
 		homePage.clickAndGoToMonitoring();

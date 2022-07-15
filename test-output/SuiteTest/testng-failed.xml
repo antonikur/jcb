@@ -1,23 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [SuiteTest]">
-  <test thread-count="5" name="JCB Modul Monitoring Test(failed)">
+  <test thread-count="5" name="JCB Modul Bucket Validasi Test(failed)">
     <classes>
-      <class name="com.nexsoft.jcb.test.TestModulMonitoring">
+      <class name="com.nexsoft.jcb.test.TestModulBucketValidasi">
         <methods>
-          <include name="input_kolom_search_by_TotalVisit"/>
-          <include name="initial"/>
-          <include name="input_kolom_search_by_potongan_detail_dari_bekasitimur_dkk"/>
-          <include name="input_kolom_search_by_potongan_detail_dari_jakarta"/>
-          <include name="input_kolom_search_by_potongan_detail_dari_jakarta3"/>
-          <include name="logout"/>
-          <include name="input_kolom_search_by_detail_dari_jakarta2"/>
-          <include name="input_kolom_search_by_potongan_detail_dari_yogyakarta"/>
-          <include name="input_kolom_search_by_potongan_detail_dari_bintaro"/>
+          <include name="fungsi_button_filter"/>
+          <include name="filter_area"/>
           <include name="reset"/>
+          <include name="cek_popup_EDC_1"/>
+          <include name="logout"/>
+          <include name="cek_popup_EDC_2"/>
+          <include name="initial"/>
+          <include name="reject_detail_validasi_dengan_isi_alfabet"/>
           <include name="closeDriver"/>
         </methods>
-      </class> <!-- com.nexsoft.jcb.test.TestModulMonitoring -->
+      </class> <!-- com.nexsoft.jcb.test.TestModulBucketValidasi -->
     </classes>
-  </test> <!-- JCB Modul Monitoring Test(failed) -->
+  </test> <!-- JCB Modul Bucket Validasi Test(failed) -->
 </suite> <!-- Failed suite [SuiteTest] -->

@@ -24,6 +24,7 @@ import com.nexsoft.jcb.pom.JCBBucketDistribusiPage;
 import com.nexsoft.jcb.pom.JCBBucketValidasiPage;
 import com.nexsoft.jcb.pom.JCBHomePage;
 import com.nexsoft.jcb.pom.JCBLoginPage;
+import com.nexsoft.jcb.pom.JCBMonitoringPage;
 import com.nexsoft.jcb.pom.JCBValidasiDetailVisit;
 
 
@@ -48,8 +49,10 @@ public class TestModulBucketValidasi {
 		driver.get(System.getProperty("url"));
 		
 		homePage = PageFactory.initElements(PageFactory.initElements(driver, JCBLoginPage.class)
-				.inputFieldUsername("admindika2")
-				.inputFieldPassword("d1k4@passw0rd")
+//				.inputFieldUsername("admindika2")
+//				.inputFieldPassword("d1k4@passw0rd")
+				.inputFieldUsername("yuninda")
+				.inputFieldPassword("yuninda")
 				.clickBtnLogin()
 				.gotoHomePage()
 				.getDriver(), JCBHomePage.class);
@@ -325,7 +328,7 @@ public class TestModulBucketValidasi {
 	}
 		
 	
-	@Test(priority = 12)
+	@Test(priority = 12, enabled = true)
 	public void input_kolom_search_by_address(){
 		
 		String keyword = "Jl. M.H. Thamrin No.1";//input keyword that must have result/data
@@ -342,7 +345,7 @@ public class TestModulBucketValidasi {
 	@Test(priority = 13)
 	public void input_kolom_search_by_officer(){
 		
-		String keyword = "MUHAMAD IDAM";//input keyword that must have result/data
+		String keyword = "RAMA";//input keyword that must have result/data
 		
 		List<List<WebElement>> actualTableValidasi = homePage.clickAndGoToBucketValidasi()
 		.input_Search(keyword)
@@ -353,7 +356,7 @@ public class TestModulBucketValidasi {
 		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
 	}
 	
-	@Test(priority = 14)
+	@Test(priority = 14, enabled = true)
 	public void input_kolom_search_by_visit_date(){
 
 		String keyword = "2021-12-21 09:23:48";//input keyword that must have result/data
@@ -367,7 +370,7 @@ public class TestModulBucketValidasi {
 		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
 	}
 	
-	@Test(priority = 15)
+	@Test(priority = 15, enabled = true)
 	public void input_kolom_search_by_note(){
 		String keyword = "1A";//input keyword that must have result/data
 		
@@ -380,7 +383,7 @@ public class TestModulBucketValidasi {
 		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
 	}
 		
-	@Test(priority = 16)
+	@Test(priority = 16, enabled = true)
 	public void input_kolom_search_by_huruf_random(){
 		String keyword = "eryeghdbaj";//input keyword that must have result/data
 		
@@ -393,7 +396,7 @@ public class TestModulBucketValidasi {
 		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
 	}	
 	
-	@Test(priority = 17)
+	@Test(priority = 17, enabled = true)
 	public void input_kolom_search_by_simbol(){
 		String keyword = "@@@@";//input keyword that must have result/data
 		
@@ -406,7 +409,7 @@ public class TestModulBucketValidasi {
 		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
 	}
 	
-	@Test(priority = 18)
+	@Test(priority = 18, enabled = true)
 	public void input_kolom_search_menggunakan_spasi(){
 		String keyword = " ";//input keyword that must have result/data
 		
@@ -419,7 +422,7 @@ public class TestModulBucketValidasi {
 		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
 	}	
 	
-	@Test(priority = 19)
+	@Test(priority = 19, enabled = true)
 	public void input_kolom_search_tanpa_isi(){
 		String keyword = "";//input keyword that must have result/data
 		
@@ -440,7 +443,34 @@ public class TestModulBucketValidasi {
 		assertTrue(actual.contains("Detail Visit"));
 		
   }
+	
 	@Test(priority = 21, enabled = true)
+	public void cek_popup_EDC_1(){
+		String actual = homePage.clickAndGoToBucketValidasi().clickAndGoToValidasiDetailVisit().clickPopUpDataEDC("2")
+				.getEDC().trim();
+		JCBValidasiDetailVisit detailvisit = PageFactory.initElements(driver, JCBValidasiDetailVisit.class);
+		tool.stopForMoment(2000);
+		
+		//screen shoot
+		tool.screenShoot(driver);
+				
+		assertTrue(actual.contains("Broken EDC"));
+	}
+	
+	@Test(priority = 22, enabled = true)
+	public void cek_popup_EDC_2(){
+		String actual = homePage.clickAndGoToBucketValidasi().clickAndGoToValidasiDetailVisit().clickPopUpDataEDC("3")
+				.getEDC().trim();
+		JCBValidasiDetailVisit detailvisit = PageFactory.initElements(driver, JCBValidasiDetailVisit.class);
+		tool.stopForMoment(2000);
+		
+		//screen shoot
+		tool.screenShoot(driver);
+				
+		assertTrue(actual.contains("Broken EDC"));
+	}
+	
+	@Test(priority = 23, enabled = true)
 	public void cek_popup_foto_depan_toko(){
 		String actual = homePage.clickAndGoToBucketValidasi().clickAndGoToValidasiDetailVisit().clickPopUpFoto("1").getPopUpTitle().trim();
 		JCBValidasiDetailVisit detailvisit = PageFactory.initElements(driver, JCBValidasiDetailVisit.class);
@@ -452,7 +482,7 @@ public class TestModulBucketValidasi {
 
 	}
 	
-	@Test(priority = 22, enabled = true)
+	@Test(priority = 24, enabled = true)
 	public void cek_popup_foto_struk_edc(){
 		String actual = homePage.clickAndGoToBucketValidasi().clickAndGoToValidasiDetailVisit().clickPopUpFoto("2").getPopUpTitle().trim();
 		JCBValidasiDetailVisit detailvisit = PageFactory.initElements(driver, JCBValidasiDetailVisit.class);
@@ -464,7 +494,7 @@ public class TestModulBucketValidasi {
 
 	}
 	
-	@Test(priority = 23, enabled = true)
+	@Test(priority = 25, enabled = true)
 	public void cek_popup_spot_meja_kasir_before(){
 		String actual = homePage.clickAndGoToBucketValidasi().clickAndGoToValidasiDetailVisit().clickPopUpFoto("3").getPopUpTitle().trim();
 		JCBValidasiDetailVisit detailvisit = PageFactory.initElements(driver, JCBValidasiDetailVisit.class);
@@ -476,7 +506,7 @@ public class TestModulBucketValidasi {
 
 	}
 	
-	@Test(priority = 24, enabled = true)
+	@Test(priority = 26, enabled = true)
 	public void cek_popup_spot_meja_kasir_after(){
 		String actual = homePage.clickAndGoToBucketValidasi().clickAndGoToValidasiDetailVisit().clickPopUpFoto("4").getPopUpTitle().trim();
 		JCBValidasiDetailVisit detailvisit = PageFactory.initElements(driver, JCBValidasiDetailVisit.class);
@@ -488,7 +518,7 @@ public class TestModulBucketValidasi {
 
 	}
 	
-	@Test(priority = 25, enabled = true)
+	@Test(priority = 27, enabled = true)
 	public void cek_popup_spot_pintu_masuk_before(){
 		String actual = homePage.clickAndGoToBucketValidasi().clickAndGoToValidasiDetailVisit().clickPopUpFoto("5").getPopUpTitle().trim();
 		JCBValidasiDetailVisit detailvisit = PageFactory.initElements(driver, JCBValidasiDetailVisit.class);
@@ -500,8 +530,7 @@ public class TestModulBucketValidasi {
 
 	}
 	
-	
-	@Test(priority = 26, enabled = true)
+	@Test(priority = 28, enabled = true)
 	public void cek_popup_spot_pintu_masuk_after(){
 		String actual = homePage.clickAndGoToBucketValidasi().clickAndGoToValidasiDetailVisit().clickPopUpFoto("6").getPopUpTitle().trim();
 		JCBValidasiDetailVisit detailvisit = PageFactory.initElements(driver, JCBValidasiDetailVisit.class);
@@ -513,7 +542,7 @@ public class TestModulBucketValidasi {
 
 	}
 	
-	@Test(priority = 27, enabled = true)
+	@Test(priority = 29, enabled = true)
 	public void cek_popup_other_principal(){
 		String actual = homePage.clickAndGoToBucketValidasi().clickAndGoToValidasiDetailVisit().clickPopUpFoto("7").getPopUpTitle().trim();
 		JCBValidasiDetailVisit detailvisit = PageFactory.initElements(driver, JCBValidasiDetailVisit.class);
@@ -525,7 +554,7 @@ public class TestModulBucketValidasi {
 
 	}
 	
-	@Test(priority = 28, enabled = true)
+	@Test(priority = 30, enabled = true)
 	public void menekan_button_validate(){
 		JCBValidasiDetailVisit detailvisit = PageFactory.initElements(driver, JCBValidasiDetailVisit.class);
 
@@ -537,9 +566,9 @@ public class TestModulBucketValidasi {
 		assertTrue(actual.contains("Validate Form"));
   }
 	
-	@Test(priority = 29, enabled = true)
+	@Test(priority = 31, enabled = true)
 	public void validasi_menekan_submit_validate(){
-		String notes = "Tes Submit Validate";
+		//String notes = "Tes Submit Validate";
 		
 		JCBBucketValidasiPage validasi = PageFactory.initElements(driver, JCBBucketValidasiPage.class);
 		
@@ -555,7 +584,7 @@ public class TestModulBucketValidasi {
 		assertTrue(beforeReturnSize > afterReturnSize);
   }
 	
-	@Test(priority = 30)
+	@Test(priority = 32)
 	public void validasi_menekan_cancel_validate(){
 		String actual = homePage.clickAndGoToBucketValidasi().clickAndGoToValidasiDetailVisit().clickValidate().clickCancelVal()
 				.getTitleDetailVisit().trim();
@@ -565,7 +594,7 @@ public class TestModulBucketValidasi {
 		assertTrue(actual.contains("Detail Visit"));
   }
 	
-	@Test(priority = 31)
+	@Test(priority = 33, enabled = true)
 	public void validasi_menekan_btnX_validate(){
 		String actual = homePage.clickAndGoToBucketValidasi().clickAndGoToValidasiDetailVisit().clickValidate().clickBtnXVal()
 				.getTitleDetailVisit().trim();
@@ -576,7 +605,7 @@ public class TestModulBucketValidasi {
   }
 	
 	
-	@Test(priority = 32, enabled = true)
+	@Test(priority = 34, enabled = true)
 	public void validasi_menekan_btn_return(){
 		
 		JCBValidasiDetailVisit detailvisit = PageFactory.initElements(driver, JCBValidasiDetailVisit.class);
@@ -589,26 +618,26 @@ public class TestModulBucketValidasi {
 		assertTrue(actual.contains("return Form"));	
   }
 	
-	@Test(priority = 33, enabled = true)
-	public void return_detail_validasi_dengan_isi_kombinasi(){
-		String notes = "kurang lengkap 1234567890 !@#$%^&*()";
-		
-		JCBBucketValidasiPage validasi = PageFactory.initElements(driver, JCBBucketValidasiPage.class);
-		
-		int beforeReturnSize = homePage.clickAndGoToBucketValidasi().getColumnNo().size();
-		System.out.println(beforeReturnSize);
-		
-		validasi.clickAndGoToValidasiDetailVisit().clickReturn().input_notes(notes).submitReturn();
-		
-		int afterReturnSize = validasi.getColumnNo().size();
-		System.out.println(afterReturnSize);
-
-		tool.stopForMoment(2000);
-		assertTrue(beforeReturnSize > afterReturnSize);
-
-  }
+//	@Test(priority = 35, enabled = false)
+//	public void return_detail_validasi_dengan_isi_kombinasi(){
+//		String notes = "kurang lengkap 1234567890 !@#$%^&*()";
+//		
+//		JCBBucketValidasiPage validasi = PageFactory.initElements(driver, JCBBucketValidasiPage.class);
+//		
+//		int beforeReturnSize = homePage.clickAndGoToBucketValidasi().getColumnNo().size();
+//		System.out.println(beforeReturnSize);
+//		
+//		validasi.clickAndGoToValidasiDetailVisit().clickReturn().input_notes(notes).submitReturn();
+//		
+//		int afterReturnSize = validasi.getColumnNo().size();
+//		System.out.println(afterReturnSize);
+//
+//		tool.stopForMoment(2000);
+//		assertTrue(beforeReturnSize > afterReturnSize);
+//
+//  }
 	
-	@Test(priority = 34, enabled = true)
+	@Test(priority = 36, enabled = true)
 	public void return_detail_validasi_dengan_isi_alfabet(){
 		String notes = "kurang lengkap";
 		
@@ -626,7 +655,7 @@ public class TestModulBucketValidasi {
 		assertTrue(beforeReturnSize > afterReturnSize);
   }
 	
-	@Test(priority = 35, enabled = true)
+	@Test(priority = 37, enabled = true)
 	public void return_detail_validasi_dengan_isi_numerik(){
 		String notes = "1234567";
 		
@@ -644,7 +673,7 @@ public class TestModulBucketValidasi {
 		assertTrue(beforeReturnSize > afterReturnSize);
 
   }
-	@Test(priority = 36, enabled = true)
+	@Test(priority = 38, enabled = true)
 	public void return_detail_validasi_dengan_isi_simbol(){
 		String notes = "-";
 		
@@ -662,10 +691,11 @@ public class TestModulBucketValidasi {
 		assertTrue(beforeReturnSize > afterReturnSize);
   }
 	
-	@Test(priority = 37, enabled = true)
+	@Test(priority = 39, enabled = true)
 	public void return_detail_validasi_tanpa_isi_notes(){
 		JCBValidasiDetailVisit detailvisit = PageFactory.initElements(driver, JCBValidasiDetailVisit.class);
-		boolean status = homePage.clickAndGoToBucketValidasi().clickAndGoToValidasiDetailVisit().clickReturn().submitReturn().checkMesageErrNotesBlankReturnDisplay();
+		boolean status = homePage.clickAndGoToBucketValidasi().clickAndGoToValidasiDetailVisit().clickReturn().submitReturn()
+				.checkMesageErrNotesBlankReturnDisplay();
 		
 		tool.stopForMoment(2000);
 		
@@ -674,7 +704,7 @@ public class TestModulBucketValidasi {
 		assertTrue(status);
   }
 	
-	@Test(priority = 38, enabled = false)
+	@Test(priority = 40, enabled = true)
 	public void validasi_menekan_submit_return(){
 		String notes = "Tes Submit Return";
 		
@@ -692,7 +722,7 @@ public class TestModulBucketValidasi {
 		assertTrue(beforeReturnSize > afterReturnSize);
   }
 	
-	@Test(priority = 39)
+	@Test(priority = 41, enabled = true)
 	public void validasi_menekan_cancel_return(){
 		String actual = homePage.clickAndGoToBucketValidasi().clickAndGoToValidasiDetailVisit().clickReturn().cancelReturn()
 				.getTitleDetailVisit().trim();
@@ -702,7 +732,7 @@ public class TestModulBucketValidasi {
 		assertTrue(actual.contains("Detail Visit"));
   }
 	
-	@Test(priority = 40, enabled = true)
+	@Test(priority = 42, enabled = true)
 	public void validasi_menekan_btnX_return(){
 		String actual = homePage.clickAndGoToBucketValidasi().clickAndGoToValidasiDetailVisit().clickReturn().clickbtnXReturn()
 				.getTitleDetailVisit().trim();
@@ -712,7 +742,7 @@ public class TestModulBucketValidasi {
 		assertTrue(actual.contains("Detail Visit"));
   }
 	
-	@Test(priority = 41, enabled = true)
+	@Test(priority = 43, enabled = true)
 	public void validasi_menekan_btn_reject(){
 		JCBValidasiDetailVisit detailvisit = PageFactory.initElements(driver, JCBValidasiDetailVisit.class);
 
@@ -724,26 +754,25 @@ public class TestModulBucketValidasi {
 		assertTrue(actual.contains("reject Form"));	
   }
 	
-	@Test(priority = 42, enabled = true)
-	public void reject_detail_validasi_dengan_isi_kombinasi(){
-		String notes = "kurang lengkap 1234567890 !@#$%^&*()";
-		
-		JCBBucketValidasiPage validasi = PageFactory.initElements(driver, JCBBucketValidasiPage.class);
-		
-		int beforeReturnSize = homePage.clickAndGoToBucketValidasi().getColumnNo().size();
-		System.out.println(beforeReturnSize);
-		
-		validasi.clickAndGoToValidasiDetailVisit().clickReject().input_notes(notes).submitReject();
-		
-		int afterReturnSize = validasi.getColumnNo().size();
-		System.out.println(afterReturnSize);
-
-		tool.stopForMoment(2000);
-		assertTrue(beforeReturnSize > afterReturnSize);
-
-  }
+//	@Test(priority = 42, enabled = false)
+//	public void reject_detail_validasi_dengan_isi_kombinasi(){
+//		String notes = "kurang lengkap 1234567890 !@#$%^&*()";
+//		
+//		JCBBucketValidasiPage validasi = PageFactory.initElements(driver, JCBBucketValidasiPage.class);
+//		
+//		int beforeReturnSize = homePage.clickAndGoToBucketValidasi().getColumnNo().size();
+//		System.out.println(beforeReturnSize);
+//		
+//		validasi.clickAndGoToValidasiDetailVisit().clickReject().input_notes(notes).submitReject();
+//		
+//		int afterReturnSize = validasi.getColumnNo().size();
+//		System.out.println(afterReturnSize);
+//
+//		tool.stopForMoment(2000);
+//		assertTrue(beforeReturnSize > afterReturnSize);
+//  }
 	
-	@Test(priority = 43, enabled = true)
+	@Test(priority = 44, enabled = true)
 	public void reject_detail_validasi_dengan_isi_alfabet(){
 		String notes = "data tidak valid";
 		
@@ -762,7 +791,7 @@ public class TestModulBucketValidasi {
 
   }
 	
-	@Test(priority = 44, enabled = true)
+	@Test(priority = 45, enabled = true)
 	public void reject_detail_validasi_dengan_isi_numerik(){
 		String notes = "1234567";
 		
@@ -781,7 +810,7 @@ public class TestModulBucketValidasi {
 
   }
 	
-	@Test(priority = 45, enabled = true)
+	@Test(priority = 46, enabled = true)
 	public void reject_detail_validasi_dengan_isi_simbol(){
 		String notes = "-";
 		
@@ -800,7 +829,7 @@ public class TestModulBucketValidasi {
 
   }
 	
-	@Test(priority = 46, enabled = true)
+	@Test(priority = 47, enabled = true)
 	public void reject_detail_validasi_tanpa_isi_notes(){
 		JCBValidasiDetailVisit detailvisit = PageFactory.initElements(driver, JCBValidasiDetailVisit.class);
 		boolean status = homePage.clickAndGoToBucketValidasi().clickAndGoToValidasiDetailVisit()
@@ -813,7 +842,7 @@ public class TestModulBucketValidasi {
 		assertTrue(status);
   }
 	
-	@Test(priority = 47, enabled = false)
+	@Test(priority = 48, enabled = true)
 	public void validasi_menekan_submit_reject(){
 		String notes = "Tes Submit Reject";
 		

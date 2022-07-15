@@ -177,7 +177,7 @@ public class TestModulBucketDistribusi {
 		assertEquals(entriesSize, 25, "kemungkinan karena data tidak mencukupi 25, tolong dicek dan ditambah");
 	}
 	
-	@Test(priority = 4)
+	@Test(priority = 4, enabled = false)
 	public void pilih_show_entries_10_di_distribusi_data(){
 		List<WebElement> kolomNo = homePage.clickAndGoToBucketDistribusi()
 		.selectDropdownListEntriesByValue("10")
@@ -197,7 +197,7 @@ public class TestModulBucketDistribusi {
 		assertEquals(entriesSize, 50, "kemungkinan karena data tidak mencukupi 50, tolong dicek dan ditambah");
 	}
 	
-	@Test(priority = 6)
+	@Test(priority = 6, enabled = false)
 	public void pilih_show_entries_100_di_distribusi_data(){
 		List<WebElement> kolomNo = homePage.clickAndGoToBucketDistribusi()
 		.selectDropdownListEntriesByValue("100")
@@ -235,7 +235,7 @@ public class TestModulBucketDistribusi {
 		assertTrue(isDesc);
 	}
 		
-	@Test(priority = 8)
+	@Test(priority = 8, enabled = false)
 	public void filter_Asc_Untuk_No() {
 		List<WebElement> list = homePage.clickAndGoToBucketDistribusi().getColumnNo();
 		boolean isAsc = false;
@@ -295,11 +295,12 @@ public class TestModulBucketDistribusi {
 					}
 				}
 			}
+			tool.stopForMoment(2000);
 			assertTrue(isAsc);
 	
   }
 	
-	@Test(priority = 10)
+	@Test(priority = 10, enabled = false)
 	public void filter_Desc_Untuk_NIK() {
 		JCBBucketDistribusiPage distribusiPage = homePage.clickAndGoToBucketDistribusi()
 				.clickBtnNIKAscDesc()
@@ -417,7 +418,7 @@ public class TestModulBucketDistribusi {
 			assertTrue(isDesc);
   }
 	
-	@Test(priority = 13)
+	@Test(priority = 13, enabled = false)
 	public void filter_Asc_Untuk_Total_Data() {
 		JCBBucketDistribusiPage distribusiPage = homePage.clickAndGoToBucketDistribusi()
 				.clickBtnTotalDataAscDesc();
@@ -454,7 +455,7 @@ public class TestModulBucketDistribusi {
 			assertTrue(isAsc);
   }
 	
-	@Test(priority = 14, enabled = true)
+	@Test(priority = 14, enabled = false)
 	public void filter_Desc_Untuk_Total_Data() {
 		JCBBucketDistribusiPage distribusiPage = homePage.clickAndGoToBucketDistribusi()
 				.clickBtnTotalDataAscDesc()
@@ -492,7 +493,7 @@ public class TestModulBucketDistribusi {
 			assertTrue(isDesc);
   }
 	
-	@Test(priority = 15)
+	@Test(priority = 15, enabled = false)
 	public void filter_Asc_Untuk_Data_Visit() {
 		JCBBucketDistribusiPage distribusiPage = homePage.clickAndGoToBucketDistribusi()
 				.clickBtnDataVisitAscDesc();
@@ -529,7 +530,7 @@ public class TestModulBucketDistribusi {
 			assertTrue(isAsc);
   }
 	
-	@Test(priority = 16)
+	@Test(priority = 16, enabled = false)
 	public void filter_Desc_Untuk_Data_Visit() {
 		JCBBucketDistribusiPage distribusiPage = homePage.clickAndGoToBucketDistribusi()
 				.clickBtnDataVisitAscDesc();
@@ -649,7 +650,7 @@ public class TestModulBucketDistribusi {
 			assertTrue(isDesc);
   }
 	
-	@Test(priority = 19)
+	@Test(priority = 19, enabled = false)
 	public void fungsi_button_next() {
 		JCBBucketDistribusiPage distribusi = homePage.clickAndGoToBucketDistribusi();
 		distribusi.clickBtnNext();
@@ -669,7 +670,7 @@ public class TestModulBucketDistribusi {
 		assertTrue(noLast == 10);
   }
 	
-	@Test(priority = 21)
+	@Test(priority = 21, enabled = false)
 	public void fungsi_button_1() {
 		JCBBucketDistribusiPage distribusi = homePage.clickAndGoToBucketDistribusi();
 		distribusi.clickPageNumber("1");
@@ -687,7 +688,7 @@ public class TestModulBucketDistribusi {
 		assertTrue(noLast == 20);
   }
 	
-	@Test(priority = 23)
+	@Test(priority = 23, enabled = false)
 	public void fungsi_button_3() {
 		JCBBucketDistribusiPage distribusi = homePage.clickAndGoToBucketDistribusi();
 		distribusi.clickPageNumber("3");
@@ -705,7 +706,7 @@ public class TestModulBucketDistribusi {
 		assertTrue(noLast == 40);
   }
 	
-	@Test(priority = 25)
+	@Test(priority = 25, enabled = false)
 	public void fungsi_button_5() {
 		JCBBucketDistribusiPage distribusi = homePage.clickAndGoToBucketDistribusi();
 		distribusi.clickPageNumber("5");
@@ -713,7 +714,7 @@ public class TestModulBucketDistribusi {
 		assertTrue(noLast == 50);
   }
 	
-	@Test(priority = 26)
+	@Test(priority = 26, enabled = false)
 	public void fungsi_button_6() {
 		JCBBucketDistribusiPage distribusi = homePage.clickAndGoToBucketDistribusi();
 		distribusi.clickPageNumber("5");
@@ -723,7 +724,7 @@ public class TestModulBucketDistribusi {
 		assertTrue(noLast == 60);
   }
 	
-	@Test(priority = 27)
+	@Test(priority = 27, enabled = false)
 	public void fungsi_button_7() {
 		JCBBucketDistribusiPage distribusi = homePage.clickAndGoToBucketDistribusi();
 		distribusi.clickPageNumber("5");
@@ -734,7 +735,7 @@ public class TestModulBucketDistribusi {
 		assertTrue(noLast == 70);
   }
 	
-	@Test(priority = 28)
+	@Test(priority = 28, enabled = false)
 	public void fungsi_button_8() {
 		JCBBucketDistribusiPage distribusi = homePage.clickAndGoToBucketDistribusi();
 		distribusi.clickPageNumber("5");
@@ -746,7 +747,7 @@ public class TestModulBucketDistribusi {
 		assertTrue(noLast == 80);
   }
 	
-	@Test(priority = 29)
+	@Test(priority = 29, enabled = false)
 	public void fungsi_button_9() {
 		JCBBucketDistribusiPage distribusi = homePage.clickAndGoToBucketDistribusi();
 		distribusi.clickPageNumber("13");
@@ -756,7 +757,7 @@ public class TestModulBucketDistribusi {
 		assertTrue(noLast == 90);
   }
 	
-	@Test(priority = 30)
+	@Test(priority = 30, enabled = false)
 	public void fungsi_button_10() {
 		JCBBucketDistribusiPage distribusi = homePage.clickAndGoToBucketDistribusi();
 		distribusi.clickPageNumber("13");
@@ -766,7 +767,7 @@ public class TestModulBucketDistribusi {
 		assertTrue(noLast == 100);
   }
 	
-	@Test(priority = 31)
+	@Test(priority = 31, enabled = false)
 	public void fungsi_button_plus_pada_setiap_nomer_1(){
 		String actual = homePage.clickAndGoToBucketDistribusi()
 				.clickButtonPlus("1").getTitlePlusAction().trim();
@@ -774,7 +775,7 @@ public class TestModulBucketDistribusi {
 		assertTrue(actual.contains("Unvisit"));
   }
 	
-	@Test(priority = 32)
+	@Test(priority = 32, enabled = false)
 	public void fungsi_button_mata(){
 		String actual = homePage.clickAndGoToBucketDistribusi().clickButtonPlus("2").clickAndGoToBucketDetailDistribusi()
 				.getTitleDetailDistribusi().trim();
@@ -782,7 +783,7 @@ public class TestModulBucketDistribusi {
 		assertEquals(actual, "Detail Distribusi Pilih Data");	
   }
 	
-	@Test(priority = 33, enabled = true)
+	@Test(priority = 33, enabled = false)
 	public void memeriksa_button_pilih_data_detail(){
 		String actual = homePage.clickAndGoToBucketDistribusi().clickButtonPlus("3").clickAndGoToBucketDetailDistribusi().clickPilihDataDetail()
 				.getTitleDetailPilihData().trim();
@@ -790,7 +791,7 @@ public class TestModulBucketDistribusi {
 		assertTrue(actual.contains("Detail Distribusi Pilih User"));
   }
 	
-	@Test(priority = 34, enabled = true)
+	@Test(priority = 34, enabled = false)
 	public void memeriksa_checkbox_all(){
 		JCBBucketDistribusiDetail disDetailPage = homePage.clickAndGoToBucketDistribusi().clickButtonPlus("6").clickAndGoToBucketDetailDistribusi().clickPilihDataDetail()
 				.clickCheckboxAll();
@@ -808,7 +809,7 @@ public class TestModulBucketDistribusi {
 		assertTrue(isSelected, "One of the check box is not selected");
   }
 	
-	@Test(priority = 35, enabled = true)
+	@Test(priority = 35, enabled = false)
 	public void memeriksa_checkbox_1(){
 		JCBBucketDistribusiDetail disDetailPage = homePage.clickAndGoToBucketDistribusi().clickButtonPlus("6").clickAndGoToBucketDetailDistribusi().clickPilihDataDetail()
 				.checkboxMerchant("1");
@@ -826,7 +827,7 @@ public class TestModulBucketDistribusi {
 		assertTrue(isSelected, "One of the check box is not selected");
   }
 	
-	@Test(priority = 36, enabled = true)
+	@Test(priority = 36, enabled = false)
 	public void memeriksa_checkbox_2(){
 		JCBBucketDistribusiDetail disDetailPage = homePage.clickAndGoToBucketDistribusi().clickButtonPlus("6").clickAndGoToBucketDetailDistribusi().clickPilihDataDetail()
 		.checkboxMerchant("1").checkboxMerchant("2");
@@ -867,7 +868,7 @@ public class TestModulBucketDistribusi {
 		assertTrue(actual.contains("Distribusi Data Kepada"));
   }
 	
-	@Test(priority = 39, enabled = true)
+	@Test(priority = 39, enabled = false)
 	public void button_x_di_pilih_user(){		
 		String actual = homePage.clickAndGoToBucketDistribusi().clickButtonPlus("6").clickAndGoToBucketDetailDistribusi()
 				.clickPilihDataDetail()
@@ -923,7 +924,7 @@ public class TestModulBucketDistribusi {
 		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
 	}
 	
-	@Test(priority = 44)
+	@Test(priority = 44, enabled = false)
 	public void input_kolom_search_by_name(){
 		String keyword = "rama";//input keyword that must have result/data
 		
@@ -936,7 +937,7 @@ public class TestModulBucketDistribusi {
 		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
 	}
 	
-	@Test(priority = 45)
+	@Test(priority = 45, enabled = false)
 	public void input_kolom_search_by_huruf_random(){
 		String keyword = "eryeghdbaj";//input keyword that must have result/data
 		
@@ -949,7 +950,7 @@ public class TestModulBucketDistribusi {
 		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
 	}
 	
-	@Test(priority = 46)
+	@Test(priority = 46, enabled = false)
 	public void input_kolom_search_by_simbol(){
 		String keyword = "@@@@";//input keyword that must have result/data
 		
@@ -962,7 +963,7 @@ public class TestModulBucketDistribusi {
 		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
 	}
 	
-	@Test(priority = 47)
+	@Test(priority = 47, enabled = false)
 	public void input_kolom_search_by_total_data(){
 		String keyword = "332";//input keyword that must have result/data
 		
@@ -975,7 +976,7 @@ public class TestModulBucketDistribusi {
 		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
 	}
 	
-	@Test(priority = 48)
+	@Test(priority = 48, enabled = false)
 	public void input_kolom_search_by_data_visit(){
 		String keyword = "321";//input keyword that must have result/data
 		
@@ -988,11 +989,11 @@ public class TestModulBucketDistribusi {
 		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
 	}
 	
-	@Test(priority = 49)
+	@Test(priority = 49, enabled =  true)
 	public void input_kolom_search_by_data_unvisit(){
 		JCBBucketDistribusiPage distribusi = homePage.clickAndGoToBucketDistribusi();
 
-		String keyword = "5";//input keyword that must have result/data
+		String keyword = "6";//input keyword that must have result/data
 		
 		List<List<WebElement>> actualTableDistribusiData = homePage.clickAndGoToBucketDistribusi().clickExpand()
 		.input_Search(keyword)
@@ -1002,6 +1003,7 @@ public class TestModulBucketDistribusi {
 
 		distribusi.clickCompress();
 	
+		tool.stopForMoment(2000);
 		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
 	}
 	
@@ -1018,7 +1020,7 @@ public class TestModulBucketDistribusi {
 		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
 	}
 	
-	@Test(priority = 51)
+	@Test(priority = 51, enabled = false)
 	public void input_kolom_search_tanpa_isi(){
 		String keyword = "";//input keyword that must have result/data
 		
@@ -1051,7 +1053,7 @@ public class TestModulBucketDistribusi {
 		assertTrue(totalDimensionSizeCompress < totalDimensionSizeExpand);
   }
 	
-	@Test(priority = 53)
+	@Test(priority = 53, enabled = false)
 	public void input_search_saat_expand_by_no(){
 		JCBBucketDistribusiPage distribusi = homePage.clickAndGoToBucketDistribusi();
 
@@ -1068,7 +1070,7 @@ public class TestModulBucketDistribusi {
 		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
 	}
 	
-	@Test(priority = 54)
+	@Test(priority = 54, enabled = false)
 	public void input_search_saat_expand_by_nik(){
 		JCBBucketDistribusiPage distribusi = homePage.clickAndGoToBucketDistribusi();
 
@@ -1102,7 +1104,7 @@ public class TestModulBucketDistribusi {
 		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
 	}
 	
-	@Test(priority = 56)
+	@Test(priority = 56, enabled = false)
 	public void input_search_saat_expand_by_simbol(){
 		JCBBucketDistribusiPage distribusi = homePage.clickAndGoToBucketDistribusi();
 
@@ -1119,7 +1121,7 @@ public class TestModulBucketDistribusi {
 		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
 	}
 	
-	@Test(priority = 57)
+	@Test(priority = 57, enabled = false)
 	public void input_search_saat_expand_by_total_data(){
 		JCBBucketDistribusiPage distribusi = homePage.clickAndGoToBucketDistribusi();
 
@@ -1136,7 +1138,7 @@ public class TestModulBucketDistribusi {
 		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
 	}
 	
-	@Test(priority = 58)
+	@Test(priority = 58, enabled = false)
 	public void input_search_saat_expand_menggunakan_spasi(){
 		JCBBucketDistribusiPage distribusi = homePage.clickAndGoToBucketDistribusi();
 
@@ -1153,7 +1155,7 @@ public class TestModulBucketDistribusi {
 		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
 	}
 	
-	@Test(priority = 59)
+	@Test(priority = 59, enabled = false)
 	public void input_search_saat_expand_tanpa_isi(){
 		JCBBucketDistribusiPage distribusi = homePage.clickAndGoToBucketDistribusi();
 
@@ -1169,7 +1171,7 @@ public class TestModulBucketDistribusi {
 
 		assertTrue(isCorrect, "One of the row doesn't contain data that match keyword");
 	}
-	@Test(priority = 60)
+	@Test(priority = 60, enabled = false)
 	public void tekan_tombol_collapse_or_expand_distribusi_data(){
 		JCBBucketDistribusiPage distribusi = homePage.clickAndGoToBucketDistribusi();
 		
@@ -1188,7 +1190,7 @@ public class TestModulBucketDistribusi {
 		assertTrue(isDiplayed && isHidden);
 	}
 
-	@Test(priority = 61)
+	@Test(priority = 61, enabled = false)
 	public void fungsi_button_assignment(){
 	String actual = homePage.clickAndGoToBucketDistribusi()
 	.clickAndGoToDetailAssignment().getTitleAssignment().trim();
@@ -1197,7 +1199,7 @@ public class TestModulBucketDistribusi {
 	
   }
 	
-	@Test(priority = 62)
+	@Test(priority = 62, enabled = false)
 	public void fungsi_pilih_data(){
 	String actual = homePage.clickAndGoToBucketDistribusi()
 	.clickAndGoToDetailAssignment().clickPilihData().getTitlePilihData().trim();
@@ -1224,7 +1226,7 @@ public class TestModulBucketDistribusi {
 	
   }
 	
-	@Test(priority = 64, enabled = true)
+	@Test(priority = 64, enabled = false)
 	public void memilih_2_data_assign(){
 		JCBBucketDistribusiAssignment assignment = homePage.clickAndGoToBucketDistribusi().clickAndGoToDetailAssignment().clickPilihData()
 				.clickCheckBox("1")
@@ -1260,7 +1262,7 @@ public class TestModulBucketDistribusi {
 
 	}
 	
-	@Test(priority = 66)
+	@Test(priority = 66, enabled = false)
 	public void tekan_tombol_collapse_or_expand_assignment(){
 		JCBBucketDistribusiAssignment assignment = homePage.clickAndGoToBucketDistribusi().clickAndGoToDetailAssignment();
 		tool.stopForMoment(2000);
@@ -1292,7 +1294,7 @@ public class TestModulBucketDistribusi {
 	
   }
 	
-	@Test(priority = 68)
+	@Test(priority = 68, enabled = false)
 	public void button_x_pilih_user_(){
 	String actual = homePage.clickAndGoToBucketDistribusi()
 			.clickAndGoToDetailAssignment().clickPilihData().clickCheckBox("1").clickPilihUser().clickXPilihUser().getTitlePilihData().trim();
@@ -1301,7 +1303,7 @@ public class TestModulBucketDistribusi {
 
   }
 	
-	@Test(priority = 69)
+	@Test(priority = 69, enabled = true)
 	public void memilih_user_yang_akan_di_assign(){
 		String actual = homePage.clickAndGoToBucketDistribusi()
 				.clickAndGoToDetailAssignment().clickPilihData().clickCheckBox("1").clickPilihUser().pilihSurveyor("1").getTextProcess().trim();
@@ -1333,7 +1335,7 @@ public class TestModulBucketDistribusi {
 
   }
 	
-	@Test(priority = 71, enabled = true)
+	@Test(priority = 71, enabled = false)
 	public void memeriksa_btn_expand_compress_pilih_data() {
 		JCBBucketDistribusiAssignment pilihdata = homePage.clickAndGoToBucketDistribusi().clickAndGoToDetailAssignment()
 				.clickPilihData();
@@ -1355,7 +1357,7 @@ public class TestModulBucketDistribusi {
 
 	}
 	
-	@Test(priority = 72, enabled = true)
+	@Test(priority = 72, enabled = false)
 	public void tekan_tombol_collapse_or_expand_pilih_data(){
 		JCBBucketDistribusiAssignment pilihdata = homePage.clickAndGoToBucketDistribusi().clickAndGoToDetailAssignment().clickPilihData();
 		tool.stopForMoment(2000);

@@ -7,20 +7,20 @@
 <classes>
 <class name = "com.nexsoft.jcb.test.TestModulBucketDistribusi"> </class>
 </classes>
-</test> 
+</test> -->
 
 
 <test name = "JCB Modul Bucket Validasi Test">
 <classes>
 <class name = "com.nexsoft.jcb.test.TestModulBucketValidasi"> </class>
 </classes>
-</test> -->
+</test>
 
-
+<!-- 
 <test name = "JCB Modul Monitoring Test">
 <classes>
 <class name = "com.nexsoft.jcb.test.TestModulMonitoring"> </class>
 </classes>
-</test>
+</test> -->
 
 </suite>

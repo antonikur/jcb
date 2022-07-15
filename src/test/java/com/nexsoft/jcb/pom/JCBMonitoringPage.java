@@ -43,6 +43,10 @@ Tools tool = new Tools();
 	@FindBy(xpath = "//span[normalize-space()='Logout']")
 	private WebElement menuLogout;
 	
+	
+	@FindBy(xpath = "//*[@id=\"data-monitoring\"]/tbody/tr/td[1]")
+	private List<WebElement> tableKolomKota2;
+	
 	@FindBy(xpath = "//table[@id='data-monitoring']/tbody/tr/td/b")
 	private List<WebElement> tableKolomKota;
 
@@ -129,18 +133,27 @@ Tools tool = new Tools();
 		return tableMonitoring;
 	}
 	
+	public List<List<WebElement>> getTableMonitoring2(){
+		List<List<WebElement>> tableMonitoring = new ArrayList<>();
+		tableMonitoring.add(tableKolomKota2);
+		tableMonitoring.add(tableKolomTotalData);
+		tableMonitoring.add(tableKolomTotalVisit);
+		tableMonitoring.add(tableKolomPrice);
+		return tableMonitoring;
+	}
+	
 	public List<WebElement> getColumnKota(){
 		return tableKolomKota;
 	}
 	
-	public JCBBucketDistribusiPage clickBtnPlus(String kota) {	
+	public JCBMonitoringPage clickBtnPlus(String kota) {	
 		driver.findElement(By.xpath("//b[normalize-space()='"+kota+"']//i[@class='fa fa-plus']")).click();
-		return PageFactory.initElements(driver, JCBBucketDistribusiPage.class);
+		return PageFactory.initElements(driver, JCBMonitoringPage.class);
 	}
 	
-	public JCBBucketDistribusiPage clickBtnMinus(String kota) {	
+	public JCBMonitoringPage clickBtnMinus(String kota) {	
 		driver.findElement(By.xpath("//b[normalize-space()='"+kota+"']//a[@class='btn btn-warning btn-icon btn-circle btn-sm']")).click();
-		return PageFactory.initElements(driver, JCBBucketDistribusiPage.class);
+		return PageFactory.initElements(driver, JCBMonitoringPage.class);
 	}
 	
 	public JCBMonitoringPage clickExpand() {
@@ -149,10 +162,10 @@ Tools tool = new Tools();
 		return PageFactory.initElements(driver, JCBMonitoringPage.class);
 	}
 	
-	public JCBBucketDistribusiAssignment clickCollapse() {
+	public JCBMonitoringPage clickCollapse() {
 		collapse.click();
 		tool.stopForMoment(2000);
-		return PageFactory.initElements(driver, JCBBucketDistribusiAssignment.class);
+		return PageFactory.initElements(driver, JCBMonitoringPage.class);
 	}
 	
 	public JCBMonitoringPage clickBtnScroll() {

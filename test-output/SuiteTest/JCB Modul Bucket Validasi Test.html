@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>JCB Modul Bucket Validasi Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>46/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>45/5/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Jul 13 12:05:23 WIB 2022</td>
+<td>Started on:</td><td>Thu Jul 14 11:45:35 WIB 2022</td>
 </tr>
-<tr><td>Total time:</td><td>687 seconds (687362 ms)</td>
+<tr><td>Total time:</td><td>661 seconds (661907 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -77,22 +77,22 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='com.nexsoft.jcb.test.TestModulBucketValidasi.filter_area()'><b>filter_area</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi<br/>
-<a href="#Output-1071933072" onClick='toggleBox("Output-1071933072", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-556662073" onClick='toggleBox("Output-556662073", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1071933072" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1071933072">
-<img src='file://D:\TA\ScreenShoot\Fail20220713_120614.PNG'height="350" width="792"/><br/>
+<a href="#Output-556662073" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-556662073">
+<img src='file://D:\TA\ScreenShoot\Fail20220714_114616.PNG'height="350" width="792"/><br/>
 </div>
 </td>
 <td><div><pre>java.lang.AssertionError: Filter is not workings expected [true] but found [false]
-	at com.nexsoft.jcb.test.TestModulBucketValidasi.filter_area(TestModulBucketValidasi.java:207)
+	at com.nexsoft.jcb.test.TestModulBucketValidasi.filter_area(TestModulBucketValidasi.java:208)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1071933072", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1071933072'><pre>java.lang.AssertionError: Filter is not workings expected [true] but found [false]
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace556662073", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace556662073'><pre>java.lang.AssertionError: Filter is not workings expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1413)
 	at org.testng.Assert.assertTrue(Assert.java:56)
-	at com.nexsoft.jcb.test.TestModulBucketValidasi.filter_area(TestModulBucketValidasi.java:207)
+	at com.nexsoft.jcb.test.TestModulBucketValidasi.filter_area(TestModulBucketValidasi.java:208)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -120,26 +120,204 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>15</td>
+<td>14</td>
 <td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
 <tr>
-<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.fungsi_button_filter()'><b>fungsi_button_filter</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi<br/>
-<a href="#Output-1175662879" onClick='toggleBox("Output-1175662879", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.reject_detail_validasi_dengan_isi_alfabet()'><b>reject_detail_validasi_dengan_isi_alfabet</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
+<td><div><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=103.0.5060.114)
+Build info: version: &apos;4.0.0&apos;, revision: &apos;3a21814679&apos;
+System info: host: &apos;LAPTOP-INFITVQT&apos;, ip: &apos;10.0.0.223&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0dc09f0296f230ba462f6eda1b0912b3, sendKeysToElement {id=361c3079-dff0-468b-a300-35f38a35a049, value=[Ljava.lang.CharSequence;@1b984ba5}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.114, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\NEXSOFT\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:51810}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51810/devtoo..., se:cdpVersion: 103.0.5060.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (0dc09f0296f230ba462f6eda1b0912b3)] -&gt; xpath: //textarea[@name=&apos;notes&apos;]]
+Session ID: 0dc09f0296f230ba462f6eda1b0912b3
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:107)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at jdk.proxy2/jdk.proxy2.$Proxy18.sendKeys(Unknown Source)
+	at com.nexsoft.jcb.pom.JCBValidasiDetailVisit.input_notes(JCBValidasiDetailVisit.java:217)
+	at com.nexsoft.jcb.test.TestModulBucketValidasi.reject_detail_validasi_dengan_isi_alfabet(TestModulBucketValidasi.java:781)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1894767896", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1894767896'><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=103.0.5060.114)
+Build info: version: &apos;4.0.0&apos;, revision: &apos;3a21814679&apos;
+System info: host: &apos;LAPTOP-INFITVQT&apos;, ip: &apos;10.0.0.223&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0dc09f0296f230ba462f6eda1b0912b3, sendKeysToElement {id=361c3079-dff0-468b-a300-35f38a35a049, value=[Ljava.lang.CharSequence;@1b984ba5}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.114, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\NEXSOFT\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:51810}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51810/devtoo..., se:cdpVersion: 103.0.5060.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (0dc09f0296f230ba462f6eda1b0912b3)] -&gt; xpath: //textarea[@name=&apos;notes&apos;]]
+Session ID: 0dc09f0296f230ba462f6eda1b0912b3
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:107)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at jdk.proxy2/jdk.proxy2.$Proxy18.sendKeys(Unknown Source)
+	at com.nexsoft.jcb.pom.JCBValidasiDetailVisit.input_notes(JCBValidasiDetailVisit.java:217)
+	at com.nexsoft.jcb.test.TestModulBucketValidasi.reject_detail_validasi_dengan_isi_alfabet(TestModulBucketValidasi.java:781)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>8</td>
+<td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.cek_popup_EDC_2()'><b>cek_popup_EDC_2</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi<br/>
+<a href="#Output-569707820" onClick='toggleBox("Output-569707820", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1175662879" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1175662879">
-<img src='file://D:\TA\ScreenShoot\Fail20220713_120631.PNG'height="350" width="792"/><br/>
+<a href="#Output-569707820" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-569707820">
+<img src='file://D:\TA\ScreenShoot\Fail20220714_114942.PNG'height="350" width="792"/><br/>
 </div>
 </td>
-<td><div><pre>java.lang.AssertionError: Filter is not workings expected [true] but found [false]
-	at com.nexsoft.jcb.test.TestModulBucketValidasi.fungsi_button_filter(TestModulBucketValidasi.java:236)
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at com.nexsoft.jcb.test.TestModulBucketValidasi.cek_popup_EDC_2(TestModulBucketValidasi.java:468)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1175662879", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1175662879'><pre>java.lang.AssertionError: Filter is not workings expected [true] but found [false]
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace569707820", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace569707820'><pre>java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1413)
 	at org.testng.Assert.assertTrue(Assert.java:56)
-	at com.nexsoft.jcb.test.TestModulBucketValidasi.fungsi_button_filter(TestModulBucketValidasi.java:236)
+	at org.testng.Assert.assertTrue(Assert.java:66)
+	at com.nexsoft.jcb.test.TestModulBucketValidasi.cek_popup_EDC_2(TestModulBucketValidasi.java:468)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>11</td>
+<td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.cek_popup_EDC_1()'><b>cek_popup_EDC_1</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi<br/>
+<a href="#Output-1579440430" onClick='toggleBox("Output-1579440430", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1579440430" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1579440430">
+<img src='file://D:\TA\ScreenShoot\Fail20220714_114929.PNG'height="350" width="792"/><br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at com.nexsoft.jcb.test.TestModulBucketValidasi.cek_popup_EDC_1(TestModulBucketValidasi.java:455)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1579440430", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1579440430'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at org.testng.Assert.assertTrue(Assert.java:66)
+	at com.nexsoft.jcb.test.TestModulBucketValidasi.cek_popup_EDC_1(TestModulBucketValidasi.java:455)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>11</td>
+<td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.fungsi_button_filter()'><b>fungsi_button_filter</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi<br/>
+<a href="#Output-1517105378" onClick='toggleBox("Output-1517105378", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1517105378" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1517105378">
+<img src='file://D:\TA\ScreenShoot\Fail20220714_114631.PNG'height="350" width="792"/><br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Filter is not workings expected [true] but found [false]
+	at com.nexsoft.jcb.test.TestModulBucketValidasi.fungsi_button_filter(TestModulBucketValidasi.java:237)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1517105378", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1517105378'><pre>java.lang.AssertionError: Filter is not workings expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at com.nexsoft.jcb.test.TestModulBucketValidasi.fungsi_button_filter(TestModulBucketValidasi.java:237)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -179,132 +357,27 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.input_kolom_search_by_merchant_name()'><b>input_kolom_search_by_merchant_name</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
-<td></td>
-<td>9</td>
-<td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
-<tr>
-<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.validasi_menekan_btnX_return()'><b>validasi_menekan_btnX_return</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
-<td></td>
-<td>13</td>
-<td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
-<tr>
-<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.fungsi_button_mata()'><b>fungsi_button_mata</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
-<td></td>
-<td>7</td>
-<td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
-<tr>
-<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.cek_popup_foto_struk_edc()'><b>cek_popup_foto_struk_edc</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
-<td></td>
-<td>11</td>
-<td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
-<tr>
-<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.return_detail_validasi_tanpa_isi_notes()'><b>return_detail_validasi_tanpa_isi_notes</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
-<td></td>
-<td>19</td>
-<td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
-<tr>
-<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.cek_popup_foto_depan_toko()'><b>cek_popup_foto_depan_toko</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
-<td></td>
-<td>11</td>
-<td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
-<tr>
-<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.validasi_menekan_btnX_reject()'><b>validasi_menekan_btnX_reject</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
-<td></td>
-<td>12</td>
-<td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
-<tr>
-<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.return_detail_validasi_dengan_isi_simbol()'><b>return_detail_validasi_dengan_isi_simbol</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
-<td></td>
-<td>16</td>
-<td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
-<tr>
 <td title='com.nexsoft.jcb.test.TestModulBucketValidasi.validasi_menekan_btn_reject()'><b>validasi_menekan_btn_reject</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
 <td></td>
 <td>11</td>
 <td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
 <tr>
-<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.input_kolom_search_by_no()'><b>input_kolom_search_by_no</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
-<td></td>
-<td>9</td>
-<td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
-<tr>
-<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.cek_popup_spot_pintu_masuk_before()'><b>cek_popup_spot_pintu_masuk_before</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
-<td></td>
-<td>11</td>
-<td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
-<tr>
-<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.filter_all_area()'><b>filter_all_area</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
+<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.validasi_menekan_submit_return()'><b>validasi_menekan_submit_return</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
 <td></td>
 <td>14</td>
-<td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
-<tr>
-<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.menekan_button_validate()'><b>menekan_button_validate</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
-<td></td>
-<td>14</td>
-<td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
-<tr>
-<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.fungsi_btn_previous()'><b>fungsi_btn_previous</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
-<td></td>
-<td>9</td>
-<td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
-<tr>
-<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.input_kolom_search_menggunakan_spasi()'><b>input_kolom_search_menggunakan_spasi</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
-<td></td>
-<td>9</td>
-<td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
-<tr>
-<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.cek_popup_spot_meja_kasir_before()'><b>cek_popup_spot_meja_kasir_before</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
-<td></td>
-<td>11</td>
-<td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
-<tr>
-<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.cek_popup_other_principal()'><b>cek_popup_other_principal</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
-<td></td>
-<td>11</td>
-<td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
-<tr>
-<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.validasi_menekan_cancel_reject()'><b>validasi_menekan_cancel_reject</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
-<td></td>
-<td>11</td>
-<td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
-<tr>
-<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.input_kolom_search_by_officer()'><b>input_kolom_search_by_officer</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
-<td></td>
-<td>8</td>
-<td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
-<tr>
-<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.cek_popup_spot_pintu_masuk_after()'><b>cek_popup_spot_pintu_masuk_after</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
-<td></td>
-<td>12</td>
-<td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
-<tr>
-<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.validasi_menekan_cancel_validate()'><b>validasi_menekan_cancel_validate</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
-<td></td>
-<td>14</td>
-<td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
-<tr>
-<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.validasi_menekan_btnX_validate()'><b>validasi_menekan_btnX_validate</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
-<td></td>
-<td>13</td>
-<td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
-<tr>
-<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.input_kolom_search_tanpa_isi()'><b>input_kolom_search_tanpa_isi</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
-<td></td>
-<td>9</td>
-<td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
-<tr>
-<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.validasi_menekan_btn_scroll()'><b>validasi_menekan_btn_scroll</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
-<td></td>
-<td>6</td>
 <td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
 <tr>
 <td title='com.nexsoft.jcb.test.TestModulBucketValidasi.input_kolom_search_by_area()'><b>input_kolom_search_by_area</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
 <td></td>
-<td>9</td>
+<td>8</td>
 <td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
 <tr>
-<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.input_kolom_search_by_visit_date()'><b>input_kolom_search_by_visit_date</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
+<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.tekan_tombol_collapse_or_expand_validasi_data()'><b>tekan_tombol_collapse_or_expand_validasi_data</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
+<td></td>
+<td>10</td>
+<td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.input_kolom_search_tanpa_isi()'><b>input_kolom_search_tanpa_isi</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
 <td></td>
 <td>10</td>
 <td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
@@ -314,29 +387,89 @@ function toggleAllBoxes() {
 <td>13</td>
 <td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
 <tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.return_detail_validasi_dengan_isi_alfabet()'><b>return_detail_validasi_dengan_isi_alfabet</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
+<td></td>
+<td>14</td>
+<td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.validasi_menekan_cancel_reject()'><b>validasi_menekan_cancel_reject</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
+<td></td>
+<td>11</td>
+<td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.cek_popup_spot_pintu_masuk_before()'><b>cek_popup_spot_pintu_masuk_before</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
+<td></td>
+<td>11</td>
+<td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.fungsi_btn_previous()'><b>fungsi_btn_previous</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
+<td></td>
+<td>9</td>
+<td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.input_kolom_search_by_simbol()'><b>input_kolom_search_by_simbol</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
+<td></td>
+<td>8</td>
+<td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.input_kolom_search_by_huruf_random()'><b>input_kolom_search_by_huruf_random</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
+<td></td>
+<td>8</td>
+<td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.validasi_menekan_btnX_return()'><b>validasi_menekan_btnX_return</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
+<td></td>
+<td>13</td>
+<td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.cek_popup_spot_pintu_masuk_after()'><b>cek_popup_spot_pintu_masuk_after</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
+<td></td>
+<td>11</td>
+<td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.cek_popup_foto_struk_edc()'><b>cek_popup_foto_struk_edc</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
+<td></td>
+<td>11</td>
+<td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.validasi_menekan_btnX_validate()'><b>validasi_menekan_btnX_validate</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
+<td></td>
+<td>13</td>
+<td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.reject_detail_validasi_dengan_isi_simbol()'><b>reject_detail_validasi_dengan_isi_simbol</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
+<td></td>
+<td>15</td>
+<td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.tekan_bucket_dan_bucket_validasi()'><b>tekan_bucket_dan_bucket_validasi</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
+<td></td>
+<td>5</td>
+<td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
+<tr>
 <td title='com.nexsoft.jcb.test.TestModulBucketValidasi.cek_popup_spot_meja_kasir_after()'><b>cek_popup_spot_meja_kasir_after</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
 <td></td>
 <td>11</td>
 <td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
 <tr>
-<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.validasi_menekan_cancel_return()'><b>validasi_menekan_cancel_return</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
+<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.reject_detail_validasi_tanpa_isi_notes()'><b>reject_detail_validasi_tanpa_isi_notes</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
 <td></td>
-<td>14</td>
+<td>16</td>
 <td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
 <tr>
-<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.input_kolom_search_by_address()'><b>input_kolom_search_by_address</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
+<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.input_kolom_search_by_merchant_name()'><b>input_kolom_search_by_merchant_name</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
 <td></td>
-<td>9</td>
+<td>8</td>
 <td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
 <tr>
-<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.reject_detail_validasi_dengan_isi_numerik()'><b>reject_detail_validasi_dengan_isi_numerik</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
+<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.return_detail_validasi_tanpa_isi_notes()'><b>return_detail_validasi_tanpa_isi_notes</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
 <td></td>
-<td>14</td>
+<td>17</td>
 <td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
 <tr>
-<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.input_kolom_search_by_huruf_random()'><b>input_kolom_search_by_huruf_random</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
+<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.cek_popup_spot_meja_kasir_before()'><b>cek_popup_spot_meja_kasir_before</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
 <td></td>
-<td>9</td>
+<td>11</td>
 <td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
 <tr>
 <td title='com.nexsoft.jcb.test.TestModulBucketValidasi.validasi_menekan_submit_validate()'><b>validasi_menekan_submit_validate</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
@@ -344,7 +477,42 @@ function toggleAllBoxes() {
 <td>11</td>
 <td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
 <tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.validasi_menekan_btnX_reject()'><b>validasi_menekan_btnX_reject</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
+<td></td>
+<td>14</td>
+<td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.validasi_menekan_btn_scroll()'><b>validasi_menekan_btn_scroll</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
+<td></td>
+<td>6</td>
+<td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.fungsi_button_2()'><b>fungsi_button_2</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
+<td></td>
+<td>6</td>
+<td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
+<tr>
 <td title='com.nexsoft.jcb.test.TestModulBucketValidasi.input_kolom_search_by_note()'><b>input_kolom_search_by_note</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
+<td></td>
+<td>8</td>
+<td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.return_detail_validasi_dengan_isi_numerik()'><b>return_detail_validasi_dengan_isi_numerik</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
+<td></td>
+<td>14</td>
+<td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.filter_all_area()'><b>filter_all_area</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
+<td></td>
+<td>13</td>
+<td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.input_kolom_search_by_no()'><b>input_kolom_search_by_no</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
+<td></td>
+<td>8</td>
+<td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.input_kolom_search_menggunakan_spasi()'><b>input_kolom_search_menggunakan_spasi</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
 <td></td>
 <td>9</td>
 <td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
@@ -354,59 +522,64 @@ function toggleAllBoxes() {
 <td>6</td>
 <td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
 <tr>
-<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.tekan_bucket_dan_bucket_validasi()'><b>tekan_bucket_dan_bucket_validasi</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
-<td></td>
-<td>4</td>
-<td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
-<tr>
-<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.reject_detail_validasi_tanpa_isi_notes()'><b>reject_detail_validasi_tanpa_isi_notes</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
-<td></td>
-<td>16</td>
-<td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
-<tr>
-<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.fungsi_button_2()'><b>fungsi_button_2</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
-<td></td>
-<td>6</td>
-<td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
-<tr>
-<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.reject_detail_validasi_dengan_isi_kombinasi()'><b>reject_detail_validasi_dengan_isi_kombinasi</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
+<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.validasi_menekan_cancel_return()'><b>validasi_menekan_cancel_return</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
 <td></td>
 <td>13</td>
 <td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
 <tr>
-<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.input_kolom_search_by_simbol()'><b>input_kolom_search_by_simbol</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
+<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.input_kolom_search_by_address()'><b>input_kolom_search_by_address</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
 <td></td>
-<td>9</td>
+<td>8</td>
 <td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
 <tr>
-<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.return_detail_validasi_dengan_isi_kombinasi()'><b>return_detail_validasi_dengan_isi_kombinasi</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
+<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.cek_popup_foto_depan_toko()'><b>cek_popup_foto_depan_toko</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
 <td></td>
-<td>15</td>
+<td>12</td>
 <td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
 <tr>
-<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.return_detail_validasi_dengan_isi_numerik()'><b>return_detail_validasi_dengan_isi_numerik</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
+<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.reject_detail_validasi_dengan_isi_numerik()'><b>reject_detail_validasi_dengan_isi_numerik</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
 <td></td>
-<td>15</td>
+<td>13</td>
 <td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
 <tr>
-<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.tekan_tombol_collapse_or_expand_validasi_data()'><b>tekan_tombol_collapse_or_expand_validasi_data</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
+<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.validasi_menekan_submit_reject()'><b>validasi_menekan_submit_reject</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
+<td></td>
+<td>13</td>
+<td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.input_kolom_search_by_officer()'><b>input_kolom_search_by_officer</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
+<td></td>
+<td>8</td>
+<td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.cek_popup_other_principal()'><b>cek_popup_other_principal</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
 <td></td>
 <td>11</td>
 <td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
 <tr>
-<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.reject_detail_validasi_dengan_isi_simbol()'><b>reject_detail_validasi_dengan_isi_simbol</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
-<td></td>
-<td>14</td>
-<td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
-<tr>
-<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.return_detail_validasi_dengan_isi_alfabet()'><b>return_detail_validasi_dengan_isi_alfabet</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
-<td></td>
-<td>15</td>
-<td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
-<tr>
-<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.reject_detail_validasi_dengan_isi_alfabet()'><b>reject_detail_validasi_dengan_isi_alfabet</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
+<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.menekan_button_validate()'><b>menekan_button_validate</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
 <td></td>
 <td>13</td>
+<td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.fungsi_button_mata()'><b>fungsi_button_mata</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
+<td></td>
+<td>7</td>
+<td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.validasi_menekan_cancel_validate()'><b>validasi_menekan_cancel_validate</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
+<td></td>
+<td>13</td>
+<td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.input_kolom_search_by_visit_date()'><b>input_kolom_search_by_visit_date</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
+<td></td>
+<td>8</td>
+<td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
+<tr>
+<td title='com.nexsoft.jcb.test.TestModulBucketValidasi.return_detail_validasi_dengan_isi_simbol()'><b>return_detail_validasi_dengan_isi_simbol</b><br>Test class: com.nexsoft.jcb.test.TestModulBucketValidasi</td>
+<td></td>
+<td>14</td>
 <td>com.nexsoft.jcb.test.TestModulBucketValidasi@5677323c</td></tr>
 </table><p>
 </body>

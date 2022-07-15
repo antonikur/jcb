@@ -152,7 +152,7 @@ public class JCBHomePage {
 	
 	public JCBMonitoringPage clickAndGoToMonitoring() {
 		menuMonitoring.click();
-		tool.stopForMoment(10000);
+		tool.stopForMoment(5000);
 		return PageFactory.initElements(driver, JCBMonitoringPage.class);
 	}
 	

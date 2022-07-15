@@ -85,6 +85,9 @@ public class JCBValidasiDetailVisit {
 	@FindBy(xpath = "//*[@id=\"myModalLabel\"]")
 	private WebElement popUpTitle;
 	
+	@FindBy(xpath = "//*[@id=\"content\"]/div[1]/div[3]/div[1]/div[1]/h4")
+	private WebElement EDCTitle;
+	
 	@FindBy(xpath = "//*[@id=\"modalFoto\"]/div/div/div[1]/button")
 	private WebElement btnCancelPopup;
 	
@@ -103,6 +106,10 @@ public class JCBValidasiDetailVisit {
 	
 	public String getPopUpTitle() {
 		return popUpTitle.getText();
+	}
+	
+	public String getEDC() {
+		return EDCTitle.getText();
 	}
 	
 	public JCBLoginPage clickLogoutAndGotoLogin() {
@@ -216,10 +223,16 @@ public class JCBValidasiDetailVisit {
 //		driver.findElement(By.xpath("//*[@id=\"content\"]/div[2]/div/div/div[2]/div/table/tbody/tr[3]/td['"+number+"'] ")).click();
 //		tool.stopForMoment(2000);
 //		return PageFactory.initElements(driver, JCBBucketDistribusiPage.class);
-//	}
+//	}//*[@id="content"]/div[1]/div[3]/div[1]/div[2]/table/tbody/tr[2]/td[5]
 	
 	public JCBValidasiDetailVisit clickPopUpFoto(String number) {	
 		driver.findElement(By.xpath("//*[@id=\"content\"]/div[2]/div/div/div[2]/div/table/tbody/tr[3]/td["+number+"]/a/img")).click();
+		tool.stopForMoment(2000);
+		return PageFactory.initElements(driver, JCBValidasiDetailVisit.class);
+	}
+	
+	public JCBValidasiDetailVisit clickPopUpDataEDC(String number) {	
+		driver.findElement(By.xpath("//*[@id=\"content\"]/div[1]/div[3]/div[1]/div[2]/table/tbody/tr["+number+"]/td[5]/img")).click();
 		tool.stopForMoment(2000);
 		return PageFactory.initElements(driver, JCBValidasiDetailVisit.class);
 	}
