@@ -27,6 +27,62 @@
 -->
 
 <!-- Titan -->
+<test name = "Worklist Test Surveyor">
+
+<classes>
+<class name = "com.nexsoft.jcb.test.TestFiturAddNewDataPageSurveyor"></class>
+<class name = "com.nexsoft.jcb.test.TestFiturNewDataSurveyor"></class>
+<class name = "com.nexsoft.jcb.test.TestFiturNewDataVisitPageSurveyor"></class>
+<class name = "com.nexsoft.jcb.test.TestFiturNewDataOtherConditionSurveyor"></class>
+<class name = "com.nexsoft.jcb.test.TestFiturReturnSurveyor"></class>
+<class name = "com.nexsoft.jcb.test.TestFiturReturnVisitPageSurveyor"></class>
+<class name = "com.nexsoft.jcb.test.TestFiturReturnOtherConditionSurveyor"></class>
+<class name = "com.nexsoft.jcb.test.TestFiturRejectSurveyor"></class>
+<class name = "com.nexsoft.jcb.test.TestFiturRejectVisitPageSurveyor"></class>
+<class name = "com.nexsoft.jcb.test.TestFiturRejectOtherConditionSurveyor"></class>
+<class name = "com.nexsoft.jcb.test.TestFiturAddNewDataPageSurveyor"></class>
+</classes>
+</test>
+
+<test name = "Report Test">
+<classes>
+<class name = "com.nexsoft.jcb.test.TestModulCompleted"></class>
+</classes>
+</test>
+
+<test name = "Report Test">
+<classes>
+<class name = "com.nexsoft.jcb.test.TestModulCompleted"></class>
+</classes>
+</test>
+
+<test name = "Report Test">
+<classes>
+<class name = "com.nexsoft.jcb.test.TestModulReport"></class>
+</classes>
+</test>
+
+<test name = "Report Test">
+<classes>
+<class name = "com.nexsoft.jcb.test.TestModulReportSurveyor"></class>
+</classes>
+</test>
+
+<test name = "Worklist Test Admin">
+<classes>
+<class name = "com.nexsoft.jcb.test.TestFiturAddNewDataPage"></class>
+<class name = "com.nexsoft.jcb.test.TestFiturNewData"></class>
+<class name = "com.nexsoft.jcb.test.TestFiturNewDataVisitPage"></class>
+<class name = "com.nexsoft.jcb.test.TestFiturNewDataOtherCondition"></class>
+<class name = "com.nexsoft.jcb.test.TestFiturReturn"></class>
+<class name = "com.nexsoft.jcb.test.TestFiturReturnVisitPage"></class>
+<class name = "com.nexsoft.jcb.test.TestFiturReturnOtherCondition"></class>
+<class name = "com.nexsoft.jcb.test.TestFiturReject"></class>
+<class name = "com.nexsoft.jcb.test.TestFiturRejectVisitPage"></class>
+<class name = "com.nexsoft.jcb.test.TestFiturRejectOtherCondition"></class>
+<class name = "com.nexsoft.jcb.test.TestFiturAddNewDataPage"></class>
+</classes>
+</test>
 
 
 <!-- Yuninda -->
